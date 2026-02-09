@@ -1,4 +1,4 @@
-# 🌲 HOLZEN! - Das Holzlernspiel
+# 🌲 HOLZEN! 🌲 - Das Holzlernspiel
 
 Willkommen beim **HOLZEN!**, einem digitalen Lernspiel für Lehramtsstudierende und Berufsschüler. 
 
