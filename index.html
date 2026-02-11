@@ -76,6 +76,7 @@
         .toggle-checkbox:checked + .toggle-label { background-color: #68D391; }
         .attr-toggle-btn { transition: all 0.2s; border: 2px solid transparent; }
         .attr-toggle-btn.selected { background-color: #fef3c7; border-color: #f59e0b; color: #92400e; }
+        .attr-toggle-btn.selected .w-6 { border-color: #f59e0b; background-color: #f59e0b; color: white; }
         .attr-toggle-btn:not(.selected) { background-color: #f3f4f6; color: #9ca3af; border-color: transparent; }
 
         /* ANIMATIONEN FÜR DEN BALKEN & PUNKT */
@@ -392,7 +393,7 @@ Es werden keine Tracking oder Werbe-Cookies eingesetzt.
     <div class="w-10 h-10 absolute left-4 top-4"></div>
     
     <a href="https://forms.office.com/r/dPiXWjBiGQ" target="_blank" 
-       class="absolute top-20 left-4 z-[120] bg-violet-600 hover:bg-violet-700 text-white text-xs font-bold py-2 px-3 rounded-full shadow-lg transition-transform active:scale-95 flex items-center justify-center gap-2 no-underline border-2 border-white/20 w-48">
+       class="absolute top-20 left-4 z-[120] bg-violet-600 hover:bg-violet-700 text-white text-xs font-bold h-16 flex items-center justify-center px-4 rounded-full shadow-lg transition-transform active:scale-95 gap-2 no-underline border-2 border-white/20 w-48">
         <span>💬</span> Feedback zum Spiel
     </a>
 
@@ -465,6 +466,13 @@ Es werden keine Tracking oder Werbe-Cookies eingesetzt.
             @keyframes spin-sun { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         </style>
         
+        <div id="gameOverFeedbackContainer" class="hidden mb-4 animate-pop-in">
+             <a href="https://forms.office.com/r/dPiXWjBiGQ" target="_blank" 
+                class="block w-full bg-violet-600 hover:bg-violet-700 text-white font-bold py-4 rounded-xl shadow-lg text-center border-2 border-white/20 transition-transform active:scale-95">
+                💬 Feedback geben
+             </a>
+        </div>
+
         <div class="scene-stage" role="img" aria-label="Animation: Klotzi pflanzt einen Baum">
             <div class="sun-ray"></div>
             <img src="https://github.com/aufdemholzweg/holzquartett/blob/main/images/klotzi_win.png?raw=true" class="klotzi-real" alt="Klotzi">
@@ -1378,6 +1386,10 @@ window.endGame = async (winnerName) => {
     document.getElementById('gameContainer').classList.add('hidden');
     document.getElementById('bottomSheet').classList.add('hidden');
     document.getElementById('bottomSheetBackdrop').classList.add('hidden');
+    
+    // Feedback Button State Reset
+    document.getElementById('gameOverFeedbackContainer').classList.add('hidden');
+    
     const isWin = (winnerName === (gameMode === 'ai' ? aiGame.playerName : localGameState.players[localPlayerId].name));
     const gameOverImg = document.getElementById('gameOverWorm');
     if(gameOverImg) { gameOverImg.src = isWin ? "https://github.com/aufdemholzweg/holzquartett/blob/main/images/klotzi_win.png?raw=true" : "https://github.com/aufdemholzweg/holzquartett/blob/main/images/klotzi_lose.png?raw=true"; }
@@ -1407,8 +1419,15 @@ window.endGame = async (winnerName) => {
         title.className = "text-3xl font-black mb-2 text-gray-600";
         text.innerHTML = `Schade, ${winnerName} hat gewonnen.<br>Dranbleiben lohnt sich!<br><br><div class="flex items-center justify-center gap-2 text-amber-600 font-bold bg-amber-50 p-2 rounded-lg"><span class="text-2xl">🔥</span> ${newGamesCount} Flammen gesammelt</div><div class="mt-2 text-sm text-gray-500">${rankData ? 'Rang: ' + rankData.title : ''}</div>`;
     }
+    
     document.getElementById('gameOverModal').classList.remove('hidden');
+    
+    // 3 Sekunden Timer für Feedback Button
+    setTimeout(() => {
+         document.getElementById('gameOverFeedbackContainer').classList.remove('hidden');
+    }, 3000);
 };
+
 // --- HIER DIE ÄNDERUNG: Leaderboard Navigation ---
 window.showLeaderboard = async (fromMenu = false) => { 
     const list=document.getElementById('leaderboardList');
