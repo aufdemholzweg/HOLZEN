@@ -361,96 +361,6 @@ Es werden keine Tracking oder Werbe-Cookies eingesetzt.
     </div>
 </div>
 
-<div id="attrConfigModal" class="fixed inset-0 z-[120] flex items-center justify-center p-4 dimmer hidden pt-20">
-    <div class="bg-white rounded-2xl shadow-2xl overflow-hidden w-full max-w-sm flex flex-col max-h-[85vh]">
-        <div class="bg-amber-600 p-4 flex justify-between items-center text-white shrink-0">
-            <h3 class="font-bold">Spieloptionen</h3>
-            <button onclick="window.closeAttrConfig()" class="text-white/80 hover:text-white text-2xl leading-none">&times;</button>
-        </div>
-        <div class="p-4 overflow-y-auto">
-            <div class="mb-5 space-y-3">
-                <div class="flex justify-between items-center bg-gray-50 p-3 rounded-lg border border-gray-100">
-                     <span class="font-bold text-gray-700 text-sm flex items-center gap-2">🔊 Ton an</span>
-                     <input type="checkbox" id="soundToggle" class="accent-green-500 w-5 h-5">
-                </div>
-                <div class="flex justify-between items-center bg-gray-50 p-3 rounded-lg border border-gray-100">
-                     <span class="font-bold text-gray-700 text-sm flex items-center gap-2">👀 Gegner-Karte sichtbar</span>
-                      <input type="checkbox" id="revealBackToggle" class="accent-green-500 w-5 h-5">
-                </div>
-            </div>
-            <hr class="border-gray-200 mb-4 border-t-2 border-dashed">
-            <h4 class="font-bold text-gray-800 mb-1 text-sm">Eigenschaften wählen</h4>
-            <p class="text-xs text-gray-500 mb-3">Wähle mindestens 3 und maximal 5 Kategorien.</p>
-            <div id="attrConfigList" class="space-y-2"></div>
-        </div>
-        <div class="p-4 bg-gray-50 border-t">
-             <button onclick="window.closeAttrConfig()" class="w-full bg-amber-500 text-white font-bold py-2 rounded-lg shadow">Fertig</button>
-        </div>
-    </div>
-</div>
-
-<div id="setupModal" class="fixed inset-0 z-[110] flex flex-col items-center justify-center p-4 dimmer overflow-y-auto h-screen">
-    <div class="w-10 h-10 absolute left-4 top-4"></div>
-    
-    <a href="https://forms.office.com/r/dPiXWjBiGQ" target="_blank" 
-       class="absolute top-20 left-4 z-[120] bg-violet-600 hover:bg-violet-700 text-white text-xs font-bold h-16 flex items-center justify-center px-4 rounded-full shadow-lg transition-transform active:scale-95 gap-2 no-underline border-2 border-white/20 w-48">
-        <span>💬</span> Feedback zum Spiel
-    </a>
-
-    <div class="relative w-full max-w-sm pt-20">
-        <img src="https://github.com/aufdemholzweg/holzquartett/blob/main/images/klotzi_menu.png?raw=true" alt="Klotzi Menü" class="absolute -top-4 -right-2 w-48 z-20 pointer-events-none transform rotate-3 drop-shadow-xl" onerror="this.style.display='none'">
-        
-        <div class="bg-white rounded-2xl shadow-2xl overflow-hidden w-full relative mb-6 z-10">
-            <div class="bg-amber-50 p-5 text-white text-center font-bold text-lg sm:text-xl tracking-wide shadow-md" style="background-color: #f59e0b;">HOLZEN!<br><span class="text-sm font-normal opacity-90">Spielmodus wählen</span></div>
-            <div class="p-6 space-y-4">
-                <button onclick="window.showNamePrompt('ai')" class="w-full bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-bold py-4 rounded-xl shadow-lg flex items-center justify-center gap-3 active:scale-95 transition-transform"><span class="text-2xl">🤖</span> Gegen Computer</button>
-                <button onclick="window.showNamePrompt('multiplayer')" class="w-full bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-bold py-4 rounded-xl shadow-lg flex items-center justify-center gap-3 active:scale-95 transition-transform"><span class="text-2xl">🌍</span> Online gegen Freunde</button>
-                
-                <div class="flex gap-3 mt-2">
-                    <button onclick="window.openAttrConfig()" class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold py-3 rounded-xl border border-gray-200 flex items-center justify-center gap-2 text-sm">
-                         <span>⚙️</span> Optionen <span id="attrCountBadge" class="bg-amber-500 text-white text-[10px] px-1.5 py-0.5 rounded-full">5</span>
-                    </button>
-                    <button onclick="window.showLeaderboard(true)" class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold py-3 rounded-xl border border-gray-200 flex items-center justify-center gap-2 text-sm">
-                        <span>🏆</span> Rangliste
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <div id="mainMenuStats" class="text-center hidden mb-8 relative z-10"></div>
-        
-        <div class="mt-auto pt-4 pb-12 text-center relative z-10">
-           <button onclick="document.getElementById('impressumModal').classList.remove('hidden')" class="text-white/70 text-xs font-medium hover:text-white underline transition-colors">Impressum</button>
-        </div>
-    </div>
-</div>
-
-<div id="nameModal" class="hidden fixed inset-0 dimmer flex items-center justify-center z-50 p-4 pt-20">
-    <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-xs w-full text-center relative overflow-visible">
-        
-        <img src="https://github.com/aufdemholzweg/holzquartett/blob/main/images/klotzi_name.png?raw=true" alt="Klotzi Name" class="absolute -top-24 left-1/2 -translate-x-1/2 w-48 pointer-events-none drop-shadow-xl z-20" onerror="this.style.display='none'">
-        
-        <div class="relative z-10 mt-16"> 
-            <h2 class="text-xl font-bold text-gray-800 mb-6">Dein Name</h2>
-            <input type="text" id="playerName" class="w-full p-3 border-2 border-gray-200 rounded-lg mb-6 text-center font-bold text-lg" placeholder="Name eingeben" maxlength="12">
-            <button id="nameSubmitButton" class="w-full bg-amber-500 text-white font-bold py-3 rounded-lg shadow-lg hover:bg-amber-600">Starten</button>
-        </div>
-    </div>
-</div>
-
-<div id="multiplayerLobbyModal" class="hidden fixed inset-0 dimmer flex items-center justify-center z-50 p-4 pt-20">
-    <div class="bg-white rounded-2xl shadow-2xl p-6 max-w-sm w-full text-center">
-        <h2 id="lobbyTitle" class="text-xl font-bold text-amber-800 mb-2">Lobby</h2>
-        <p id="lobbyText" class="text-sm text-gray-600 mb-4">Lass deinen Freund scannen:</p>
-        <div class="flex justify-center mb-4"><div id="qrcode" class="p-2 bg-white rounded-lg border border-gray-200"></div></div>
-        <div class="bg-gray-100 p-2 rounded mb-4 flex items-center gap-2">
-            <input id="shareLink" type="text" class="bg-transparent text-xs w-full text-gray-600 font-mono" readonly>
-            <button onclick="window.copyShareLink()" class="bg-white px-3 py-1 rounded text-xs font-bold border shadow-sm hover:bg-gray-50">Kopieren</button>
-        </div>
-        <p class="text-sm text-green-600 font-bold animate-pulse">Warte auf Mitspieler...</p>
-    </div>
-</div>
-
 <div id="gameOverModal" class="hidden fixed inset-0 dimmer flex items-center justify-center z-50 p-4 pt-20">
     <div class="bg-white rounded-2xl shadow-2xl p-6 max-w-sm w-full text-center relative overflow-visible">
         
@@ -560,6 +470,21 @@ const getPublicDataRef = (coll, docId) => {
     return collection(db, 'artifacts', appId, 'public', 'data', coll);
 };
 
+// -------------------------------------------------------------
+// WAKE LOCK (BILDSCHIRM WACH HALTEN)
+// -------------------------------------------------------------
+let wakeLock = null;
+async function requestWakeLock() {
+    if ('wakeLock' in navigator) {
+        try {
+            wakeLock = await navigator.wakeLock.request('screen');
+            console.log('Wake Lock aktiv');
+        } catch (err) {
+            console.log(`${err.name}, ${err.message}`);
+        }
+    }
+}
+
 async function trackEvent(type) {
     if (!auth || !auth.currentUser) return;
     const ref = getPublicDataRef("statistics", "usage"); 
@@ -603,6 +528,7 @@ window.setNavState = (state) => {
             e.preventDefault();
             if(confirm('Spiel abbrechen und zum Startbildschirm zurückkehren?')) { 
                 if(typeof unsubscribeGame === 'function') unsubscribeGame();
+                if(wakeLock) wakeLock.release();
                 window.location.href = "https://aufdemholzweg.github.io/holzquartett/"; 
             } 
         };
@@ -732,7 +658,7 @@ const woodCards=[
  {name:"Eiche", dk:"2", druckfestigkeit:40, quellen:11.7, rohdichte:670, emodul:13000, preis:3, imgTree:`${IMG_BASE}/eiche_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/eiche_2.jpeg${IMG_SUFFIX}`},
  {name:"Erle", dk:"5", druckfestigkeit:60, quellen:9.4, rohdichte:550, emodul:9500, preis:1, imgTree:`${IMG_BASE}/erle_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/erle_2.jpeg${IMG_SUFFIX}`},
  {name:"Esche", dk:"5", druckfestigkeit:60, quellen:8.5, rohdichte:670, emodul:13000, preis:2, imgTree:`${IMG_BASE}/esche_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/esche_2.jpeg${IMG_SUFFIX}`},
- {name:"Fichte", dk:"4", druckfestigkeit:50, quellen:8, rohdichte:480, emodul:11000, preis:2, imgTree:`${IMG_BASE}/fichte_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/fichte_2.jpeg${IMG_SUFFIX}`},
+ {name:"Fichte", dk:"4", druckfestigkeit:60, quellen:8, rohdichte:480, emodul:11000, preis:2, imgTree:`${IMG_BASE}/fichte_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/fichte_2.jpeg${IMG_SUFFIX}`},
  {name:"Hemlock", dk:"4", druckfestigkeit:60, quellen:8.5, rohdichte:480, emodul:10000, preis:4, imgTree:`${IMG_BASE}/hemlock_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/hemlock_2.jpeg${IMG_SUFFIX}`},
  {name:"Hickory", dk:"4", druckfestigkeit:60, quellen:11, rohdichte:800, emodul:15000, preis:3, imgTree:`${IMG_BASE}/hickory_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/hickory_2.jpeg${IMG_SUFFIX}`},
  {name:"Kiefer", dk:"3-4", druckfestigkeit:60, quellen:12.4, rohdichte:520, emodul:11000, preis:1, imgTree:`${IMG_BASE}/kiefer_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/kiefer_2.jpeg${IMG_SUFFIX}`},
@@ -750,7 +676,7 @@ const woodCards=[
  {name:"Rüster", dk:"4", druckfestigkeit:40, quellen:8.3, rohdichte:670, emodul:11000, preis:3, imgTree:`${IMG_BASE}/ulme_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/ulme_2.jpeg${IMG_SUFFIX}`},
  {name:"Tanne", dk:"4", druckfestigkeit:40, quellen:7.5, rohdichte:450, emodul:11000, preis:2, imgTree:`${IMG_BASE}/tanne_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/tanne_2.jpeg${IMG_SUFFIX}`},
  {name:"Teak", dk:"1", druckfestigkeit:60, quellen:5.8, rohdichte:670, emodul:13000, preis:5, imgTree:`${IMG_BASE}/teak_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/teak_2.jpeg${IMG_SUFFIX}`},
- {name:"Wengé", dk:"2", druckfestigkeit:90, quellen:9.4, rohdichte:850, emodul:16000, preis:4, imgTree:`${IMG_BASE}/wenge_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/wenge_2.jpeg${IMG_SUFFIX}`},
+ {name:"Wengé", dk:"2", druckfestigkeit:100, quellen:9.4, rohdichte:850, emodul:16000, preis:4, imgTree:`${IMG_BASE}/wenge_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/wenge_2.jpeg${IMG_SUFFIX}`},
  {name:"Zebrano", dk:"2-3", druckfestigkeit:60, quellen:9, rohdichte:770, emodul:15400, preis:4, imgTree:`${IMG_BASE}/zebrano_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/zebrano_2.jpeg${IMG_SUFFIX}`},
  {name:"Zeder", dk:"1-2", druckfestigkeit:40, quellen:11, rohdichte:550, emodul:7200, preis:5, imgTree:`${IMG_BASE}/zeder_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/zeder_2.jpeg${IMG_SUFFIX}`}
 ];
@@ -810,7 +736,7 @@ const quizQuestions = [
     {q:"Was stellen die Jahresringe im Querschnitt eines Baumstammes dar?", o:["Holzzuwachs pro Jahr","Krankheiten","Risse","Wurzeln"], c:1, e:"Ein Ring besteht aus Frühholz (Frühling) und Spätholz (Sommer)."},
     {q:"Wodurch unterscheiden sich Frühholz und Spätholz innerhalb eines Jahresringes?", o:["Frühholz hell, Spätholz dunkel","Frühholz ist dunkler","Kein Unterschied","Spätholz ist blau"], c:1, e:"Frühholz dient dem Wassertransport, Spätholz der Festigkeit."},
     
-    {q:"Welche physikalische Eigenschaft ist typisch für das Holz der Pappel?", o:["Leicht und weich","Schwer und hart","Witterungsfest","Schwarz"], c:1, e:"Pappelholz hat eine sehr geringe Dichte."},
+    {q:"Welche physikalische Eigenschaft ist typisch für das Holz der Pappel?", o:["Schwer und hart","Leicht und weich","Witterungsfest","Schwarz"], c:1, e:"Pappelholz hat eine sehr geringe Dichte."},
     {q:"Was ist das Kambium und welche Funktion hat es im Baumstamm?", o:["Die Rinde","Wachstumsschicht","Das Mark","Ein Ast"], c:1, e:"Hier findet die Zellteilung statt (Holz nach innen, Bast nach außen)."},
     {q:"Welches Holz verströmt einen intensiven, aromatischen Geruch, der an Bleistifte erinnert?", o:["Buche","Zeder","Ahorn","Esche"], c:1, e:"Zedernöl sorgt für den typischen Geruch und vertreibt Motten."},
     {q:"Was bedeutet es, wenn ein Holzbauteil als „imprägniert“ bezeichnet wird?", o:["Mit Schutzmittel getränkt","Geschliffen","Getrocknet","Lackiert"], c:0, e:"Der Schutz zieht tief in das Holz ein, anders als bei Lack."},
@@ -828,29 +754,29 @@ const quizQuestions = [
     {q:"Was versteht man unter dem Begriff „Maserholz“?", o:["Wirbelig strukturiertes Holz","Gerades Holz","Farbiges Holz","Faules Holz"], c:0, e:"Es entsteht oft an Wucherungen und ist sehr dekorativ."},
     {q:"Welche Holzart wird klassischerweise für die Herstellung von Weinfässern (Barrique) genutzt?", o:["Eiche","Fichte","Pappel","Birke"], c:0, e:"Eiche ist dicht (dank Thyllen) und gibt erwünschte Aromen an den Wein ab."},
     {q:"Was ist „Bläue“ im Holz?", o:["Zuwachs von Ästen","Verfärbung durch Pilze","Holzzerfall","Wuchsfehler"], c:1, e:"Bläue ist meist ein optischer Mangel, keine Zerstörung der Zellwand."},
-    {q:"Welcher Teil des Holzes weist die höchste Dichte und Härte auf?", o:["Spätholz","Frühholz","alles gleich","Kambium"], c:1, e:"Spätholz hat dickere Zellwände und kleinere Hohlräume."},
-    {q:"Nach welchem Prinzip ist eine Sperrholzplatte aufgebaut?", o:["Lagen um 90° verleimt","Längsholz aufeinander","Stäbe hochkant","PU-Klebstoff"], c:1, e:"Durch das „Absperren“ (Kreuzen) wird das Quellen und Schwinden minimiert."},
+    {q:"Welcher Teil des Holzes weist die höchste Dichte und Härte auf?", o:["Frühholz","Spätholz","alles gleich","Kambium"], c:1, e:"Spätholz hat dickere Zellwände und kleinere Hohlräume."},
+    {q:"Nach welchem Prinzip ist eine Sperrholzplatte aufgebaut?", o:["Längsholz aufeinander","Lagen um 90° verleimt","Stäbe hochkant","PU-Klebstoff"], c:1, e:"Durch das „Absperren“ (Kreuzen) wird das Quellen und Schwinden minimiert."},
     {q:"Welche Holzart zeigt im Radialschnitt glänzende „Spiegel“ (Markstrahlen)?", o:["Eiche","Fichte","Kiefer","Pappel"], c:0, e:"Die „Spiegel“ sind die angeschnittenen, breiten Markstrahlen der Eiche."},
     {q:"Welches Holz zeichnet sich durch besonders hohe Elastizität aus?", o:["Esche","Eiche","Pappel","Fichte"], c:0, e:"Esche ist biegsam und bricht nicht sofort (ideal für Sportgeräte)."},
-    {q:"Was ist ein Ast im Holz aus technischer Sicht?", o:["Eingewachsener Zweig","Wuchsfehler","Krankheit","Wurzel"], c:1, e:"Jeder Ast im Holz war früher ein Zweig außen am Baum."},
+    {q:"Was ist ein Ast im Holz aus technischer Sicht?", o:["Wuchsfehler","Eingewachsener Zweig","Krankheit","Wurzel"], c:1, e:"Jeder Ast im Holz war früher ein Zweig außen am Baum."},
     {q:"Welche Holzart wird häufig für die Herstellung von einfachen Paletten verwendet?", o:["Kiefer / Fichte","Nussbaum","Eiche","Teak"], c:0, e:"Für Einwegverpackungen muss das Holz billig, leicht und verfügbar sein."},
-    {q:"Was meint der Fachmann mit dem Ausdruck „Das Holz arbeitet“?", o:["Quillt & Schwindet","Macht Geräusche","Verrottet","Wächst"], c:1, e:"Das Quellen und Schwinden ist die wichtigste Eigenschaft bei der Konstruktion."},
+    {q:"Was meint der Fachmann mit dem Ausdruck „Das Holz arbeitet“?", o:["Macht Geräusche","Quillt & Schwindet","Verrottet","Wächst"], c:1, e:"Das Quellen und Schwinden ist die wichtigste Eigenschaft bei der Konstruktion."},
     {q:"Welche der folgenden Holzarten bezeichnet man als ringporig?", o:["Eiche","Buche","Ahorn","Fichte"], c:0, e:"Bei der Eiche sieht man die großen Poren im Frühholz als deutlichen Ring."},
     {q:"Was ist eine OSB-Platte (Oriented Strand Board)?", o:["Grobspanplatte","Massivholz","Vollkunststoff","MDF"], c:0, e:"Die Späne sind ausgerichtet, um der Platte mehr Festigkeit zu geben."},
-    {q:"In welcher Jahreszeit bildet der Baum das dunklere Spätholz?", o:["Sommer","Frühling","Winter","Immer"], c:1, e:"Im Frühling muss der Baum schnell Wasser leiten, im Sommer festigt er sich."},
-    {q:"Ab welcher Holzfeuchte besteht dauerhaft die Gefahr von Pilzbefall?", o:["20 %","0 %","8 %","100 %"], c:2, e:"Pilze brauchen freies Wasser. Trockenes Holz (unter 20 %) ist sicher."},
-    {q:"Warum vergraut Holz im Außenbereich mit der Zeit?", o:["UV-Licht & Regen","Staub","Fäule","Pilze"], c:1, e:"Das Lignin wird zerstört und ausgewaschen, zurück bleibt helle Cellulose."},
-    {q:"Welcher heimische Nadelbaum besitzt keine Harzkanäle?", o:["Tanne","Fichte","Kiefer","Lärche"], c:3, e:"Tannenholz ist harzfrei (ein wichtiges Unterscheidungsmerkmal zur Fichte)."},
-    {q:"Warum haben Pfannen oft Holzgriffe?", o:["Isoliert Wärme","reduziert Gewicht","Leitet Strom","Brennt nicht"], c:2, e:"Holz leitet Hitze nur sehr langsam weiter, man verbrennt sich nicht die Finger."},
-    {q:"Die Eibe ist ein Nadelholz. Welches typische Nadelholz-Merkmal fehlt ihr jedoch komplett?", o:["Die Harzkanäle","Jahresringe","Der farbige Kern","Die Härte"], c:2, e:"Im Gegensatz zu Fichte oder Kiefer besitzt die Eibe keine Harzkanäle."},
-    {q:"Was ist das besondere Merkmal der Poren bei der Robinie?", o:["Sie sind verthyllt","Sie sind leer","Sie sind quadratisch","Mit Harz gefüllt"], c:1, e:"Die Thyllen verstopfen die Poren komplett, was das Holz sehr dauerhaft macht."},
-    {q:"Welche Holzfeuchte stellt sich ungefähr ein, wenn Holz lange Zeit im Normalklima (20°C/65%) gelagert wird?", o:["ca. 12 %","ca. 6 – 8 %","ca. 18 %","ca. 30 %"], c:1, e:"Dies ist ein Standardwert für die „Ausgleichsfeuchte“ im Außenklima unter Dach."},
-    {q:"Bei welcher Holzart muss man bei der Oberflächenbeschichtung besonders mit Harzgallen rechnen?", o:["Fichte (o. Kiefer)","Eiche","Tanne","Buche"], c:1, e:"Fichte und Kiefer besitzen Harzkanäle, die bei Wärme auslaufen können."},
-    {q:"Warum fühlt sich Holz bei Raumtemperatur wärmer an als ein Stück Stahl?", o:["Schlechter Wärmeleiter","Holz heizt","Höhere Dichte","Gibt Feuchte ab"], c:1, e:"Stahl leitet die Körperwärme sofort ab (kalt), Holz isoliert (warm)."},
-    {q:"Woran erkennt man „Braunfäule“ am zerstörten Holz?", o:["Das Holz zerfällt würfelartig (Würfelbruch)","Das Holz wird weiß und faserig","Das Holz wird blau","Das Holz wird elastisch"], c:1, e:"Der Pilz baut Cellulose ab, das braune Lignin bleibt spröde zurück und bricht in Würfeln."},
+    {q:"In welcher Jahreszeit bildet der Baum das dunklere Spätholz?", o:["Frühling","Sommer","Winter","Immer"], c:1, e:"Im Frühling muss der Baum schnell Wasser leiten, im Sommer festigt er sich."},
+    {q:"Ab welcher Holzfeuchte besteht dauerhaft die Gefahr von Pilzbefall?", o:["0 %","8 %","20 %","100 %"], c:2, e:"Pilze brauchen freies Wasser. Trockenes Holz (unter 20 %) ist sicher."},
+    {q:"Warum vergraut Holz im Außenbereich mit der Zeit?", o:["Staub","UV-Licht & Regen","Fäule","Pilze"], c:1, e:"Das Lignin wird zerstört und ausgewaschen, zurück bleibt helle Cellulose."},
+    {q:"Welcher heimische Nadelbaum besitzt keine Harzkanäle?", o:["Fichte","Kiefer","Lärche","Tanne"], c:3, e:"Tannenholz ist harzfrei (ein wichtiges Unterscheidungsmerkmal zur Fichte)."},
+    {q:"Warum haben Pfannen oft Holzgriffe?", o:["reduziert Gewicht","Leitet Strom","Isoliert Wärme","Brennt nicht"], c:2, e:"Holz leitet Hitze nur sehr langsam weiter, man verbrennt sich nicht die Finger."},
+    {q:"Die Eibe ist ein Nadelholz. Welches typische Nadelholz-Merkmal fehlt ihr jedoch komplett?", o:["Jahresringe","Der farbige Kern","Die Harzkanäle","Die Härte"], c:2, e:"Im Gegensatz zu Fichte oder Kiefer besitzt die Eibe keine Harzkanäle."},
+    {q:"Was ist das besondere Merkmal der Poren bei der Robinie?", o:["Sie sind leer","Sie sind verthyllt","Sie sind quadratisch","Mit Harz gefüllt"], c:1, e:"Die Thyllen verstopfen die Poren komplett, was das Holz sehr dauerhaft macht."},
+    {q:"Welche Holzfeuchte stellt sich ungefähr ein, wenn Holz lange Zeit im Normalklima (20°C/65%) gelagert wird?", o:["ca. 6 – 8 %","ca. 12 %","ca. 18 %","ca. 30 %"], c:1, e:"Dies ist ein Standardwert für die „Ausgleichsfeuchte“ im Außenklima unter Dach."},
+    {q:"Bei welcher Holzart muss man bei der Oberflächenbeschichtung besonders mit Harzgallen rechnen?", o:["Eiche","Fichte (o. Kiefer)","Tanne","Buche"], c:1, e:"Fichte und Kiefer besitzen Harzkanäle, die bei Wärme auslaufen können."},
+    {q:"Warum fühlt sich Holz bei Raumtemperatur wärmer an als ein Stück Stahl?", o:["Holz heizt","Schlechter Wärmeleiter","Höhere Dichte","Gibt Feuchte ab"], c:1, e:"Stahl leitet die Körperwärme sofort ab (kalt), Holz isoliert (warm)."},
+    {q:"Woran erkennt man „Braunfäule“ am zerstörten Holz?", o:["Das Holz wird weiß und faserig","Das Holz zerfällt würfelartig (Würfelbruch)","Das Holz wird blau","Das Holz wird elastisch"], c:1, e:"Der Pilz baut Cellulose ab, das braune Lignin bleibt spröde zurück und bricht in Würfeln."},
     {q:"Woran erkennt man „Weißfäule“?", o:["Das Holz wird hell und faserig","Das Holz wird schwarz","Es entstehen Würfel","Es wird steinhart"], c:0, e:"Der Pilz baut das braune Lignin ab, die weiße Cellulose bleibt als weiche Faserstruktur zurück."},
     {q:"Was sind „Tüpfel“ in der Zellwand?", o:["Ventile für den Wasseraustausch","Krankheiten","Farbpigmente","Astlöcher"], c:0, e:"Sie verbinden benachbarte Zellen und ermöglichen den Flüssigkeitstransport."},
-    {q:"Wo bildet ein Laubbaum Reaktionsholz (Zugholz), wenn er schief steht?", o:["Auf der Oberseite (Zugseite)","Auf der Unterseite","Im Kern","In der Wurzel"], c:1, e:"Laubbäume „ziehen“ sich aktiv wieder gerade (im Gegensatz zu Nadelbäumen, die drücken)."}
+    {q:"Wo bildet ein Laubbaum Reaktionsholz (Zugholz), wenn er schief steht?", o:["Auf der Unterseite","Auf der Oberseite (Zugseite)","Im Kern","In der Wurzel"], c:1, e:"Laubbäume „ziehen“ sich aktiv wieder gerade (im Gegensatz zu Nadelbäumen, die drücken)."}
 ];
 function shuffleArray(a){ for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
 
@@ -1264,6 +1190,7 @@ window.selectAttribute = async (attr) => {
 
 window.startGameAI = (name) => {
     trackEvent('games_ai');
+    requestWakeLock(); // WAKE LOCK AKTIVIEREN
     gameMode='ai'; aiGame.playerName=name;
     window.setNavState('game');
     document.getElementById('ruleButton').classList.remove('hidden');
@@ -1285,6 +1212,7 @@ window.createGame = async (playerName) => {
     }
     localPlayerId = auth.currentUser.uid;
     trackEvent('games_multiplayer');
+    requestWakeLock(); // WAKE LOCK AKTIVIEREN
     gameMode='multiplayer';
     const lobby=document.getElementById('multiplayerLobbyModal'); lobby.classList.remove('hidden');
     gameId=Math.random().toString(36).substring(2,8).toUpperCase();
@@ -1306,6 +1234,7 @@ window.joinGame = async (id, playerName) => {
     if (!auth || !auth.currentUser) { setTimeout(()=>window.joinGame(id,playerName), 500); return; }
     localPlayerId = auth.currentUser.uid;
     gameMode='multiplayer'; gameId = id;
+    requestWakeLock(); // WAKE LOCK AKTIVIEREN
     const ref = getPublicDataRef("games", id);
     const snap = await getDoc(ref);
     if(snap.exists() && snap.data().status==='waiting'){
@@ -1431,11 +1360,13 @@ window.endGame = async (winnerName) => {
     if (isWin) {
         title.innerText = "GEWONNEN!";
         title.className = "text-3xl font-black mb-2 text-green-600";
-        text.innerHTML = `Herzlichen Glückwunsch! Du hast gewonnen.<br><br><div class="flex items-center justify-center gap-2 text-amber-600 font-bold bg-amber-50 p-2 rounded-lg"><span class="text-2xl">🔥</span> ${newGamesCount} Flammen gesammelt</div><div class="mt-2 text-sm text-gray-500">${rankData ? 'Rang: ' + rankData.title : ''}</div>`;
+        // RANG ENTFERNT, NUR FLAMMEN BLEIBEN
+        text.innerHTML = `Herzlichen Glückwunsch! Du hast gewonnen.<br><br><div class="flex items-center justify-center gap-2 text-amber-600 font-bold bg-amber-50 p-2 rounded-lg"><span class="text-2xl">🔥</span> ${newGamesCount} Flammen gesammelt</div>`;
     } else {
         title.innerText = "VERLOREN";
         title.className = "text-3xl font-black mb-2 text-gray-600";
-        text.innerHTML = `Schade, ${winnerName} hat gewonnen.<br>Dranbleiben lohnt sich!<br><br><div class="flex items-center justify-center gap-2 text-amber-600 font-bold bg-amber-50 p-2 rounded-lg"><span class="text-2xl">🔥</span> ${newGamesCount} Flammen gesammelt</div><div class="mt-2 text-sm text-gray-500">${rankData ? 'Rang: ' + rankData.title : ''}</div>`;
+        // RANG ENTFERNT, NUR FLAMMEN BLEIBEN
+        text.innerHTML = `Schade, ${winnerName} hat gewonnen.<br>Dranbleiben lohnt sich!<br><br><div class="flex items-center justify-center gap-2 text-amber-600 font-bold bg-amber-50 p-2 rounded-lg"><span class="text-2xl">🔥</span> ${newGamesCount} Flammen gesammelt</div>`;
     }
     
     document.getElementById('gameOverModal').classList.remove('hidden');
