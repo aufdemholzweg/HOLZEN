@@ -301,25 +301,21 @@
                     <div class="text-xs text-gray-600 mt-1">
                         <p class="mb-2">
                             <strong>Soweit nicht anders gekennzeichnet</strong>, stehen der Programmcode, das Spielkonzept, die Quizfragen und eigene Texte dieses Projekts unter der 
-                            <a href="https://creativecommons.org/licenses/by/4.0/deed.de" target="_blank" class="underline text-blue-600">Creative Commons Namensnennung 4.0 International Lizenz (CC BY 4.0)</a>.
-</p>
+                            <a href="https://creativecommons.org/licenses/by/4.0/deed.de" target="_blank" class="underline text-blue-600">Creative Commons Namensnennung 4.0 International Lizenz (CC BY 4.0)</a>.</p>
                         <p><strong>Das bedeutet:</strong> Sie dürfen das Material teilen und bearbeiten (auch für kommerzielle Zwecke), solange Sie den Urheber wie folgt nennen:</p>
                         <div class="bg-white p-2 border border-gray-300 rounded mt-1 font-mono text-[10px] text-gray-500 select-all">
-                             "HOLZEN" von Christopher Lehr, Quellcode verfügbar auf GitHub, lizenziert unter CC BY 4.0.
-</div>
+                              "HOLZEN" von Christopher Lehr, Quellcode verfügbar auf GitHub, lizenziert unter CC BY 4.0.
+                        </div>
                     </div>
                 </div>
 
                 <p class="mb-1 font-bold text-xs text-red-700">⚠️ Wichtiger Hinweis zu Drittinhalten:</p>
                 <p class="text-xs text-gray-600 mb-2">
-                    Von dieser freien Lizenzierung ausdrücklich <strong>ausgenommen</strong> sind eingebundene Medien Dritter im Repository. Diese verbleiben unter ihrem ursprünglichen Urheberrecht.
-Dies betrifft:
+                    Von dieser freien Lizenzierung ausdrücklich <strong>ausgenommen</strong> sind eingebundene Medien Dritter im Repository. Diese verbleiben unter ihrem ursprünglichen Urheberrecht. Dies betrifft:
                 </p>
                 <ul class="list-disc pl-4 text-xs text-gray-600 space-y-1 mb-2">
-                    <li>Die <strong>Holzbilder</strong> (im Ordner <code>/images</code>).
-Rechte liegen bei <em>holzvomfach.de</em> und <em>schreiner-seiten.de</em>.</li>
-                    <li>Die <strong>Sounds</strong> (im Ordner <code>/sounds</code>).
-Genutzt unter der Freesound License.</li>
+                    <li>Die <strong>Holzbilder</strong> (im Ordner <code>/images</code>). Rechte liegen bei <em>holzvomfach.de</em> und <em>schreiner-seiten.de</em>.</li>
+                    <li>Die <strong>Sounds</strong> (im Ordner <code>/sounds</code>). Genutzt unter der Freesound License.</li>
                     <li>Markennamen und Normen (DIN).</li>
                 </ul>
             </div>
@@ -336,24 +332,20 @@ Genutzt unter der Freesound License.</li>
             
             <div>
                 <h4 class="font-bold text-gray-900 mb-1">Datenschutz & Technik</h4>
-                <p class="mb-2">Da dies ein reines Forschungsprojekt ist, werden so wenige Daten wie möglich gespeichert.
-Dennoch kommen externe Dienstleister zum Einsatz, um die technische Funktion zu gewährleisten:</p>
+                <p class="mb-2">Da dies ein reines Forschungsprojekt ist, werden so wenige Daten wie möglich gespeichert. Dennoch kommen externe Dienstleister zum Einsatz, um die technische Funktion zu gewährleisten:</p>
                 
                 <ul class="list-disc pl-4 text-xs text-gray-600 space-y-2">
                     <li>
                         <strong>Hosting (GitHub Pages):</strong><br>
-                        Diese Webseite wird auf Servern von GitHub Inc. (USA) gehostet.
-Beim Aufruf der Seite werden technisch bedingt Verbindungsdaten (z. B. IP-Adresse) an GitHub übertragen, um die Inhalte auszuliefern.
-</li>
+                        Diese Webseite wird auf Servern von GitHub Inc. (USA) gehostet. Beim Aufruf der Seite werden technisch bedingt Verbindungsdaten (z. B. IP-Adresse) an GitHub übertragen, um die Inhalte auszuliefern.
+                    </li>
                     <li>
                         <strong>Datenbank & Backend (Google Firebase):</strong><br>
-                        Für die Multiplayer-Funktion (Spielstände, Synchronisation) nutze ich Google Firebase (Google Ireland Limited).
-Die Spieldaten werden temporär auf deren Servern gespeichert. Ich verwenden hier die "Anonyme Anmeldung", sodass keine Klarnamen oder E-Mail-Adressen von Nutzern gespeichert werden.
-</li>
+                        Für die Multiplayer-Funktion (Spielstände, Synchronisation) nutze ich Google Firebase (Google Ireland Limited). Die Spieldaten werden temporär auf deren Servern gespeichert. Ich verwenden hier die "Anonyme Anmeldung", sodass keine Klarnamen oder E-Mail-Adressen von Nutzern gespeichert werden.
+                    </li>
                     <li>
                         <strong>Cookies / LocalStorage:</strong><br>
-                        Das Spiel speichert lediglich technische Einstellungen (z. B. Sound an/aus) lokal auf Ihrem Gerät ("LocalStorage").
-Es werden keine Tracking oder Werbe-Cookies eingesetzt.
+                        Das Spiel speichert lediglich technische Einstellungen (z. B. Sound an/aus) lokal auf Ihrem Gerät ("LocalStorage"). Es werden keine Tracking oder Werbe-Cookies eingesetzt.
                     </li>
                 </ul>
             </div>
@@ -521,6 +513,7 @@ Es werden keine Tracking oder Werbe-Cookies eingesetzt.
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
 import { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 import { getFirestore, doc, getDoc, setDoc, updateDoc, onSnapshot, serverTimestamp, deleteDoc, collection, query, orderBy, limit, getDocs, increment } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
 const firebaseConfig = {
   apiKey: "AIzaSyCyRXl8-JPr1xTXPDi1VG-eQk6fOnTpqUI",
   authDomain: "holzquartett-3a177.firebaseapp.com",
@@ -530,6 +523,7 @@ const firebaseConfig = {
   appId: "1:1081595025073:web:bc571fffb6e4f20b27f490",
   measurementId: "G-HKLWFJE83K"
 };
+
 const activeConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : firebaseConfig;
 const appId = typeof __app_id !== 'undefined' ? __app_id : 'holzquartett-3a177';
 
@@ -555,6 +549,7 @@ const initAuth = async () => {
     }
 };
 initAuth();
+
 const getPublicDataRef = (coll, docId) => {
     if(docId) return doc(db, 'artifacts', appId, 'public', 'data', coll, docId);
     return collection(db, 'artifacts', appId, 'public', 'data', coll);
@@ -602,6 +597,7 @@ const NAV_ICONS = {
                   </svg>`,
     house: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>`
 };
+
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -645,11 +641,13 @@ window.setNavState = (state) => {
 
 // Initial Call
 window.setNavState('menu');
+
 let gameMode=null, gameId=null, localPlayerId=null, unsubscribeGame=null, localGameState={}, winStreak=0, hasCopiedShareLink=false;
 let isMuted=false;
 let roundSoundPlayed=false;
 let lastRoundWinningWoodName = null;
 let aiGame={playerName:'',playerCards:[],aiCards:[],currentPlayerCard:null,currentAiCard:null,roundInProgress:false,turn:'player'};
+
 // --- RUN LOGIK ---
 function checkRun() {
     if (winStreak === 5) {
@@ -676,7 +674,7 @@ rohdichte:{
      logic: 'Hoch gewinnt', 
      default: true,
      description: 'Die Normal-Rohdichte beschreibt das Gewicht des Holzes in kg/m³. Er bezieht sich auf das Normalklima bei ca. 12 % Holzfeuchtte (DIN 68364). Sie korreliert oft mit der Festigkeit von Hölzern.'
-},
+ },
  emodul:{
      icon:'〰️',
      name:'E-Modul',
@@ -684,7 +682,7 @@ rohdichte:{
      logic: 'Hoch gewinnt', 
      default: true,
      description: 'Der E-Modul (Elastizitätsmodul) beschreibt die Steifigkeit des Holzes nach DIN EN 338 (in N/mm²). Er zeigt an, wie stark sich das Holz unter Kraftaufwand elastisch verformt. Hölzer mit hohem E-Modul sind steifer und bleiben unter Last formstabiler, solange die Belastung im elastischen Bereich bleibt und keine bleibende Verformung entsteht.'
-},
+ },
 dk:{
      icon:'🛡️',
      name:'Dauerhaftigkeit',
@@ -692,7 +690,7 @@ dk:{
      logic: 'Niedrig gewinnt', 
      default: true,
      description: 'Die Dauerhaftigkeit nach DIN EN 350 gibt an, wie resistent das Kernholz gegen biologischen Befall ist: DK 1 bedeutet eine sehr lange Wiederstandsfähigkeit gegenüber Pilze, Insekten und andere Schädlinge, DK 5 dagegen eine sehr geringe Dauerhaftigkeit.'
-},
+ },
  quellen:{
      icon:'↔️',
      name:'Quellen/Schw.',
@@ -700,18 +698,14 @@ dk:{
      logic: 'Niedrig gewinnt', 
      default: true,
      description: 'Angegeben ist das mittlere Schwindmaß (%). Dieser Wert beschreibt die durchschnittliche Maßänderung quer zur Faser vom fasergesättigten Zustand (ca. 30 % Holzfeuchte) bis zum darrtrockenen Zustand (0 %).'
-},
+ },
  preis:{
      icon:'💰',
      name:'Materialkosten',
      unit:'(Preisgruppe)', 
      logic: 'Niedrig gewinnt', 
      default: true,
-     description: `Die Materialkosten sind ein entscheidender Faktor für die Wirtschaftlichkeit eines Holzes.
-Gruppe 1 bedeutet, es ist sehr günstig, Gruppe 5 bedeuten sehr hohe Kosten (€/m³).
-Gruppe 1: 0 € bis 699 €; Gruppe 2: 700 € bis 1199 €;
-Gruppe 3:   1200 € bis 1999 €; Gruppe 4:   2000 € bis 3999 €;
-Gruppe 5: mehr als 4000 €`
+     description: `Die Materialkosten sind ein entscheidender Faktor für die Wirtschaftlichkeit eines Holzes. Gruppe 1 bedeutet, es ist sehr günstig, Gruppe 5 bedeuten sehr hohe Kosten (€/m³). Gruppe 1: 0 € bis 699 €; Gruppe 2: 700 € bis 1199 €; Gruppe 3:   1200 € bis 1999 €; Gruppe 4:   2000 € bis 3999 €; Gruppe 5: mehr als 4000 €`
  }
 };
 // RANDOM DEFAULT ATTRIBUTES
@@ -726,13 +720,21 @@ function getRandomDefaultAttributes() {
 }
 
 let activeAttributeKeys = getRandomDefaultAttributes();
-const sounds={
- flip:new Audio('https://cdn.pixabay.com/audio/2022/03/15/audio_139083c224.mp3'),
- win:new Audio('https://github.com/aufdemholzweg/holzquartett/blob/64126fed45ff8c3fb4bd833f473d83f51ba0548b/Sounds/spielzuggewonnen.mp3?raw=true'),
- quizTick: new Audio('https://github.com/aufdemholzweg/holzquartett/blob/c491fcce7b6340c1b7cf0852321134012a156131/Sounds/ticken_bei_quizfrage.mp3?raw=true'),
- tieAlert: new Audio('https://github.com/aufdemholzweg/holzquartett/blob/main/Sounds/Quiztime.mp3?raw=true'),
- gameWin: new Audio('https://github.com/aufdemholzweg/holzquartett/blob/main/Sounds/win%20game.mp3?raw=true')
+
+const SOUND_BASE_URL = "https://github.com/aufdemholzweg/HOLZEN/blob/main/Sounds";
+const SOUND_PARAM = "?raw=true";
+
+const sounds = {
+    flip: new Audio(`${SOUND_BASE_URL}/cardflip.mp3${SOUND_PARAM}`),
+    win: new Audio(`${SOUND_BASE_URL}/spielzuggewonnen.mp3${SOUND_PARAM}`),
+    quizTick: new Audio(`${SOUND_BASE_URL}/ticken_bei_quizfrage.mp3${SOUND_PARAM}`),
+    tieAlert: new Audio(`${SOUND_BASE_URL}/Quiztime.mp3${SOUND_PARAM}`),
+    gameWin: new Audio(`${SOUND_BASE_URL}/win%20game.mp3${SOUND_PARAM}`)
 };
+
+// Töne vorladen für bessere Performance
+Object.values(sounds).forEach(s => s.preload = 'auto');
+
 function playSound(a){ if(!isMuted && a){ a.currentTime=0; a.play().catch(()=>{}); } }
 
 function isOpponentNameBackVisible(){ return localStorage.getItem('holzquartett_showOpponentNameOnBack')==='true'; }
@@ -927,10 +929,12 @@ window.closeAttrConfig = () => {
 function toggleAttribute(key, el) {
     const idx = activeAttributeKeys.indexOf(key);
     if (idx > -1) {
-        if(activeAttributeKeys.length <= 3) { alert("Mindestens 3 Eigenschaften müssen aktiv sein!"); return; }
+        if(activeAttributeKeys.length <= 3) { alert("Mindestens 3 Eigenschaften müssen aktiv sein!");
+        return; }
         activeAttributeKeys.splice(idx, 1);
     } else {
-        if(activeAttributeKeys.length >= 5) { return; } 
+        if(activeAttributeKeys.length >= 5) { return;
+        } 
         activeAttributeKeys.push(key);
     }
     const isSelected = activeAttributeKeys.includes(key);
@@ -950,7 +954,8 @@ function createCard(data, isRevealed, isPlayer, isActive, highlightAttr){
     const card = document.createElement('div');
     card.className = `card-3d w-full h-full relative ${isPlayer?'cursor-pointer hover-lift':''}`;
     if(!isRevealed) card.classList.add('card-flipped');
-    if(isPlayer) { card.setAttribute('role', 'button'); card.setAttribute('tabindex', '0'); }
+    if(isPlayer) { card.setAttribute('role', 'button'); card.setAttribute('tabindex', '0');
+    }
 
     const canSelect = isPlayer && ((gameMode==='ai' && aiGame.turn==='player' && !aiGame.roundInProgress) || (gameMode==='multiplayer' && localGameState.turn===localPlayerId && !localGameState.lastResult));
     const front = document.createElement('div');
@@ -1103,7 +1108,8 @@ function evaluateRoundAI(attr){
     const pv = getNumericValue(rawPv, attr);
     const av = getNumericValue(rawAv, attr);
     const logic = attributeInfo[attr].logic;
-    let pWins = (logic === 'Niedrig gewinnt') ? (pv < av) : (pv > av);
+    let pWins = (logic === 'Niedrig gewinnt') ?
+    (pv < av) : (pv > av);
     
     if(pv === av) {
         showTieOverlay(() => {
@@ -1120,7 +1126,8 @@ function evaluateRoundAI(attr){
 }
 
 function finishRoundAI(attr, rawPv, rawAv, pWins) {
-    const resText = pWins===true ? 'Du gewinnst!' : 'Computer gewinnt!';
+    const resText = pWins===true ?
+    'Du gewinnst!' : 'Computer gewinnt!';
     const resColor = pWins===true ? 'text-green-600' : 'text-red-600';
     document.getElementById('resultText').innerText = resText;
     document.getElementById('resultText').className = `text-2xl font-black uppercase tracking-wide mb-2 ${resColor}`;
@@ -1139,7 +1146,8 @@ function finishRoundAI(attr, rawPv, rawAv, pWins) {
     }
     openBottomSheet(resText);
     const pC=aiGame.playerCards.shift(); const aC=aiGame.aiCards.shift();
-    if(pWins===true){ aiGame.playerCards.push(pC, aC); aiGame.turn='player'; }
+    if(pWins===true){ aiGame.playerCards.push(pC, aC); aiGame.turn='player';
+    }
     else { aiGame.aiCards.push(aC, pC); aiGame.turn='ai'; }
     if(aiGame.playerCards.length===0) window.endGame("Computer");
     if(aiGame.aiCards.length===0) window.endGame(aiGame.playerName);
@@ -1216,25 +1224,31 @@ function listenToGameChanges(){
                 const c = createCard(gd.currentCards[oppId], false, false, !isPlayerTurn, highlightAttr);
                 ac.appendChild(c);
                 if(gd.lastResult){ setTimeout(()=> { c.classList.remove('card-flipped'); playSound(sounds.flip); }, 100); }
-            } else { ac.innerHTML = `<div class="w-full h-full bg-gray-200 rounded-2xl flex items-center justify-center text-xs text-gray-500">Warte auf Gegner-Karte...</div>`; }
+            } else { ac.innerHTML = `<div class="w-full h-full bg-gray-200 rounded-2xl flex items-center justify-center text-xs text-gray-500">Warte auf Gegner-Karte...</div>`;
+            }
             
             if(gd.lastResult){
                  const wId = gd.lastResult.winnerId;
                  const iWin = wId===localPlayerId;
                  
                  // RUN LOGIK ONLINE
-                 if(iWin) { winStreak++; checkRun(); } else if(wId !== 'tie') { winStreak = 0; }
+                 if(iWin) { winStreak++;
+                 checkRun(); } else if(wId !== 'tie') { winStreak = 0;
+                 }
 
-                 if(gd.currentCards[wId]) { lastRoundWinningWoodName = gd.currentCards[wId].name; }
+                 if(gd.currentCards[wId]) { lastRoundWinningWoodName = gd.currentCards[wId].name;
+                 }
                  if(!roundSoundPlayed && iWin) playSound(sounds.win);
                  roundSoundPlayed=true;
                  const resText = iWin ? 'Du gewinnst!' : (wId==='tie'?'Unentschieden':'Gegner gewinnt!');
-                 document.getElementById('resultText').className = iWin ? 'text-2xl font-black uppercase text-green-600' : 'text-2xl font-black uppercase text-red-600';
+                 document.getElementById('resultText').className = iWin ?
+                 'text-2xl font-black uppercase text-green-600' : 'text-2xl font-black uppercase text-red-600';
                  document.getElementById('resultDetails').innerText = `${attributeInfo[gd.lastResult.attribute].name}: ${gd.lastResult.values[localPlayerId]} vs ${gd.lastResult.values[oppId]}`;
                  if(iWin) showHappyWorm();
                  if(document.getElementById('bottomSheet').classList.contains('hidden')) openBottomSheet(resText);
             } else { roundSoundPlayed=false; closeBottomSheet(); }
-            document.getElementById('turnIndicator').innerText = (gd.turn===localPlayerId) ? "Du bist am Zug!" : "Gegner wählt...";
+            document.getElementById('turnIndicator').innerText = (gd.turn===localPlayerId) ?
+            "Du bist am Zug!" : "Gegner wählt...";
             if(gd.status==='finished'){
                 let winnerName = "";
                 if (gd.players[localPlayerId].cards.length > 0) winnerName = gd.players[localPlayerId].name;
@@ -1301,7 +1315,8 @@ window.startGameAI = (name) => {
 let authRetries = 0;
 window.createGame = async (playerName) => {
     if (!auth || !auth.currentUser) { 
-        if(authRetries > 10) { alert("Verbindungsfehler"); return; }
+        if(authRetries > 10) { alert("Verbindungsfehler");
+        return; }
         authRetries++; setTimeout(() => window.createGame(playerName), 500); return;
     }
     localPlayerId = auth.currentUser.uid;
@@ -1314,7 +1329,6 @@ window.createGame = async (playerName) => {
     document.getElementById('shareLink').value=joinUrl;
     document.getElementById('qrcode').innerHTML = "";
     new QRCode(document.getElementById('qrcode'), {text: joinUrl, width: 128, height: 128});
-    
     await setDoc(getPublicDataRef("games", gameId),{
         gameId, status:'waiting', playerIds:[localPlayerId],
         players:{[localPlayerId]:{name:playerName,cards:[],status:'online'}},
@@ -1325,10 +1339,12 @@ window.createGame = async (playerName) => {
 };
 
 window.joinGame = async (id, playerName) => {
-    if (!auth || !auth.currentUser) { setTimeout(()=>window.joinGame(id,playerName), 500); return; }
+    if (!auth || !auth.currentUser) { setTimeout(()=>window.joinGame(id,playerName), 500); return;
+    }
     localPlayerId = auth.currentUser.uid;
     gameMode='multiplayer'; gameId = id;
-    requestWakeLock(); // WAKE LOCK AKTIVIEREN
+    requestWakeLock();
+    // WAKE LOCK AKTIVIEREN
     const ref = getPublicDataRef("games", id);
     const snap = await getDoc(ref);
     if(snap.exists() && snap.data().status==='waiting'){
@@ -1365,9 +1381,12 @@ window.nextRound = async () => {
         let c1=gs.players[p1].cards.shift();
         let c2=gs.players[p2].cards.shift();
         const w = gs.lastResult.winnerId;
-        if(w===p1){ if(c1) gs.players[p1].cards.push(c1); if(c2) gs.players[p1].cards.push(c2); }
-        else if(w===p2){ if(c1) gs.players[p2].cards.push(c1); if(c2) gs.players[p2].cards.push(c2); }
-        else { if(c1) gs.players[p1].cards.push(c1); if(c2) gs.players[p2].cards.push(c2); }
+        if(w===p1){ if(c1) gs.players[p1].cards.push(c1); if(c2) gs.players[p1].cards.push(c2);
+        }
+        else if(w===p2){ if(c1) gs.players[p2].cards.push(c1); if(c2) gs.players[p2].cards.push(c2);
+        }
+        else { if(c1) gs.players[p1].cards.push(c1); if(c2) gs.players[p2].cards.push(c2);
+        }
         if(gs.players[p1].cards.length===0 || gs.players[p2].cards.length===0){
             await updateDoc(getPublicDataRef("games", gameId), {status:'finished', players:gs.players});
             return;
@@ -1395,7 +1414,8 @@ async function updateMainMenuStats(user) {
     const statsRef = doc(db, 'artifacts', appId, 'users', user.uid, 'gamification', 'stats');
     try {
         const snap = await getDoc(statsRef);
-        const count = snap.exists() ? (snap.data().gamesPlayed || 0) : 0;
+        const count = snap.exists() ?
+        (snap.data().gamesPlayed || 0) : 0;
         const rank = calculateRank(count);
         const container = document.getElementById('mainMenuStats');
         if(container) {
@@ -1417,16 +1437,13 @@ window.endGame = async (winnerName) => {
     document.getElementById('gameContainer').classList.add('hidden');
     document.getElementById('bottomSheet').classList.add('hidden');
     document.getElementById('bottomSheetBackdrop').classList.add('hidden');
-    
     // Feedback Button State Reset
     document.getElementById('gameOverFeedbackContainer').classList.add('hidden');
     
     const isWin = (winnerName === (gameMode === 'ai' ? aiGame.playerName : localGameState.players[localPlayerId].name));
-    
     // NEUE LOGIK: VERLIERER ANIMATION
     const sceneStage = document.querySelector('.scene-stage');
     const klotziImg = sceneStage.querySelector('.klotzi-real');
-    
     if (isWin) {
         sceneStage.classList.remove('lose-state');
         klotziImg.src = "https://github.com/aufdemholzweg/holzquartett/blob/main/images/klotzi_win.png?raw=true";
@@ -1446,7 +1463,8 @@ window.endGame = async (winnerName) => {
             newGamesCount = snap.data().gamesPlayed || 0;
             rankData = calculateRank(newGamesCount);
         } catch (e) {}
-        if (isWin) { await updateLeaderboard(gameMode === 'ai' ? aiGame.playerName : localGameState.players[localPlayerId].name); }
+        if (isWin) { await updateLeaderboard(gameMode === 'ai' ? aiGame.playerName : localGameState.players[localPlayerId].name);
+        }
     }
     
     const title = document.getElementById('gameOverTitle');
@@ -1487,7 +1505,8 @@ window.showLeaderboard = async (fromMenu = false) => {
     try {
         const q=query(getPublicDataRef("leaderboard"), orderBy("wins","desc"), limit(10));
         const snap=await getDocs(q);
-        if(snap.empty){ list.innerHTML='<div class="text-center py-4 text-gray-400">Keine Einträge</div>'; return; }
+        if(snap.empty){ list.innerHTML='<div class="text-center py-4 text-gray-400">Keine Einträge</div>'; return;
+        }
         list.innerHTML = snap.docs.map((d,i)=>`<div class="flex justify-between p-3 rounded-lg ${i%2===0?'bg-gray-50':'bg-white'} border border-gray-100"><span class="font-bold text-gray-700">${i+1}. ${d.data().name}</span><span class="font-bold text-amber-600">${d.data().wins} 🏆</span></div>`).join('');
     } catch(e){ list.innerHTML='<div class="text-center text-red-400 text-sm">Fehler beim Laden</div>'; }
 };
@@ -1529,9 +1548,11 @@ window.showGameInfo = () => {
         html += `<div class="p-3 rounded-xl border-2 ${isBetter ? 'border-green-400 bg-green-50' : 'border-blue-400/80 bg-blue-50/50'} mb-2">
                     <div class="flex justify-between items-center mb-1">
                         <span class="text-lg font-bold text-gray-800">${info.icon} ${info.name}</span>
-                        <span class="text-sm font-semibold ${isBetter ? 'text-green-700' : 'text-blue-700'}">${isBetter ? '⬆ Hoch' : '⬇ Niedrig'}</span>
+                        <span class="text-sm font-semibold ${isBetter 
+? 'text-green-700' : 'text-blue-700'}">${isBetter ? '⬆ Hoch' : '⬇ Niedrig'}</span>
                     </div>
-                    <p class="text-xs text-gray-700 leading-snug">${info.description || ''}</p>
+                    <p class="text-xs text-gray-700 leading-snug">${info.description ||
+''}</p>
                  </div>`;
     }
     list.innerHTML = html;
@@ -1545,7 +1566,8 @@ window.closeGameInfo = () => {
 window.closeInfoModal = () => document.getElementById('infoModal').classList.add('hidden');
 window.resetGame = () => location.reload();
 
-function closeBottomSheet(){ const bs=document.getElementById('bottomSheet'); const bd=document.getElementById('bottomSheetBackdrop'); bs.classList.add('translate-y-full'); bd.classList.add('opacity-0'); setTimeout(()=>{bs.classList.add('hidden');bd.classList.add('hidden');},300); }
+function closeBottomSheet(){ const bs=document.getElementById('bottomSheet'); const bd=document.getElementById('bottomSheetBackdrop'); bs.classList.add('translate-y-full'); bd.classList.add('opacity-0'); setTimeout(()=>{bs.classList.add('hidden');bd.classList.add('hidden');},300);
+}
 function openBottomSheet(title){ if(title)document.getElementById('resultText').innerText=title; const bs=document.getElementById('bottomSheet'); const bd=document.getElementById('bottomSheetBackdrop'); bd.classList.remove('hidden'); bs.classList.remove('hidden'); setTimeout(()=>{bd.classList.remove('opacity-0'); bs.classList.remove('translate-y-full');},10); }
 
 document.getElementById('bsNextBtn').addEventListener('click',()=> { closeBottomSheet(); window.nextRound(); });
@@ -1553,7 +1575,8 @@ document.getElementById('bsNextBtn').addEventListener('click',()=> { closeBottom
 const soundToggle = document.getElementById('soundToggle');
 if(soundToggle) { soundToggle.checked = !isMuted; soundToggle.addEventListener('change', function() { isMuted = !this.checked; }); }
 const revealToggle = document.getElementById('revealBackToggle');
-if(revealToggle) { revealToggle.checked = isOpponentNameBackVisible(); revealToggle.addEventListener('change', function() { setOpponentNameBackVisible(this.checked); if(gameMode === 'ai' && !document.getElementById('gameContainer').classList.contains('hidden')) updateDisplayAI(); }); }
+if(revealToggle) { revealToggle.checked = isOpponentNameBackVisible(); revealToggle.addEventListener('change', function() { setOpponentNameBackVisible(this.checked); if(gameMode === 'ai' && !document.getElementById('gameContainer').classList.contains('hidden')) updateDisplayAI(); });
+}
 document.getElementById('bsInfoBtn').addEventListener('click', ()=>{ 
     const wood = lastRoundWinningWoodName || (aiGame.currentPlayerCard ? aiGame.currentPlayerCard.name : "Eiche");
     const content = detailedWoodInfo[wood] || `<p>Keine Detailinfo zu ${wood}</p>`;
@@ -1564,7 +1587,7 @@ document.getElementById('bsInfoBtn').addEventListener('click', ()=>{
         const img1 = cardData.imgTree || 'https://placehold.co/400x300?text=Bild+fehlt';
         const img2 = cardData.imgCross || 'https://placehold.co/400x300?text=Detail+fehlt';
         modalContent.innerHTML += `
-             <div class="grid grid-cols-2 gap-3 mt-4">
+            <div class="grid grid-cols-2 gap-3 mt-4">
                 <div>
                     <p class="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">Maserung</p>
                     <img src="${img1}" class="w-full h-32 object-cover rounded-lg border border-gray-200 shadow-sm cursor-pointer hover:opacity-90 transition" onclick="window.openImageViewer(this.src)">
