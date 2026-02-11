@@ -460,18 +460,18 @@ Es werden keine Tracking oder Werbe-Cookies eingesetzt.
             .seed { font-size: 20px; position: absolute; bottom: 120px; left: 160px; opacity: 0; animation: seed-fall 6s infinite; }
             .big-tree { font-size: 120px; position: absolute; bottom: 35px; left: 110px; transform-origin: bottom center; transform: scale(0); filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.2)); animation: tree-pop 6s infinite; }
             .sun-ray { position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: repeating-conic-gradient(from 0deg, rgba(255,255,255,0.4) 0deg 10deg, transparent 10deg 20deg); animation: spin-sun 20s linear infinite; z-index: 0; }
+            
+            /* NEUE LOGIK FÜR VERLIERER-SZENARIO */
+            .scene-stage.lose-state .sun-ray { display: none; }
+            .scene-stage.lose-state .big-tree { display: none; }
+            .scene-stage.lose-state .seed { animation: none; opacity: 1; transform: translateY(70px) scale(0.8); left: 140px; }
+            .scene-stage.lose-state .klotzi-real { animation: none; bottom: 50px; left: 60px; transform: scale(0.9); }
+
             @keyframes klotzi-logic { 0% { transform: translateX(-100px); } 10% { transform: translateX(0); } 15% { transform: scaleY(0.9); } 20% { transform: scaleY(1); } 40% { transform: translateX(0); } 45% { transform: translateY(-20px) rotate(-10deg); } 50% { transform: translateY(0) rotate(0deg); } 55% { transform: translateY(-20px) rotate(10deg); } 60% { transform: translateY(0) rotate(0deg); } 100% { transform: translateY(0); } }
             @keyframes seed-fall { 0%, 10% { opacity: 0; transform: translateY(0); } 15% { opacity: 1; transform: translateY(0); } 25% { opacity: 1; transform: translateY(70px) scale(0.5); } 26%, 100% { opacity: 0; } }
             @keyframes tree-pop { 0%, 25% { transform: scale(0); } 35% { transform: scale(1.2); } 40% { transform: scale(0.9); } 45% { transform: scale(1); } 100% { transform: scale(1); } }
             @keyframes spin-sun { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         </style>
-        
-        <div id="gameOverFeedbackContainer" class="hidden mb-4 animate-pop-in">
-             <a href="https://forms.office.com/r/dPiXWjBiGQ" target="_blank" 
-                class="block w-full bg-violet-600 hover:bg-violet-700 text-white font-bold py-4 rounded-xl shadow-lg text-center border-2 border-white/20 transition-transform active:scale-95">
-                💬 Feedback geben
-             </a>
-        </div>
 
         <div class="scene-stage" role="img" aria-label="Animation: Klotzi pflanzt einen Baum">
             <div class="sun-ray"></div>
@@ -483,6 +483,14 @@ Es werden keine Tracking oder Werbe-Cookies eingesetzt.
         <div class="relative z-10 mt-4"> 
             <h2 id="gameOverTitle" class="text-3xl font-black mb-2 text-gray-800">SPIELENDE</h2>
             <p id="gameOverText" class="text-gray-600 mb-6"></p>
+
+            <div id="gameOverFeedbackContainer" class="hidden mb-2 animate-pop-in">
+                 <a href="https://forms.office.com/r/dPiXWjBiGQ" target="_blank" 
+                    class="block w-full bg-violet-600 hover:bg-violet-700 text-white font-bold py-4 rounded-xl shadow-lg text-center border-2 border-white/20 transition-transform active:scale-95">
+                    💬 Feedback geben
+                 </a>
+            </div>
+
             <div class="space-y-3">
                 <button onclick="window.showLeaderboard(false)" class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3 rounded-lg border border-gray-300">🏆 Bestenliste</button>
                 <button onclick="window.resetGame()" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 rounded-lg shadow">🔄 Neues Spiel</button>
@@ -679,11 +687,11 @@ dk:{
 },
  preis:{
      icon:'💰',
-     name:'Preisstufe',
+     name:'Materialkosten',
      unit:'(Stufe)', 
      logic: 'Niedrig gewinnt', 
      default: true,
-     description: `Um eine einfache Vergleichbarkeit der Materialien zu gewährleisten, beziehen sich alle Preisangaben auf das Volumen von einem Kubikmeter (€/m³) Massivholz. Da reale Marktpreise je nach Region und Zeitpunkt schwanken, sind alle Hölzer in fünf feste Preisstufen unterteilt. 0€ bis 699€  = 1, 700€ bis 1199€ = 2, 1200€ bis 1999€ = 3, 2000€ bis 3999€ = 4, >4000€ = 5`
+     description: `Die Materialkosten sind ein entscheidender Faktor für die Wirtschaftlichkeit. Stufe 1 bedeutet sehr günstige Kosten (ideal für Massenprodukte/Bau), Stufe 5 bedeutet extrem hohe Kosten (nur für Luxusobjekte). Niedrige Kosten gewinnen!`
  }
 };
 // RANDOM DEFAULT ATTRIBUTES
@@ -800,7 +808,7 @@ const quizQuestions = [
     {q:"Welche heimische Baumart ist an ihrer charakteristischen weißen Rinde zu erkennen?", o:["Kiefer","Birke","Eiche","Nussbaum"], c:1, e:"Die weiße Rinde ist das sicherste Erkennungsmerkmal der Birke."},
     {q:"Welches Nadelholz wird im traditionellen Holzbau am häufigsten für Dachstühle verwendet?", o:["Fichte","Nussbaum","Kirschbaum","Balsa"], c:0, e:"Fichte ist leicht, fest, elastisch und günstig verfügbar."},
     {q:"Was stellen die Jahresringe im Querschnitt eines Baumstammes dar?", o:["Krankheiten","Holzzuwachs pro Jahr","Risse","Wurzeln"], c:1, e:"Ein Ring besteht aus Frühholz (Frühling) und Spätholz (Sommer)."},
-    {q:"Wodurch unterscheiden sich Frühholz und Spätholz innerhalb eines Jahresringes?", o:["Frühholz ist dunkler","Frühholz hell, Spätholz dunkel","Kein Unterschied","Spätholz ist blau"], c:1, e:"Frühholz dient dem Wassertransport, Spätholz der Festigkeit."},
+    {q:"Wodurch unterscheiden sich Frühholz und Spätholz innerhalb eines Jahresringes?", o:["Frühholz hell, Spätholz dunkel","Frühholz ist dunkler","Kein Unterschied","Spätholz ist blau"], c:1, e:"Frühholz dient dem Wassertransport, Spätholz der Festigkeit."},
     
     {q:"Welche physikalische Eigenschaft ist typisch für das Holz der Pappel?", o:["Schwer und hart","Leicht und weich","Witterungsfest","Schwarz"], c:1, e:"Pappelholz hat eine sehr geringe Dichte."},
     {q:"Was ist das Kambium und welche Funktion hat es im Baumstamm?", o:["Die Rinde","Wachstumsschicht","Das Mark","Ein Ast"], c:1, e:"Hier findet die Zellteilung statt (Holz nach innen, Bast nach außen)."},
@@ -1391,11 +1399,21 @@ window.endGame = async (winnerName) => {
     document.getElementById('gameOverFeedbackContainer').classList.add('hidden');
     
     const isWin = (winnerName === (gameMode === 'ai' ? aiGame.playerName : localGameState.players[localPlayerId].name));
-    const gameOverImg = document.getElementById('gameOverWorm');
-    if(gameOverImg) { gameOverImg.src = isWin ? "https://github.com/aufdemholzweg/holzquartett/blob/main/images/klotzi_win.png?raw=true" : "https://github.com/aufdemholzweg/holzquartett/blob/main/images/klotzi_lose.png?raw=true"; }
     
-    // NEU: GEWINNERSOUND
-    if(isWin) playSound(sounds.gameWin);
+    // NEUE LOGIK: VERLIERER ANIMATION
+    const sceneStage = document.querySelector('.scene-stage');
+    const klotziImg = sceneStage.querySelector('.klotzi-real');
+    
+    if (isWin) {
+        sceneStage.classList.remove('lose-state');
+        klotziImg.src = "https://github.com/aufdemholzweg/holzquartett/blob/main/images/klotzi_win.png?raw=true";
+        playSound(sounds.gameWin);
+        triggerConfetti();
+    } else {
+        sceneStage.classList.add('lose-state');
+        klotziImg.src = "https://github.com/aufdemholzweg/HOLZEN/blob/main/images/klotzi_lose.png?raw=true";
+    }
+    
     let newGamesCount = 0; let rankData = null;
     if (auth.currentUser) {
         const statsRef = doc(db, 'artifacts', appId, 'users', auth.currentUser.uid, 'gamification', 'stats');
@@ -1407,13 +1425,13 @@ window.endGame = async (winnerName) => {
         } catch (e) {}
         if (isWin) { await updateLeaderboard(gameMode === 'ai' ? aiGame.playerName : localGameState.players[localPlayerId].name); }
     }
+    
     const title = document.getElementById('gameOverTitle');
     const text = document.getElementById('gameOverText');
     if (isWin) {
         title.innerText = "GEWONNEN!";
         title.className = "text-3xl font-black mb-2 text-green-600";
         text.innerHTML = `Herzlichen Glückwunsch! Du hast gewonnen.<br><br><div class="flex items-center justify-center gap-2 text-amber-600 font-bold bg-amber-50 p-2 rounded-lg"><span class="text-2xl">🔥</span> ${newGamesCount} Flammen gesammelt</div><div class="mt-2 text-sm text-gray-500">${rankData ? 'Rang: ' + rankData.title : ''}</div>`;
-        triggerConfetti();
     } else {
         title.innerText = "VERLOREN";
         title.className = "text-3xl font-black mb-2 text-gray-600";
