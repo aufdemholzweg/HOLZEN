@@ -721,15 +721,14 @@ function getRandomDefaultAttributes() {
 
 let activeAttributeKeys = getRandomDefaultAttributes();
 
-const SOUND_BASE_URL = "https://github.com/aufdemholzweg/HOLZEN/blob/main/Sounds";
-const SOUND_PARAM = "?raw=true";
+const SOUND_BASE_URL = "https://github.com/aufdemholzweg/HOLZEN/raw/refs/heads/main/Sounds";
 
 const sounds = {
-    flip: new Audio(`${SOUND_BASE_URL}/cardflip.mp3${SOUND_PARAM}`),
-    win: new Audio(`${SOUND_BASE_URL}/spielzuggewonnen.mp3${SOUND_PARAM}`),
-    quizTick: new Audio(`${SOUND_BASE_URL}/ticken_bei_quizfrage.mp3${SOUND_PARAM}`),
-    tieAlert: new Audio(`${SOUND_BASE_URL}/Quiztime.mp3${SOUND_PARAM}`),
-    gameWin: new Audio(`${SOUND_BASE_URL}/win%20game.mp3${SOUND_PARAM}`)
+    flip: new Audio(`${SOUND_BASE_URL}/cardflip.mp3`),
+    win: new Audio(`${SOUND_BASE_URL}/spielgewonnen.mp3`),
+    quizTick: new Audio(`${SOUND_BASE_URL}/ticken_bei_quizfrage.mp3`),
+    tieAlert: new Audio(`${SOUND_BASE_URL}/Quiztime.mp3`),
+    gameWin: new Audio(`${SOUND_BASE_URL}/win%20game.mp3`)
 };
 
 // Töne vorladen für bessere Performance
