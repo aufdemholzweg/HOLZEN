@@ -465,7 +465,7 @@ Es werden keine Tracking oder Werbe-Cookies eingesetzt.
             .scene-stage.lose-state .sun-ray { display: none; }
             .scene-stage.lose-state .big-tree { display: none; }
             .scene-stage.lose-state .seed { animation: none; opacity: 1; transform: translateY(70px) scale(0.8); left: 140px; }
-            .scene-stage.lose-state .klotzi-real { animation: none; bottom: 50px; left: 60px; transform: scale(0.9); }
+            .scene-stage.lose-state .klotzi-real { animation: none; bottom: 50px; left: 90px; transform: scale(0.9); }
 
             @keyframes klotzi-logic { 0% { transform: translateX(-100px); } 10% { transform: translateX(0); } 15% { transform: scaleY(0.9); } 20% { transform: scaleY(1); } 40% { transform: translateX(0); } 45% { transform: translateY(-20px) rotate(-10deg); } 50% { transform: translateY(0) rotate(0deg); } 55% { transform: translateY(-20px) rotate(10deg); } 60% { transform: translateY(0) rotate(0deg); } 100% { transform: translateY(0); } }
             @keyframes seed-fall { 0%, 10% { opacity: 0; transform: translateY(0); } 15% { opacity: 1; transform: translateY(0); } 25% { opacity: 1; transform: translateY(70px) scale(0.5); } 26%, 100% { opacity: 0; } }
@@ -486,14 +486,14 @@ Es werden keine Tracking oder Werbe-Cookies eingesetzt.
 
             <div id="gameOverFeedbackContainer" class="hidden mb-2 animate-pop-in">
                  <a href="https://forms.office.com/r/dPiXWjBiGQ" target="_blank" 
-                    class="block w-full bg-violet-600 hover:bg-violet-700 text-white font-bold py-4 rounded-xl shadow-lg text-center border-2 border-white/20 transition-transform active:scale-95">
+                    class="block w-full bg-violet-600 hover:bg-violet-700 text-white font-bold py-2.5 rounded-xl shadow-lg text-center border-2 border-white/20 transition-transform active:scale-95">
                     💬 Feedback geben
                  </a>
             </div>
 
             <div class="space-y-3">
-                <button onclick="window.showLeaderboard(false)" class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3 rounded-lg border border-gray-300">🏆 Bestenliste</button>
-                <button onclick="window.resetGame()" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 rounded-lg shadow">🔄 Neues Spiel</button>
+                <button onclick="window.showLeaderboard(false)" class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-2 rounded-lg border border-gray-300">🏆 Bestenliste</button>
+                <button onclick="window.resetGame()" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 rounded-lg shadow">🔄 Neues Spiel</button>
             </div>
         </div>
     </div>
@@ -724,34 +724,34 @@ const IMG_SUFFIX = "?raw=true";
 // 6. KARTEN DATEN
 const woodCards=[
  {name:"Ahorn", dk:"5", druckfestigkeit:60, quellen:9, rohdichte:650, emodul:9500, preis:2, imgTree:`${IMG_BASE}/ahorn_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/ahorn_2.jpeg${IMG_SUFFIX}`},
- {name:"Birke", dk:"5", druckfestigkeit:50, quellen:11.7, rohdichte:650, emodul:14500, preis:2, imgTree:`${IMG_BASE}/birke_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/birke_2.jpeg${IMG_SUFFIX}`},
- {name:"Douglasie", dk:"5", druckfestigkeit:70, quellen:7.5, rohdichte:500, emodul:13000, preis:4, imgTree:`${IMG_BASE}/douglasie_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/douglasie_2.jpeg${IMG_SUFFIX}`},
- {name:"Ebenholz, Afr.", dk:"1-2", druckfestigkeit:70, quellen:12.8, rohdichte:1200, emodul:13000, preis:5, imgTree:`${IMG_BASE}/ebenholz_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/ebenholz_2.jpeg${IMG_SUFFIX}`},
- {name:"Edelkastanie", dk:"2", druckfestigkeit:50, quellen:6.8, rohdichte:620, emodul:9000, preis:3, imgTree:`${IMG_BASE}/kastanie_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/kastanie_2.jpeg${IMG_SUFFIX}`},
+ {name:"Birke", dk:"5", druckfestigkeit:60, quellen:11.7, rohdichte:650, emodul:14500, preis:2, imgTree:`${IMG_BASE}/birke_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/birke_2.jpeg${IMG_SUFFIX}`},
+ {name:"Douglasie", dk:"5", druckfestigkeit:60, quellen:7.5, rohdichte:500, emodul:13000, preis:4, imgTree:`${IMG_BASE}/douglasie_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/douglasie_2.jpeg${IMG_SUFFIX}`},
+ {name:"Ebenholz, Afr.", dk:"1-2", druckfestigkeit:80, quellen:12.8, rohdichte:1200, emodul:13000, preis:5, imgTree:`${IMG_BASE}/ebenholz_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/ebenholz_2.jpeg${IMG_SUFFIX}`},
+ {name:"Edelkastanie", dk:"2", druckfestigkeit:60, quellen:6.8, rohdichte:620, emodul:9000, preis:3, imgTree:`${IMG_BASE}/kastanie_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/kastanie_2.jpeg${IMG_SUFFIX}`},
  {name:"Eibe", dk:"2", druckfestigkeit:60, quellen:5.2, rohdichte:670, emodul:15000, preis:4, imgTree:`${IMG_BASE}/eibe_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/eibe_2.jpeg${IMG_SUFFIX}`},
  {name:"Eiche", dk:"2", druckfestigkeit:40, quellen:11.7, rohdichte:670, emodul:13000, preis:3, imgTree:`${IMG_BASE}/eiche_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/eiche_2.jpeg${IMG_SUFFIX}`},
- {name:"Erle", dk:"5", druckfestigkeit:55, quellen:9.4, rohdichte:550, emodul:9500, preis:1, imgTree:`${IMG_BASE}/erle_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/erle_2.jpeg${IMG_SUFFIX}`},
- {name:"Esche", dk:"5", druckfestigkeit:50, quellen:8.5, rohdichte:670, emodul:13000, preis:2, imgTree:`${IMG_BASE}/esche_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/esche_2.jpeg${IMG_SUFFIX}`},
+ {name:"Erle", dk:"5", druckfestigkeit:60, quellen:9.4, rohdichte:550, emodul:9500, preis:1, imgTree:`${IMG_BASE}/erle_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/erle_2.jpeg${IMG_SUFFIX}`},
+ {name:"Esche", dk:"5", druckfestigkeit:60, quellen:8.5, rohdichte:670, emodul:13000, preis:2, imgTree:`${IMG_BASE}/esche_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/esche_2.jpeg${IMG_SUFFIX}`},
  {name:"Fichte", dk:"4", druckfestigkeit:50, quellen:8, rohdichte:480, emodul:11000, preis:2, imgTree:`${IMG_BASE}/fichte_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/fichte_2.jpeg${IMG_SUFFIX}`},
- {name:"Hemlock", dk:"4", druckfestigkeit:55, quellen:8.5, rohdichte:480, emodul:10000, preis:4, imgTree:`${IMG_BASE}/hemlock_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/hemlock_2.jpeg${IMG_SUFFIX}`},
- {name:"Hickory", dk:"4", druckfestigkeit:65, quellen:11, rohdichte:800, emodul:15000, preis:3, imgTree:`${IMG_BASE}/hickory_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/hickory_2.jpeg${IMG_SUFFIX}`},
- {name:"Kiefer", dk:"3-4", druckfestigkeit:55, quellen:12.4, rohdichte:520, emodul:11000, preis:1, imgTree:`${IMG_BASE}/kiefer_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/kiefer_2.jpeg${IMG_SUFFIX}`},
- {name:"Lärche", dk:"3-4", druckfestigkeit:55, quellen:10.4, rohdichte:590, emodul:13800, preis:3, imgTree:`${IMG_BASE}/laerche_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/laerche_2.jpeg${IMG_SUFFIX}`},
- {name:"Linde", dk:"5", druckfestigkeit:50, quellen:10.7, rohdichte:520, emodul:7200, preis:2, imgTree:`${IMG_BASE}/linde_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/linde_2.jpeg${IMG_SUFFIX}`},
- {name:"Mahagoni (echtes)", dk:"2", druckfestigkeit:50, quellen:5.8, rohdichte:600, emodul:10600, preis:5, imgTree:`${IMG_BASE}/mahagoni_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/mahagoni_2.jpeg${IMG_SUFFIX}`},
- {name:"Meranti (DR)", dk:"3-4", druckfestigkeit:65, quellen:9.8, rohdichte:720, emodul:14500, preis:4, imgTree:`${IMG_BASE}/meranti_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/meranti_2.jpeg${IMG_SUFFIX}`},
- {name:"Nussbaum (EU)", dk:"3", druckfestigkeit:70, quellen:7.5, rohdichte:670, emodul:12000, preis:4, imgTree:`${IMG_BASE}/nuss_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/nuss_2.jpeg${IMG_SUFFIX}`},
+ {name:"Hemlock", dk:"4", druckfestigkeit:60, quellen:8.5, rohdichte:480, emodul:10000, preis:4, imgTree:`${IMG_BASE}/hemlock_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/hemlock_2.jpeg${IMG_SUFFIX}`},
+ {name:"Hickory", dk:"4", druckfestigkeit:60, quellen:11, rohdichte:800, emodul:15000, preis:3, imgTree:`${IMG_BASE}/hickory_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/hickory_2.jpeg${IMG_SUFFIX}`},
+ {name:"Kiefer", dk:"3-4", druckfestigkeit:60, quellen:12.4, rohdichte:520, emodul:11000, preis:1, imgTree:`${IMG_BASE}/kiefer_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/kiefer_2.jpeg${IMG_SUFFIX}`},
+ {name:"Lärche", dk:"3-4", druckfestigkeit:60, quellen:10.4, rohdichte:590, emodul:13800, preis:3, imgTree:`${IMG_BASE}/laerche_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/laerche_2.jpeg${IMG_SUFFIX}`},
+ {name:"Linde", dk:"5", druckfestigkeit:60, quellen:10.7, rohdichte:520, emodul:7200, preis:2, imgTree:`${IMG_BASE}/linde_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/linde_2.jpeg${IMG_SUFFIX}`},
+ {name:"Mahagoni (echtes)", dk:"2", druckfestigkeit:60, quellen:5.8, rohdichte:600, emodul:10600, preis:5, imgTree:`${IMG_BASE}/mahagoni_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/mahagoni_2.jpeg${IMG_SUFFIX}`},
+ {name:"Meranti (DR)", dk:"3-4", druckfestigkeit:60, quellen:9.8, rohdichte:720, emodul:14500, preis:4, imgTree:`${IMG_BASE}/meranti_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/meranti_2.jpeg${IMG_SUFFIX}`},
+ {name:"Nussbaum (EU)", dk:"3", druckfestigkeit:80, quellen:7.5, rohdichte:670, emodul:12000, preis:4, imgTree:`${IMG_BASE}/nuss_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/nuss_2.jpeg${IMG_SUFFIX}`},
  {name:"Palisander", dk:"1", druckfestigkeit:80, quellen:8.1, rohdichte:850, emodul:12800, preis:5, imgTree:`${IMG_BASE}/palisander_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/palisander_2.jpeg${IMG_SUFFIX}`},
- {name:"Pappel", dk:"5", druckfestigkeit:35, quellen:9.8, rohdichte:450, emodul:9000, preis:2, imgTree:`${IMG_BASE}/pappel_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/pappel_2.jpeg${IMG_SUFFIX}`},
- {name:"Platane", dk:"5", druckfestigkeit:45, quellen:8.5, rohdichte:620, emodul:12800, preis:3, imgTree:`${IMG_BASE}/platane_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/platane_2.jpeg${IMG_SUFFIX}`},
+ {name:"Pappel", dk:"5", druckfestigkeit:40, quellen:9.8, rohdichte:450, emodul:9000, preis:2, imgTree:`${IMG_BASE}/pappel_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/pappel_2.jpeg${IMG_SUFFIX}`},
+ {name:"Platane", dk:"5", druckfestigkeit:40, quellen:8.5, rohdichte:620, emodul:12800, preis:3, imgTree:`${IMG_BASE}/platane_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/platane_2.jpeg${IMG_SUFFIX}`},
  {name:"Redwood", dk:"2", druckfestigkeit:40, quellen:4.0, rohdichte:420, emodul:9500, preis:4, imgTree:`${IMG_BASE}/redwood_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/redwood_2.jpeg${IMG_SUFFIX}`},
- {name:"Robinie", dk:"1-2", druckfestigkeit:70, quellen:7.5, rohdichte:770, emodul:13600, preis:3, imgTree:`${IMG_BASE}/robinie_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/robinie_2.jpeg${IMG_SUFFIX}`},
+ {name:"Robinie", dk:"1-2", druckfestigkeit:80, quellen:7.5, rohdichte:770, emodul:13600, preis:3, imgTree:`${IMG_BASE}/robinie_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/robinie_2.jpeg${IMG_SUFFIX}`},
  {name:"Rotbuche", dk:"5", druckfestigkeit:60, quellen:11.7, rohdichte:720, emodul:14000, preis:2, imgTree:`${IMG_BASE}/buche_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/buche_2.jpeg${IMG_SUFFIX}`},
- {name:"Rüster", dk:"4", druckfestigkeit:45, quellen:8.3, rohdichte:670, emodul:11000, preis:3, imgTree:`${IMG_BASE}/ulme_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/ulme_2.jpeg${IMG_SUFFIX}`},
- {name:"Tanne", dk:"4", druckfestigkeit:45, quellen:7.5, rohdichte:450, emodul:11000, preis:2, imgTree:`${IMG_BASE}/tanne_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/tanne_2.jpeg${IMG_SUFFIX}`},
+ {name:"Rüster", dk:"4", druckfestigkeit:40, quellen:8.3, rohdichte:670, emodul:11000, preis:3, imgTree:`${IMG_BASE}/ulme_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/ulme_2.jpeg${IMG_SUFFIX}`},
+ {name:"Tanne", dk:"4", druckfestigkeit:40, quellen:7.5, rohdichte:450, emodul:11000, preis:2, imgTree:`${IMG_BASE}/tanne_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/tanne_2.jpeg${IMG_SUFFIX}`},
  {name:"Teak", dk:"1", druckfestigkeit:60, quellen:5.8, rohdichte:670, emodul:13000, preis:5, imgTree:`${IMG_BASE}/teak_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/teak_2.jpeg${IMG_SUFFIX}`},
  {name:"Wengé", dk:"2", druckfestigkeit:90, quellen:9.4, rohdichte:850, emodul:16000, preis:4, imgTree:`${IMG_BASE}/wenge_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/wenge_2.jpeg${IMG_SUFFIX}`},
- {name:"Zebrano", dk:"2-3", druckfestigkeit:50, quellen:9, rohdichte:770, emodul:15400, preis:4, imgTree:`${IMG_BASE}/zebrano_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/zebrano_2.jpeg${IMG_SUFFIX}`},
+ {name:"Zebrano", dk:"2-3", druckfestigkeit:60, quellen:9, rohdichte:770, emodul:15400, preis:4, imgTree:`${IMG_BASE}/zebrano_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/zebrano_2.jpeg${IMG_SUFFIX}`},
  {name:"Zeder", dk:"1-2", druckfestigkeit:40, quellen:11, rohdichte:550, emodul:7200, preis:5, imgTree:`${IMG_BASE}/zeder_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/zeder_2.jpeg${IMG_SUFFIX}`}
 ];
 // -------------------------------------------------------------
@@ -807,10 +807,10 @@ const quizQuestions = [
     {q:"Warum ist das Kernholz der Eiche besonders witterungsbeständig und dauerhaft?", o:["Ist sehr weich","Enthält Gerbsäure","Speichert Wasser","Ist weiß"], c:1, e:"Gerbsäure (Tannin) schützt das Holz vor Pilzen und Insekten."},
     {q:"Welche heimische Baumart ist an ihrer charakteristischen weißen Rinde zu erkennen?", o:["Kiefer","Birke","Eiche","Nussbaum"], c:1, e:"Die weiße Rinde ist das sicherste Erkennungsmerkmal der Birke."},
     {q:"Welches Nadelholz wird im traditionellen Holzbau am häufigsten für Dachstühle verwendet?", o:["Fichte","Nussbaum","Kirschbaum","Balsa"], c:0, e:"Fichte ist leicht, fest, elastisch und günstig verfügbar."},
-    {q:"Was stellen die Jahresringe im Querschnitt eines Baumstammes dar?", o:["Krankheiten","Holzzuwachs pro Jahr","Risse","Wurzeln"], c:1, e:"Ein Ring besteht aus Frühholz (Frühling) und Spätholz (Sommer)."},
+    {q:"Was stellen die Jahresringe im Querschnitt eines Baumstammes dar?", o:["Holzzuwachs pro Jahr","Krankheiten","Risse","Wurzeln"], c:1, e:"Ein Ring besteht aus Frühholz (Frühling) und Spätholz (Sommer)."},
     {q:"Wodurch unterscheiden sich Frühholz und Spätholz innerhalb eines Jahresringes?", o:["Frühholz hell, Spätholz dunkel","Frühholz ist dunkler","Kein Unterschied","Spätholz ist blau"], c:1, e:"Frühholz dient dem Wassertransport, Spätholz der Festigkeit."},
     
-    {q:"Welche physikalische Eigenschaft ist typisch für das Holz der Pappel?", o:["Schwer und hart","Leicht und weich","Witterungsfest","Schwarz"], c:1, e:"Pappelholz hat eine sehr geringe Dichte."},
+    {q:"Welche physikalische Eigenschaft ist typisch für das Holz der Pappel?", o:["Leicht und weich","Schwer und hart","Witterungsfest","Schwarz"], c:1, e:"Pappelholz hat eine sehr geringe Dichte."},
     {q:"Was ist das Kambium und welche Funktion hat es im Baumstamm?", o:["Die Rinde","Wachstumsschicht","Das Mark","Ein Ast"], c:1, e:"Hier findet die Zellteilung statt (Holz nach innen, Bast nach außen)."},
     {q:"Welches Holz verströmt einen intensiven, aromatischen Geruch, der an Bleistifte erinnert?", o:["Buche","Zeder","Ahorn","Esche"], c:1, e:"Zedernöl sorgt für den typischen Geruch und vertreibt Motten."},
     {q:"Was bedeutet es, wenn ein Holzbauteil als „imprägniert“ bezeichnet wird?", o:["Mit Schutzmittel getränkt","Geschliffen","Getrocknet","Lackiert"], c:0, e:"Der Schutz zieht tief in das Holz ein, anders als bei Lack."},
@@ -828,29 +828,29 @@ const quizQuestions = [
     {q:"Was versteht man unter dem Begriff „Maserholz“?", o:["Wirbelig strukturiertes Holz","Gerades Holz","Farbiges Holz","Faules Holz"], c:0, e:"Es entsteht oft an Wucherungen und ist sehr dekorativ."},
     {q:"Welche Holzart wird klassischerweise für die Herstellung von Weinfässern (Barrique) genutzt?", o:["Eiche","Fichte","Pappel","Birke"], c:0, e:"Eiche ist dicht (dank Thyllen) und gibt erwünschte Aromen an den Wein ab."},
     {q:"Was ist „Bläue“ im Holz?", o:["Zuwachs von Ästen","Verfärbung durch Pilze","Holzzerfall","Wuchsfehler"], c:1, e:"Bläue ist meist ein optischer Mangel, keine Zerstörung der Zellwand."},
-    {q:"Welcher Teil des Holzes weist die höchste Dichte und Härte auf?", o:["Frühholz","Spätholz","alles gleich","Kambium"], c:1, e:"Spätholz hat dickere Zellwände und kleinere Hohlräume."},
-    {q:"Nach welchem Prinzip ist eine Sperrholzplatte aufgebaut?", o:["Längsholz aufeinander","Lagen um 90° verleimt","Stäbe hochkant","PU-Klebstoff"], c:1, e:"Durch das „Absperren“ (Kreuzen) wird das Quellen und Schwinden minimiert."},
+    {q:"Welcher Teil des Holzes weist die höchste Dichte und Härte auf?", o:["Spätholz","Frühholz","alles gleich","Kambium"], c:1, e:"Spätholz hat dickere Zellwände und kleinere Hohlräume."},
+    {q:"Nach welchem Prinzip ist eine Sperrholzplatte aufgebaut?", o:["Lagen um 90° verleimt","Längsholz aufeinander","Stäbe hochkant","PU-Klebstoff"], c:1, e:"Durch das „Absperren“ (Kreuzen) wird das Quellen und Schwinden minimiert."},
     {q:"Welche Holzart zeigt im Radialschnitt glänzende „Spiegel“ (Markstrahlen)?", o:["Eiche","Fichte","Kiefer","Pappel"], c:0, e:"Die „Spiegel“ sind die angeschnittenen, breiten Markstrahlen der Eiche."},
     {q:"Welches Holz zeichnet sich durch besonders hohe Elastizität aus?", o:["Esche","Eiche","Pappel","Fichte"], c:0, e:"Esche ist biegsam und bricht nicht sofort (ideal für Sportgeräte)."},
-    {q:"Was ist ein Ast im Holz aus technischer Sicht?", o:["Wuchsfehler","Eingewachsener Zweig","Krankheit","Wurzel"], c:1, e:"Jeder Ast im Holz war früher ein Zweig außen am Baum."},
+    {q:"Was ist ein Ast im Holz aus technischer Sicht?", o:["Eingewachsener Zweig","Wuchsfehler","Krankheit","Wurzel"], c:1, e:"Jeder Ast im Holz war früher ein Zweig außen am Baum."},
     {q:"Welche Holzart wird häufig für die Herstellung von einfachen Paletten verwendet?", o:["Kiefer / Fichte","Nussbaum","Eiche","Teak"], c:0, e:"Für Einwegverpackungen muss das Holz billig, leicht und verfügbar sein."},
-    {q:"Was meint der Fachmann mit dem Ausdruck „Das Holz arbeitet“?", o:["Macht Geräusche","Quillt & Schwindet","Verrottet","Wächst"], c:1, e:"Das Quellen und Schwinden ist die wichtigste Eigenschaft bei der Konstruktion."},
+    {q:"Was meint der Fachmann mit dem Ausdruck „Das Holz arbeitet“?", o:["Quillt & Schwindet","Macht Geräusche","Verrottet","Wächst"], c:1, e:"Das Quellen und Schwinden ist die wichtigste Eigenschaft bei der Konstruktion."},
     {q:"Welche der folgenden Holzarten bezeichnet man als ringporig?", o:["Eiche","Buche","Ahorn","Fichte"], c:0, e:"Bei der Eiche sieht man die großen Poren im Frühholz als deutlichen Ring."},
     {q:"Was ist eine OSB-Platte (Oriented Strand Board)?", o:["Grobspanplatte","Massivholz","Vollkunststoff","MDF"], c:0, e:"Die Späne sind ausgerichtet, um der Platte mehr Festigkeit zu geben."},
-    {q:"In welcher Jahreszeit bildet der Baum das dunklere Spätholz?", o:["Frühling","Sommer","Winter","Immer"], c:1, e:"Im Frühling muss der Baum schnell Wasser leiten, im Sommer festigt er sich."},
-    {q:"Ab welcher Holzfeuchte besteht dauerhaft die Gefahr von Pilzbefall?", o:["0 %","8 %","20 %","100 %"], c:2, e:"Pilze brauchen freies Wasser. Trockenes Holz (unter 20 %) ist sicher."},
-    {q:"Warum vergraut Holz im Außenbereich mit der Zeit?", o:["Staub","UV-Licht & Regen","Fäule","Pilze"], c:1, e:"Das Lignin wird zerstört und ausgewaschen, zurück bleibt helle Cellulose."},
-    {q:"Welcher heimische Nadelbaum besitzt keine Harzkanäle?", o:["Fichte","Kiefer","Lärche","Tanne"], c:3, e:"Tannenholz ist harzfrei (ein wichtiges Unterscheidungsmerkmal zur Fichte)."},
-    {q:"Warum haben Pfannen oft Holzgriffe?", o:["reduziert Gewicht","Leitet Strom","Isoliert Wärme","Brennt nicht"], c:2, e:"Holz leitet Hitze nur sehr langsam weiter, man verbrennt sich nicht die Finger."},
-    {q:"Die Eibe ist ein Nadelholz. Welches typische Nadelholz-Merkmal fehlt ihr jedoch komplett?", o:["Jahresringe","Der farbige Kern","Die Harzkanäle","Die Härte"], c:2, e:"Im Gegensatz zu Fichte oder Kiefer besitzt die Eibe keine Harzkanäle."},
-    {q:"Was ist das besondere Merkmal der Poren bei der Robinie?", o:["Sie sind leer","Sie sind verthyllt","Sie sind quadratisch","Mit Harz gefüllt"], c:1, e:"Die Thyllen verstopfen die Poren komplett, was das Holz sehr dauerhaft macht."},
-    {q:"Welche Holzfeuchte stellt sich ungefähr ein, wenn Holz lange Zeit im Normalklima (20°C/65%) gelagert wird?", o:["ca. 6 – 8 %","ca. 12 %","ca. 18 %","ca. 30 %"], c:1, e:"Dies ist ein Standardwert für die „Ausgleichsfeuchte“ im Außenklima unter Dach."},
-    {q:"Bei welcher Holzart muss man bei der Oberflächenbeschichtung besonders mit Harzgallen rechnen?", o:["Eiche","Fichte (o. Kiefer)","Tanne","Buche"], c:1, e:"Fichte und Kiefer besitzen Harzkanäle, die bei Wärme auslaufen können."},
-    {q:"Warum fühlt sich Holz bei Raumtemperatur wärmer an als ein Stück Stahl?", o:["Holz heizt","Schlechter Wärmeleiter","Höhere Dichte","Gibt Feuchte ab"], c:1, e:"Stahl leitet die Körperwärme sofort ab (kalt), Holz isoliert (warm)."},
-    {q:"Woran erkennt man „Braunfäule“ am zerstörten Holz?", o:["Das Holz wird weiß und faserig","Das Holz zerfällt würfelartig (Würfelbruch)","Das Holz wird blau","Das Holz wird elastisch"], c:1, e:"Der Pilz baut Cellulose ab, das braune Lignin bleibt spröde zurück und bricht in Würfeln."},
+    {q:"In welcher Jahreszeit bildet der Baum das dunklere Spätholz?", o:["Sommer","Frühling","Winter","Immer"], c:1, e:"Im Frühling muss der Baum schnell Wasser leiten, im Sommer festigt er sich."},
+    {q:"Ab welcher Holzfeuchte besteht dauerhaft die Gefahr von Pilzbefall?", o:["20 %","0 %","8 %","100 %"], c:2, e:"Pilze brauchen freies Wasser. Trockenes Holz (unter 20 %) ist sicher."},
+    {q:"Warum vergraut Holz im Außenbereich mit der Zeit?", o:["UV-Licht & Regen","Staub","Fäule","Pilze"], c:1, e:"Das Lignin wird zerstört und ausgewaschen, zurück bleibt helle Cellulose."},
+    {q:"Welcher heimische Nadelbaum besitzt keine Harzkanäle?", o:["Tanne","Fichte","Kiefer","Lärche"], c:3, e:"Tannenholz ist harzfrei (ein wichtiges Unterscheidungsmerkmal zur Fichte)."},
+    {q:"Warum haben Pfannen oft Holzgriffe?", o:["Isoliert Wärme","reduziert Gewicht","Leitet Strom","Brennt nicht"], c:2, e:"Holz leitet Hitze nur sehr langsam weiter, man verbrennt sich nicht die Finger."},
+    {q:"Die Eibe ist ein Nadelholz. Welches typische Nadelholz-Merkmal fehlt ihr jedoch komplett?", o:["Die Harzkanäle","Jahresringe","Der farbige Kern","Die Härte"], c:2, e:"Im Gegensatz zu Fichte oder Kiefer besitzt die Eibe keine Harzkanäle."},
+    {q:"Was ist das besondere Merkmal der Poren bei der Robinie?", o:["Sie sind verthyllt","Sie sind leer","Sie sind quadratisch","Mit Harz gefüllt"], c:1, e:"Die Thyllen verstopfen die Poren komplett, was das Holz sehr dauerhaft macht."},
+    {q:"Welche Holzfeuchte stellt sich ungefähr ein, wenn Holz lange Zeit im Normalklima (20°C/65%) gelagert wird?", o:["ca. 12 %","ca. 6 – 8 %","ca. 18 %","ca. 30 %"], c:1, e:"Dies ist ein Standardwert für die „Ausgleichsfeuchte“ im Außenklima unter Dach."},
+    {q:"Bei welcher Holzart muss man bei der Oberflächenbeschichtung besonders mit Harzgallen rechnen?", o:["Fichte (o. Kiefer)","Eiche","Tanne","Buche"], c:1, e:"Fichte und Kiefer besitzen Harzkanäle, die bei Wärme auslaufen können."},
+    {q:"Warum fühlt sich Holz bei Raumtemperatur wärmer an als ein Stück Stahl?", o:["Schlechter Wärmeleiter","Holz heizt","Höhere Dichte","Gibt Feuchte ab"], c:1, e:"Stahl leitet die Körperwärme sofort ab (kalt), Holz isoliert (warm)."},
+    {q:"Woran erkennt man „Braunfäule“ am zerstörten Holz?", o:["Das Holz zerfällt würfelartig (Würfelbruch)","Das Holz wird weiß und faserig","Das Holz wird blau","Das Holz wird elastisch"], c:1, e:"Der Pilz baut Cellulose ab, das braune Lignin bleibt spröde zurück und bricht in Würfeln."},
     {q:"Woran erkennt man „Weißfäule“?", o:["Das Holz wird hell und faserig","Das Holz wird schwarz","Es entstehen Würfel","Es wird steinhart"], c:0, e:"Der Pilz baut das braune Lignin ab, die weiße Cellulose bleibt als weiche Faserstruktur zurück."},
     {q:"Was sind „Tüpfel“ in der Zellwand?", o:["Ventile für den Wasseraustausch","Krankheiten","Farbpigmente","Astlöcher"], c:0, e:"Sie verbinden benachbarte Zellen und ermöglichen den Flüssigkeitstransport."},
-    {q:"Wo bildet ein Laubbaum Reaktionsholz (Zugholz), wenn er schief steht?", o:["Auf der Unterseite","Auf der Oberseite (Zugseite)","Im Kern","In der Wurzel"], c:1, e:"Laubbäume „ziehen“ sich aktiv wieder gerade (im Gegensatz zu Nadelbäumen, die drücken)."}
+    {q:"Wo bildet ein Laubbaum Reaktionsholz (Zugholz), wenn er schief steht?", o:["Auf der Oberseite (Zugseite)","Auf der Unterseite","Im Kern","In der Wurzel"], c:1, e:"Laubbäume „ziehen“ sich aktiv wieder gerade (im Gegensatz zu Nadelbäumen, die drücken)."}
 ];
 function shuffleArray(a){ for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
 
