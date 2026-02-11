@@ -392,12 +392,12 @@ Es werden keine Tracking oder Werbe-Cookies eingesetzt.
 <div id="setupModal" class="fixed inset-0 z-[110] flex flex-col items-center justify-center p-4 dimmer overflow-y-auto h-screen">
     <div class="w-10 h-10 absolute left-4 top-4"></div>
     
-    <a href="https://forms.office.com/r/dPiXWjBiGQ" target="_blank" 
-       class="absolute top-20 left-4 z-[120] bg-violet-600 hover:bg-violet-700 text-white text-xs font-bold h-16 flex items-center justify-center px-4 rounded-full shadow-lg transition-transform active:scale-95 gap-2 no-underline border-2 border-white/20 w-48">
-        <span>💬</span> Feedback zum Spiel
-    </a>
-
     <div class="relative w-full max-w-sm pt-20">
+        <a href="https://forms.office.com/r/dPiXWjBiGQ" target="_blank" 
+           class="absolute top-4 left-0 z-[120] bg-violet-600 hover:bg-violet-700 text-white text-xs font-bold h-16 flex items-center justify-center px-4 rounded-full shadow-lg transition-transform active:scale-95 gap-2 no-underline border-2 border-white/20 w-48">
+            <span>💬</span> Feedback zum Spiel
+        </a>
+
         <img src="https://github.com/aufdemholzweg/holzquartett/blob/main/images/klotzi_menu.png?raw=true" alt="Klotzi Menü" class="absolute -top-4 -right-2 w-48 z-20 pointer-events-none transform rotate-3 drop-shadow-xl" onerror="this.style.display='none'">
         
         <div class="bg-white rounded-2xl shadow-2xl overflow-hidden w-full relative mb-6 z-10">
@@ -826,7 +826,7 @@ const quizQuestions = [
     {q:"Was stellen die Jahresringe im Querschnitt eines Baumstammes dar?", o:["Holzzuwachs pro Jahr","Krankheiten","Risse","Wurzeln"], c:1, e:"Ein Ring besteht aus Frühholz (Frühling) und Spätholz (Sommer)."},
     {q:"Wodurch unterscheiden sich Frühholz und Spätholz innerhalb eines Jahresringes?", o:["Frühholz hell, Spätholz dunkel","Frühholz ist dunkler","Kein Unterschied","Spätholz ist blau"], c:1, e:"Frühholz dient dem Wassertransport, Spätholz der Festigkeit."},
     
-    {q:"Welche physikalische Eigenschaft ist typisch für das Holz der Pappel?", o:["Schwer und hart","Leicht und weich","Witterungsfest","Schwarz"], c:1, e:"Pappelholz hat eine sehr geringe Dichte."},
+    {q:"Welche physikalische Eigenschaft ist typisch für das Holz der Pappel?", o:["Leicht und weich","Schwer und hart","Witterungsfest","Schwarz"], c:1, e:"Pappelholz hat eine sehr geringe Dichte."},
     {q:"Was ist das Kambium und welche Funktion hat es im Baumstamm?", o:["Die Rinde","Wachstumsschicht","Das Mark","Ein Ast"], c:1, e:"Hier findet die Zellteilung statt (Holz nach innen, Bast nach außen)."},
     {q:"Welches Holz verströmt einen intensiven, aromatischen Geruch, der an Bleistifte erinnert?", o:["Buche","Zeder","Ahorn","Esche"], c:1, e:"Zedernöl sorgt für den typischen Geruch und vertreibt Motten."},
     {q:"Was bedeutet es, wenn ein Holzbauteil als „imprägniert“ bezeichnet wird?", o:["Mit Schutzmittel getränkt","Geschliffen","Getrocknet","Lackiert"], c:0, e:"Der Schutz zieht tief in das Holz ein, anders als bei Lack."},
@@ -850,7 +850,7 @@ const quizQuestions = [
     {q:"Welches Holz zeichnet sich durch besonders hohe Elastizität aus?", o:["Esche","Eiche","Pappel","Fichte"], c:0, e:"Esche ist biegsam und bricht nicht sofort (ideal für Sportgeräte)."},
     {q:"Was ist ein Ast im Holz aus technischer Sicht?", o:["Eingewachsener Zweig","Wuchsfehler","Krankheit","Wurzel"], c:1, e:"Jeder Ast im Holz war früher ein Zweig außen am Baum."},
     {q:"Welche Holzart wird häufig für die Herstellung von einfachen Paletten verwendet?", o:["Kiefer / Fichte","Nussbaum","Eiche","Teak"], c:0, e:"Für Einwegverpackungen muss das Holz billig, leicht und verfügbar sein."},
-    {q:"Was meint der Fachmann mit dem Ausdruck „Das Holz arbeitet“?", o:["Macht Geräusche","Quillt & Schwindet","Verrottet","Wächst"], c:1, e:"Das Quellen und Schwinden ist die wichtigste Eigenschaft bei der Konstruktion."},
+    {q:"Was meint der Fachmann mit dem Ausdruck „Das Holz arbeitet“?", o:["Quillt & Schwindet","Macht Geräusche","Verrottet","Wächst"], c:1, e:"Das Quellen und Schwinden ist die wichtigste Eigenschaft bei der Konstruktion."},
     {q:"Welche der folgenden Holzarten bezeichnet man als ringporig?", o:["Eiche","Buche","Ahorn","Fichte"], c:0, e:"Bei der Eiche sieht man die großen Poren im Frühholz als deutlichen Ring."},
     {q:"Was ist eine OSB-Platte (Oriented Strand Board)?", o:["Grobspanplatte","Massivholz","Vollkunststoff","MDF"], c:0, e:"Die Späne sind ausgerichtet, um der Platte mehr Festigkeit zu geben."},
     {q:"In welcher Jahreszeit bildet der Baum das dunklere Spätholz?", o:["Sommer","Frühling","Winter","Immer"], c:1, e:"Im Frühling muss der Baum schnell Wasser leiten, im Sommer festigt er sich."},
