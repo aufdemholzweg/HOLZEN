@@ -667,7 +667,8 @@ druckfestigkeit:{
      unit:'(N/mm²)', 
      logic: 'Hoch gewinnt', 
      default: true,
-     description: `Die Druckfestigkeit gibt die maximale Spannung in (N/mm²) an, die das Holz aufnehmen kann, wenn es in Faserrichtung gestaucht wird. Der Wert wird an kleinen, fehlerfreien Holzklötzen im Normalklima (20°C, 65% rel. Luftfeuchte) bestimmt. Dabei wird die maximale Kraft, bei der das Holz versagt, durch den ursprünglichen Querschnitt der Probe geteilt.`
+     description: `Die Druckfestigkeit (N/mm²) beschreibt, mit wie viel Druck das Holz in Faserrichtung belastet werden kann, bevor es zum Bruch kommt. 
+`
  },
 rohdichte:{
      icon:'💎',
@@ -675,7 +676,7 @@ rohdichte:{
      unit:'(kg/m³)', 
      logic: 'Hoch gewinnt', 
      default: true,
-     description: 'Die Normal-Rohdichte (Roh) ist der Quotient aus Masse und Volumen (kg/m³) bei gleicher Holzfeuchte (DIN 68364). Als Referenz gilt hierbei das Normalklima bei 20 °C / 65 % rel. Luftfeuchte, was einer Ausgleichsfeuchte des Holzes von rund 12 % entspricht.'
+     description: 'Die Normal-Rohdichte beschreibt das Gewicht des Holzes in kg/m³. Er bezieht sich auf das Normalklima bei ca. 12 % Holzfeuchtte (DIN 68364). Sie korreliert oft mit der Festigkeit von Hölzern. '
 },
  emodul:{
      icon:'〰️',
@@ -699,7 +700,7 @@ dk:{
      unit:'(%)', 
      logic: 'Niedrig gewinnt', 
      default: true,
-     description: 'Angegeben ist das maximale tangentiale Schwindmaß (%). Dieser Wert beschreibt die prozentuale Maßänderung in Richtung der Jahresringe vom fasergesättigten Zustand (ca. 30 % Holzfeuchte) bis zum darrtrockenen Zustand (0 %).'
+     description: 'Angegeben ist das mittlere Schwindmaß (%). Dieser Wert beschreibt die durchschnittliche Maßänderung quer zur Faser vom fasergesättigten Zustand (ca. 30 % Holzfeuchte) bis zum darrtrockenen Zustand (0 %).'
 },
  preis:{
      icon:'💰',
