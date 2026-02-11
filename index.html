@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -20,12 +19,12 @@
         .card-flipped { transform: rotateY(180deg); }
         .card-front, .card-back { backface-visibility: hidden; position: absolute; width: 100%; height: 100%; top: 0; left: 0; border-radius: 1rem; overflow: hidden; box-sizing: border-box; }
         .card-back { 
-            transform: rotateY(180deg); 
+            transform: rotateY(180deg);
             background-color: #2c3e50;
             background-image: url('https://github.com/aufdemholzweg/holzquartett/blob/326bdfd40ff4d97de5c70dc584fe767aba056135/images/background_card.jpg?raw=true'); 
             background-size: cover; 
             background-position: center; 
-            border: 4px solid white; 
+            border: 4px solid white;
         }
         .card-front-bg { background-color: #fffbeb; background-image: linear-gradient(to bottom right, #fffbeb, #fef3c7); }
         .hover-lift:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
@@ -182,7 +181,7 @@
                 Frage wird geladen...
             </h3>
             <div id="quizOptions" class="grid grid-cols-1 gap-3 relative z-30">
-                </div>
+            </div>
             
             <div id="quizExplanation" class="hidden mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg text-sm text-gray-700 leading-snug shadow-sm animate-pop-in">
             </div>
@@ -302,21 +301,24 @@
                         <p class="mb-2">
                             <strong>Soweit nicht anders gekennzeichnet</strong>, stehen der Programmcode, das Spielkonzept, die Quizfragen und eigene Texte dieses Projekts unter der 
                             <a href="https://creativecommons.org/licenses/by/4.0/deed.de" target="_blank" class="underline text-blue-600">Creative Commons Namensnennung 4.0 International Lizenz (CC BY 4.0)</a>.
-                        </p>
+</p>
                         <p><strong>Das bedeutet:</strong> Sie dürfen das Material teilen und bearbeiten (auch für kommerzielle Zwecke), solange Sie den Urheber wie folgt nennen:</p>
                         <div class="bg-white p-2 border border-gray-300 rounded mt-1 font-mono text-[10px] text-gray-500 select-all">
-                            "HOLZEN" von Christopher Lehr, Quellcode verfügbar auf GitHub, lizenziert unter CC BY 4.0.
-                        </div>
+                             "HOLZEN" von Christopher Lehr, Quellcode verfügbar auf GitHub, lizenziert unter CC BY 4.0.
+</div>
                     </div>
                 </div>
 
                 <p class="mb-1 font-bold text-xs text-red-700">⚠️ Wichtiger Hinweis zu Drittinhalten:</p>
                 <p class="text-xs text-gray-600 mb-2">
-                    Von dieser freien Lizenzierung ausdrücklich <strong>ausgenommen</strong> sind eingebundene Medien Dritter im Repository. Diese verbleiben unter ihrem ursprünglichen Urheberrecht. Dies betrifft:
+                    Von dieser freien Lizenzierung ausdrücklich <strong>ausgenommen</strong> sind eingebundene Medien Dritter im Repository. Diese verbleiben unter ihrem ursprünglichen Urheberrecht.
+Dies betrifft:
                 </p>
                 <ul class="list-disc pl-4 text-xs text-gray-600 space-y-1 mb-2">
-                    <li>Die <strong>Holzbilder</strong> (im Ordner <code>/images</code>). Rechte liegen bei <em>holzvomfach.de</em> und <em>schreiner-seiten.de</em>.</li>
-                    <li>Die <strong>Sounds</strong> (im Ordner <code>/sounds</code>). Genutzt unter der Freesound License.</li>
+                    <li>Die <strong>Holzbilder</strong> (im Ordner <code>/images</code>).
+Rechte liegen bei <em>holzvomfach.de</em> und <em>schreiner-seiten.de</em>.</li>
+                    <li>Die <strong>Sounds</strong> (im Ordner <code>/sounds</code>).
+Genutzt unter der Freesound License.</li>
                     <li>Markennamen und Normen (DIN).</li>
                 </ul>
             </div>
@@ -333,20 +335,24 @@
             
             <div>
                 <h4 class="font-bold text-gray-900 mb-1">Datenschutz & Technik</h4>
-                <p class="mb-2">Da dies ein reines Forschungsprojekt ist, werden so wenige Daten wie möglich gespeichert. Dennoch kommen externe Dienstleister zum Einsatz, um die technische Funktion zu gewährleisten:</p>
+                <p class="mb-2">Da dies ein reines Forschungsprojekt ist, werden so wenige Daten wie möglich gespeichert.
+Dennoch kommen externe Dienstleister zum Einsatz, um die technische Funktion zu gewährleisten:</p>
                 
                 <ul class="list-disc pl-4 text-xs text-gray-600 space-y-2">
                     <li>
                         <strong>Hosting (GitHub Pages):</strong><br>
-                        Diese Webseite wird auf Servern von GitHub Inc. (USA) gehostet. Beim Aufruf der Seite werden technisch bedingt Verbindungsdaten (z. B. IP-Adresse) an GitHub übertragen, um die Inhalte auszuliefern.
-                    </li>
+                        Diese Webseite wird auf Servern von GitHub Inc. (USA) gehostet.
+Beim Aufruf der Seite werden technisch bedingt Verbindungsdaten (z. B. IP-Adresse) an GitHub übertragen, um die Inhalte auszuliefern.
+</li>
                     <li>
                         <strong>Datenbank & Backend (Google Firebase):</strong><br>
-                        Für die Multiplayer-Funktion (Spielstände, Synchronisation) nutze ich Google Firebase (Google Ireland Limited). Die Spieldaten werden temporär auf deren Servern gespeichert. Ich verwenden hier die "Anonyme Anmeldung", sodass keine Klarnamen oder E-Mail-Adressen von Nutzern gespeichert werden.
-                    </li>
+                        Für die Multiplayer-Funktion (Spielstände, Synchronisation) nutze ich Google Firebase (Google Ireland Limited).
+Die Spieldaten werden temporär auf deren Servern gespeichert. Ich verwenden hier die "Anonyme Anmeldung", sodass keine Klarnamen oder E-Mail-Adressen von Nutzern gespeichert werden.
+</li>
                     <li>
                         <strong>Cookies / LocalStorage:</strong><br>
-                        Das Spiel speichert lediglich technische Einstellungen (z. B. Sound an/aus) lokal auf Ihrem Gerät ("LocalStorage"). Es werden keine Tracking oder Werbe-Cookies eingesetzt.
+                        Das Spiel speichert lediglich technische Einstellungen (z. B. Sound an/aus) lokal auf Ihrem Gerät ("LocalStorage").
+Es werden keine Tracking oder Werbe-Cookies eingesetzt.
                     </li>
                 </ul>
             </div>
@@ -368,7 +374,7 @@
                 </div>
                 <div class="flex justify-between items-center bg-gray-50 p-3 rounded-lg border border-gray-100">
                      <span class="font-bold text-gray-700 text-sm flex items-center gap-2">👀 Gegner-Karte sichtbar</span>
-                     <input type="checkbox" id="revealBackToggle" class="accent-green-500 w-5 h-5">
+                      <input type="checkbox" id="revealBackToggle" class="accent-green-500 w-5 h-5">
                 </div>
             </div>
             <hr class="border-gray-200 mb-4 border-t-2 border-dashed">
@@ -401,7 +407,7 @@
                 
                 <div class="flex gap-3 mt-2">
                     <button onclick="window.openAttrConfig()" class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold py-3 rounded-xl border border-gray-200 flex items-center justify-center gap-2 text-sm">
-                        <span>⚙️</span> Optionen <span id="attrCountBadge" class="bg-amber-500 text-white text-[10px] px-1.5 py-0.5 rounded-full">5</span>
+                         <span>⚙️</span> Optionen <span id="attrCountBadge" class="bg-amber-500 text-white text-[10px] px-1.5 py-0.5 rounded-full">5</span>
                     </button>
                     <button onclick="window.showLeaderboard(true)" class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold py-3 rounded-xl border border-gray-200 flex items-center justify-center gap-2 text-sm">
                         <span>🏆</span> Rangliste
@@ -413,7 +419,7 @@
         <div id="mainMenuStats" class="text-center hidden mb-8 relative z-10"></div>
         
         <div class="mt-auto pt-4 pb-12 text-center relative z-10">
-            <button onclick="document.getElementById('impressumModal').classList.remove('hidden')" class="text-white/70 text-xs font-medium hover:text-white underline transition-colors">Impressum</button>
+           <button onclick="document.getElementById('impressumModal').classList.remove('hidden')" class="text-white/70 text-xs font-medium hover:text-white underline transition-colors">Impressum</button>
         </div>
     </div>
 </div>
@@ -499,7 +505,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
 import { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 import { getFirestore, doc, getDoc, setDoc, updateDoc, onSnapshot, serverTimestamp, deleteDoc, collection, query, orderBy, limit, getDocs, increment } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
-
 const firebaseConfig = {
   apiKey: "AIzaSyCyRXl8-JPr1xTXPDi1VG-eQk6fOnTpqUI",
   authDomain: "holzquartett-3a177.firebaseapp.com",
@@ -509,7 +514,6 @@ const firebaseConfig = {
   appId: "1:1081595025073:web:bc571fffb6e4f20b27f490",
   measurementId: "G-HKLWFJE83K"
 };
-
 const activeConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : firebaseConfig;
 const appId = typeof __app_id !== 'undefined' ? __app_id : 'holzquartett-3a177';
 
@@ -535,7 +539,6 @@ const initAuth = async () => {
     }
 };
 initAuth();
-
 const getPublicDataRef = (coll, docId) => {
     if(docId) return doc(db, 'artifacts', appId, 'public', 'data', coll, docId);
     return collection(db, 'artifacts', appId, 'public', 'data', coll);
@@ -568,7 +571,6 @@ const NAV_ICONS = {
                   </svg>`,
     house: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>`
 };
-
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -576,22 +578,19 @@ function scrollToTop() {
 window.setNavState = (state) => {
     const btn = document.getElementById('navButton');
     if(!btn) return;
-    
     // REMOVE OLD HANDLERS (Clean Navigation)
     btn.onclick = null;
-    
     if(state === 'game') {
         btn.innerHTML = NAV_ICONS.house;
-        btn.removeAttribute('href'); 
+        btn.removeAttribute('href');
         btn.onclick = (e) => { 
-            e.preventDefault(); 
+            e.preventDefault();
             if(confirm('Spiel abbrechen und zum Startbildschirm zurückkehren?')) { 
                 if(typeof unsubscribeGame === 'function') unsubscribeGame();
                 window.location.href = "https://aufdemholzweg.github.io/holzquartett/"; 
             } 
         };
         btn.setAttribute('aria-label', 'Zurück zur Holzen! Startseite');
-        
     } else if (state === 'name_input') {
         btn.innerHTML = NAV_ICONS.house;
         btn.href = "#";
@@ -599,13 +598,13 @@ window.setNavState = (state) => {
             e.preventDefault();
             document.getElementById('nameModal').classList.add('hidden');
             document.getElementById('setupModal').classList.remove('hidden');
-            window.setNavState('menu'); 
+            window.setNavState('menu');
         };
         btn.setAttribute('aria-label', 'Zurück zum Hauptmenü');
         
     } else {
         // Default: Link zum Splashscreen
-        btn.innerHTML = NAV_ICONS.fingerprint; 
+        btn.innerHTML = NAV_ICONS.fingerprint;
         btn.href = 'https://aufdemholzweg.github.io/Lernwelt-Holz/';
         btn.onclick = null; 
         btn.setAttribute('aria-label', 'Zum Splashscreen');
@@ -614,13 +613,11 @@ window.setNavState = (state) => {
 
 // Initial Call
 window.setNavState('menu');
-
 let gameMode=null, gameId=null, localPlayerId=null, unsubscribeGame=null, localGameState={}, winStreak=0, hasCopiedShareLink=false;
 let isMuted=false;
 let roundSoundPlayed=false;
 let lastRoundWinningWoodName = null;
 let aiGame={playerName:'',playerCards:[],aiCards:[],currentPlayerCard:null,currentAiCard:null,roundInProgress:false,turn:'player'};
-
 // --- RUN LOGIK ---
 function checkRun() {
     if (winStreak === 5) {
@@ -638,8 +635,7 @@ druckfestigkeit:{
      unit:'(N/mm²)', 
      logic: 'Hoch gewinnt', 
      default: true,
-     description: `Die Druckfestigkeit gibt die maximale Spannung in (N/mm²) an, die das Holz aufnehmen kann, wenn es in Faserrichtung gestaucht wird.
-Der Wert wird an kleinen, fehlerfreien Holzklötzen im Normalklima (20°C, 65% rel. Luftfeuchte) bestimmt. Dabei wird die maximale Kraft, bei der das Holz versagt, durch den ursprünglichen Querschnitt der Probe geteilt.`
+     description: `Die Druckfestigkeit gibt die maximale Spannung in (N/mm²) an, die das Holz aufnehmen kann, wenn es in Faserrichtung gestaucht wird. Der Wert wird an kleinen, fehlerfreien Holzklötzen im Normalklima (20°C, 65% rel. Luftfeuchte) bestimmt. Dabei wird die maximale Kraft, bei der das Holz versagt, durch den ursprünglichen Querschnitt der Probe geteilt.`
  },
 rohdichte:{
      icon:'💎',
@@ -648,7 +644,7 @@ rohdichte:{
      logic: 'Hoch gewinnt', 
      default: true,
      description: 'Die Normal-Rohdichte (Roh) ist der Quotient aus Masse und Volumen (kg/m³) bei gleicher Holzfeuchte (DIN 68364). Als Referenz gilt hierbei das Normalklima bei 20 °C / 65 % rel. Luftfeuchte, was einer Ausgleichsfeuchte des Holzes von rund 12 % entspricht.'
- },
+},
  emodul:{
      icon:'〰️',
      name:'E-Modul',
@@ -656,7 +652,7 @@ rohdichte:{
      logic: 'Hoch gewinnt', 
      default: true,
      description: 'Das E-Modul ist eine Materialkonstante und beschreibt die Steifigkeit des Holzes (DIN EN 338). Der Wert gibt an, welche Kraft (N) erforderlich ist, um einen Stab mit einem Querschnitt von 1x1 mm auf seine doppelte Länge zu verformen. Sie wird in N/mm² angegeben. Ein hoher E-Modul steht für ein steifes Material, das sich nur schwer verformen lässt (steile Steigung im Spannungs-Dehnungs-Diagramm).'
- },
+},
 dk:{
      icon:'🛡️',
      name:'Dauerhaftigkeit',
@@ -664,7 +660,7 @@ dk:{
      logic: 'Niedrig gewinnt', 
      default: true,
      description: 'Die Dauerhaftigkeit nach DIN EN 350 gibt an, wie resistent das Kernholz gegen biologischen Befall ist: DK 1 bedeutet eine sehr lange Wiederstandsfähigkeit gegenüber Pilze, Insekten und andere Schädlinge, DK 5 dagegen eine sehr geringe Dauerhaftigkeit.'
- },
+},
  quellen:{
      icon:'↔️',
      name:'Quellen/Schw.',
@@ -672,23 +668,16 @@ dk:{
      logic: 'Niedrig gewinnt', 
      default: true,
      description: 'Angegeben ist das maximale tangentiale Schwindmaß (%). Dieser Wert beschreibt die prozentuale Maßänderung in Richtung der Jahresringe vom fasergesättigten Zustand (ca. 30 % Holzfeuchte) bis zum darrtrockenen Zustand (0 %).'
- },
+},
  preis:{
      icon:'💰',
      name:'Preisstufe',
      unit:'(Stufe)', 
      logic: 'Niedrig gewinnt', 
      default: true,
-     description: `Um eine einfache Vergleichbarkeit der Materialien zu gewährleisten, beziehen sich alle Preisangaben auf das Volumen von einem Kubikmeter (€/m³) Massivholz. Da reale Marktpreise je nach Region und Zeitpunkt schwanken, sind alle Hölzer in fünf feste Preisstufen unterteilt. 
-    0€ bis 699€  = 1
-  700€ bis 1199€ = 2
- 1200€ bis 1999€ = 3
- 2000€ bis 3999€ = 4
->4000€            = 5`
+     description: `Um eine einfache Vergleichbarkeit der Materialien zu gewährleisten, beziehen sich alle Preisangaben auf das Volumen von einem Kubikmeter (€/m³) Massivholz. Da reale Marktpreise je nach Region und Zeitpunkt schwanken, sind alle Hölzer in fünf feste Preisstufen unterteilt. 0€ bis 699€  = 1, 700€ bis 1199€ = 2, 1200€ bis 1999€ = 3, 2000€ bis 3999€ = 4, >4000€ = 5`
  }
 };
-
-
 // RANDOM DEFAULT ATTRIBUTES
 function getRandomDefaultAttributes() {
     const keys = Object.keys(attributeInfo);
@@ -701,7 +690,6 @@ function getRandomDefaultAttributes() {
 }
 
 let activeAttributeKeys = getRandomDefaultAttributes();
-
 const sounds={
  flip:new Audio('https://cdn.pixabay.com/audio/2022/03/15/audio_139083c224.mp3'),
  win:new Audio('https://github.com/aufdemholzweg/holzquartett/blob/64126fed45ff8c3fb4bd833f473d83f51ba0548b/Sounds/spielzuggewonnen.mp3?raw=true'),
@@ -722,8 +710,8 @@ const woodCards=[
  {name:"Ahorn", dk:"5", druckfestigkeit:60, quellen:9, rohdichte:650, emodul:9500, preis:2, imgTree:`${IMG_BASE}/ahorn_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/ahorn_2.jpeg${IMG_SUFFIX}`},
  {name:"Birke", dk:"5", druckfestigkeit:50, quellen:11.7, rohdichte:650, emodul:14500, preis:2, imgTree:`${IMG_BASE}/birke_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/birke_2.jpeg${IMG_SUFFIX}`},
  {name:"Douglasie", dk:"5", druckfestigkeit:70, quellen:7.5, rohdichte:500, emodul:13000, preis:4, imgTree:`${IMG_BASE}/douglasie_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/douglasie_2.jpeg${IMG_SUFFIX}`},
- {name:"Ebenholz, Afrikanisches", dk:"1-2", druckfestigkeit:70, quellen:12.8, rohdichte:1200, emodul:13000, preis:5, imgTree:`${IMG_BASE}/ebenholz_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/ebenholz_2.jpeg${IMG_SUFFIX}`},
- {name:"Kastanie", dk:"2", druckfestigkeit:50, quellen:6.8, rohdichte:620, emodul:9000, preis:3, imgTree:`${IMG_BASE}/kastanie_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/kastanie_2.jpeg${IMG_SUFFIX}`},
+ {name:"Ebenholz, Afr.", dk:"1-2", druckfestigkeit:70, quellen:12.8, rohdichte:1200, emodul:13000, preis:5, imgTree:`${IMG_BASE}/ebenholz_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/ebenholz_2.jpeg${IMG_SUFFIX}`},
+ {name:"Edelkastanie", dk:"2", druckfestigkeit:50, quellen:6.8, rohdichte:620, emodul:9000, preis:3, imgTree:`${IMG_BASE}/kastanie_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/kastanie_2.jpeg${IMG_SUFFIX}`},
  {name:"Eibe", dk:"2", druckfestigkeit:60, quellen:5.2, rohdichte:670, emodul:15000, preis:4, imgTree:`${IMG_BASE}/eibe_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/eibe_2.jpeg${IMG_SUFFIX}`},
  {name:"Eiche", dk:"2", druckfestigkeit:40, quellen:11.7, rohdichte:670, emodul:13000, preis:3, imgTree:`${IMG_BASE}/eiche_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/eiche_2.jpeg${IMG_SUFFIX}`},
  {name:"Erle", dk:"5", druckfestigkeit:55, quellen:9.4, rohdichte:550, emodul:9500, preis:1, imgTree:`${IMG_BASE}/erle_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/erle_2.jpeg${IMG_SUFFIX}`},
@@ -732,15 +720,15 @@ const woodCards=[
  {name:"Hemlock", dk:"4", druckfestigkeit:55, quellen:8.5, rohdichte:480, emodul:10000, preis:4, imgTree:`${IMG_BASE}/hemlock_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/hemlock_2.jpeg${IMG_SUFFIX}`},
  {name:"Hickory", dk:"4", druckfestigkeit:65, quellen:11, rohdichte:800, emodul:15000, preis:3, imgTree:`${IMG_BASE}/hickory_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/hickory_2.jpeg${IMG_SUFFIX}`},
  {name:"Kiefer", dk:"3-4", druckfestigkeit:55, quellen:12.4, rohdichte:520, emodul:11000, preis:1, imgTree:`${IMG_BASE}/kiefer_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/kiefer_2.jpeg${IMG_SUFFIX}`},
- {name:"Kirschbaum", dk:"3", druckfestigkeit:55, quellen:8.5, rohdichte:630, emodul:10600, preis:3, imgTree:`${IMG_BASE}/kirsche_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/kirsche_2.jpeg${IMG_SUFFIX}`},
  {name:"Lärche", dk:"3-4", druckfestigkeit:55, quellen:10.4, rohdichte:590, emodul:13800, preis:3, imgTree:`${IMG_BASE}/laerche_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/laerche_2.jpeg${IMG_SUFFIX}`},
  {name:"Linde", dk:"5", druckfestigkeit:50, quellen:10.7, rohdichte:520, emodul:7200, preis:2, imgTree:`${IMG_BASE}/linde_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/linde_2.jpeg${IMG_SUFFIX}`},
- {name:"Mahagoni (ami)", dk:"2", druckfestigkeit:50, quellen:5.8, rohdichte:600, emodul:10600, preis:5, imgTree:`${IMG_BASE}/mahagoni_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/mahagoni_2.jpeg${IMG_SUFFIX}`},
+ {name:"Mahagoni (echtes)", dk:"2", druckfestigkeit:50, quellen:5.8, rohdichte:600, emodul:10600, preis:5, imgTree:`${IMG_BASE}/mahagoni_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/mahagoni_2.jpeg${IMG_SUFFIX}`},
  {name:"Meranti (DR)", dk:"3-4", druckfestigkeit:65, quellen:9.8, rohdichte:720, emodul:14500, preis:4, imgTree:`${IMG_BASE}/meranti_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/meranti_2.jpeg${IMG_SUFFIX}`},
  {name:"Nussbaum (EU)", dk:"3", druckfestigkeit:70, quellen:7.5, rohdichte:670, emodul:12000, preis:4, imgTree:`${IMG_BASE}/nuss_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/nuss_2.jpeg${IMG_SUFFIX}`},
  {name:"Palisander", dk:"1", druckfestigkeit:80, quellen:8.1, rohdichte:850, emodul:12800, preis:5, imgTree:`${IMG_BASE}/palisander_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/palisander_2.jpeg${IMG_SUFFIX}`},
  {name:"Pappel", dk:"5", druckfestigkeit:35, quellen:9.8, rohdichte:450, emodul:9000, preis:2, imgTree:`${IMG_BASE}/pappel_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/pappel_2.jpeg${IMG_SUFFIX}`},
  {name:"Platane", dk:"5", druckfestigkeit:45, quellen:8.5, rohdichte:620, emodul:12800, preis:3, imgTree:`${IMG_BASE}/platane_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/platane_2.jpeg${IMG_SUFFIX}`},
+ {name:"Redwood", dk:"2", druckfestigkeit:40, quellen:4.0, rohdichte:420, emodul:9500, preis:4, imgTree:`${IMG_BASE}/redwood_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/redwood_2.jpeg${IMG_SUFFIX}`},
  {name:"Robinie", dk:"1-2", druckfestigkeit:70, quellen:7.5, rohdichte:770, emodul:13600, preis:3, imgTree:`${IMG_BASE}/robinie_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/robinie_2.jpeg${IMG_SUFFIX}`},
  {name:"Rotbuche", dk:"5", druckfestigkeit:60, quellen:11.7, rohdichte:720, emodul:14000, preis:2, imgTree:`${IMG_BASE}/buche_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/buche_2.jpeg${IMG_SUFFIX}`},
  {name:"Rüster", dk:"4", druckfestigkeit:45, quellen:8.3, rohdichte:670, emodul:11000, preis:3, imgTree:`${IMG_BASE}/ulme_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/ulme_2.jpeg${IMG_SUFFIX}`},
@@ -750,7 +738,6 @@ const woodCards=[
  {name:"Zebrano", dk:"2-3", druckfestigkeit:50, quellen:9, rohdichte:770, emodul:15400, preis:4, imgTree:`${IMG_BASE}/zebrano_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/zebrano_2.jpeg${IMG_SUFFIX}`},
  {name:"Zeder", dk:"1-2", druckfestigkeit:40, quellen:11, rohdichte:550, emodul:7200, preis:5, imgTree:`${IMG_BASE}/zeder_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/zeder_2.jpeg${IMG_SUFFIX}`}
 ];
-
 // -------------------------------------------------------------
 // NEUE WISSENSKARTEN-DATEN
 // -------------------------------------------------------------
@@ -759,7 +746,7 @@ const detailedWoodInfo = {
     "Birke": `<div class="text-xs font-bold mb-2">🟩 Heimisch (Europa, Nordasien)</div><p class="mb-2">Die Birke liefert ein helles, gelblich-weißes bis rötliches Holz. Es ist mäßig hart und zäh, aber leider nicht witterungsbeständig.</p><p class="mb-2"><strong>Verwendung:</strong> Der Klassiker für Sperrholz und Multiplex-Platten.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Hier sind die Gefäße (Poren) oft breiter als die Markstrahlen. Im Querschnitt sehen die Poren aus wie <strong>feine, helle Punkte</strong>.</div>`,
     "Douglasie": `<div class="text-xs font-bold mb-2">🟩 Heimisch (Eingebürgert)</div><p class="mb-2">Ein Nadelholz mit einem kräftigen, rötlichen Kern. Es ist fester und widerstandsfähiger als Fichte und enthält Harz.</p><p class="mb-2"><strong>Verwendung:</strong> Konstruktionsholz für draußen, Terrassendielen.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Der Übergang zwischen dem hellen Frühholz und dem dunklen Spätholz ist sehr scharf. Wenn du es bearbeitest, riecht es oft leicht nach <strong>Zitrone</strong>.</div>`,
     "Ebenholz, Afr.": `<div class="text-xs font-bold mb-2 text-red-600">🟥 Import (Afrika) - Stark gefährdet</div><p class="mb-2">Dieses Holz ist extrem hart, schwer und dicht. Der Kern ist tiefschwarz. Es ist so fein, dass es sich hervorragend polieren lässt.</p><p class="mb-2"><strong>Verwendung:</strong> Griffbretter für Geigen und Gitarren, Klaviertasten.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Es hat eine enorme Dichte und <strong>sinkt im Wasser</strong>. Die Poren sind oft mit dunklen Inhaltsstoffen gefüllt und kaum sichtbar.</div>`,
-    "Kastanie": `<div class="text-xs font-bold mb-2">🟩 Heimisch (Südeuropa)</div><p class="mb-2">Ein ringporiges Hartholz mit einem gelbbraunen Kern. Es sieht der Eiche zum Verwechseln ähnlich, ist aber etwas leichter und weicher.</p><p class="mb-2"><strong>Verwendung:</strong> Fassholz für Wein, Pfähle, Möbel.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Es sieht aus wie Eiche, aber es fehlen die breiten Markstrahlen. Du siehst also <strong>keine Spiegel</strong> auf der radialen Fläche.</div>`,
+    "Edelkastanie": `<div class="text-xs font-bold mb-2">🟩 Heimisch (Südeuropa)</div><p class="mb-2">Ein ringporiges Hartholz mit einem gelbbraunen Kern. Es sieht der Eiche zum Verwechseln ähnlich, ist aber etwas leichter und weicher.</p><p class="mb-2"><strong>Verwendung:</strong> Fassholz für Wein, Pfähle, Möbel.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Es sieht aus wie Eiche, aber es fehlen die breiten Markstrahlen. Du siehst also <strong>keine Spiegel</strong> auf der radialen Fläche.</div>`,
     "Eibe": `<div class="text-xs font-bold mb-2 text-yellow-600">🟨 Heimisch - Geschützt</div><p class="mb-2">Das härteste und schwerste Nadelholz, das wir haben. Der Kern ist rötlich-violett. Es ist extrem zäh und dauerhaft.</p><p class="mb-2"><strong>Verwendung:</strong> Drechseln, Kunsttischlerei, Bogenbau.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Obwohl es ein Nadelholz ist, hat die Eibe <strong>keine Harzkanäle</strong>. Die Jahresringe verlaufen oft sehr wellig.</div>`,
     "Eiche": `<div class="text-xs font-bold mb-2">🟩 Heimisch (Europa)</div><p class="mb-2">Der Klassiker. Der Kern ist graugelb bis gelbbraun. Das Holz ist hart, schwer und dank der Gerbsäure sehr wetterfest.</p><p class="mb-2"><strong>Verwendung:</strong> Massivholzmöbel, Parkettböden, Weinfässer.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Die Eiche erkennst du sofort an den breiten <strong>Markstrahlen</strong>. Im Radialschnitt glänzen sie als auffällige Spiegel.</div>`,
     "Erle": `<div class="text-xs font-bold mb-2">🟩 Heimisch (Europa)</div><p class="mb-2">Frisch gefällt leuchtet das Holz orange-rot. Es ist ein weiches und leichtes Laubholz.</p><p class="mb-2"><strong>Verwendung:</strong> Kirschbaum-Ersatz (gebeizt), Modellbau. Unter Wasser extrem haltbar.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Die Markstrahlen bündeln sich oft zu sogenannten <strong>Scheinmarkstrahlen</strong>, die du als Längsstreifen erkennen kannst.</div>`,
@@ -768,15 +755,15 @@ const detailedWoodInfo = {
     "Hemlock": `<div class="text-xs font-bold mb-2 text-yellow-600">🟨 Import (Nordamerika)</div><p class="mb-2">Ein Nadelholz aus Nordamerika. Es ist grau-weiß bis gelblich und harzfrei.</p><p class="mb-2"><strong>Verwendung:</strong> Saunabau (harzt nicht), Innenausbau.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Es sieht der Fichte ähnlich, ist aber eher <strong>grau im Farbton</strong> und besitzt absolut keine Harzkanäle.</div>`,
     "Hickory": `<div class="text-xs font-bold mb-2 text-yellow-600">🟨 Import (Nordamerika)</div><p class="mb-2">Ein sehr hartes Holz aus der Walnuss-Familie. Höchste Zähigkeit aller Handelshölzer.</p><p class="mb-2"><strong>Verwendung:</strong> Hochwertige Werkzeugstiele, Drumsticks.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Im dunklen Spätholz kannst du feine, helle Linien erkennen. Das sind netzartige <strong>Parenchymbänder</strong>.</div>`,
     "Kiefer": `<div class="text-xs font-bold mb-2">🟩 Heimisch (Europa)</div><p class="mb-2">Starker Kontrast zwischen dem rötlichen Kern und dem gelben Splint. Harzreich.</p><p class="mb-2"><strong>Verwendung:</strong> Fenster, Türen, Möbel im Landhausstil, Dielen.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Auf dem Querschnitt siehst du große, deutliche <strong>Harzkanäle</strong>. Riecht intensiv nach Harz.</div>`,
-    "Kirschbaum": `<div class="text-xs font-bold mb-2">🟩 Heimisch (Europa)</div><p class="mb-2">Ein edles, feinporiges Hartholz. Der Kern ist rötlich und dunkelt feurig nach.</p><p class="mb-2"><strong>Verwendung:</strong> Stilmöbel, Innenausbau.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Die Markstrahlen sind im Querschnitt als helle, <strong>scharf begrenzte Linien</strong>.</div>`,
     "Lärche": `<div class="text-xs font-bold mb-2">🟩 Heimisch (Europa)</div><p class="mb-2">Schwerstes heimisches Nadelholz. Kern intensiv rotbraun. Sehr witterungsbeständig.</p><p class="mb-2"><strong>Verwendung:</strong> Fassaden, Fenster, Brücken, Außenbereich.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Der Übergang vom hellen Frühholz zum dunklen <strong>Spätholz</strong> ist extrem scharf und kontrastreich.</div>`,
     "Linde": `<div class="text-xs font-bold mb-2">🟩 Heimisch (Europa)</div><p class="mb-2">Ein helles, weiches und leichtes Holz. Kaum sichtbare Jahresringe.</p><p class="mb-2"><strong>Verwendung:</strong> Das klassische Holz für Bildhauer und Schnitzer.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Das Holz ist in alle Richtungen <strong>sehr homogen</strong> schneidbar (ideal zum Schnitzen).</div>`,
-    "Mahagoni (ami)": `<div class="text-xs font-bold mb-2 text-red-600">🟥 Import (Tropen) - CITES!</div><p class="mb-2">Tropisches Kernholz, rotbraun bis kupferrot. Mäßig hart, arbeitet kaum.</p><p class="mb-2"><strong>Verwendung:</strong> Exklusive Möbel, Bootsbau.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Durch den <strong>Wechseldrehwuchs</strong> entstehen auf der Fläche die berühmten Hell-Dunkel-Streifen.</div>`,
+    "Mahagoni (echtes)": `<div class="text-xs font-bold mb-2 text-red-600">🟥 Import (Tropen) - CITES!</div><p class="mb-2">Tropisches Kernholz, rotbraun bis kupferrot. Mäßig hart, arbeitet kaum.</p><p class="mb-2"><strong>Verwendung:</strong> Exklusive Möbel, Bootsbau.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Durch den <strong>Wechseldrehwuchs</strong> entstehen auf der Fläche die berühmten Hell-Dunkel-Streifen.</div>`,
     "Meranti (DR)": `<div class="text-xs font-bold mb-2 text-yellow-600">🟨 Import (Asien)</div><p class="mb-2">DR steht für <strong>Dark Red</strong>. Der Kern ist rotbraun. Eigenschaften schwanken stark.</p><p class="mb-2"><strong>Verwendung:</strong> Fensterbau (Standard), Außentüren.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Grobporig. Auf dem Querschnitt sieht man oft feine weiße Linien mit Harz (<strong>Gummiadern</strong>).</div>`,
     "Nussbaum (EU)": `<div class="text-xs font-bold mb-2">🟩 Heimisch (Europa)</div><p class="mb-2">Sehr dekoratives Hartholz. Kern grau-braun, oft dunkel gemasert.</p><p class="mb-2"><strong>Verwendung:</strong> Teure Möbel, Furniere, Gewehrschäfte.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Es ist <strong>halbringporig</strong>. Die Poren werden vom Frühjahr zum Sommer hin langsam kleiner.</div>`,
     "Palisander": `<div class="text-xs font-bold mb-2 text-red-600">🟥 Import (Tropen) - CITES!</div><p class="mb-2">Sehr schweres, hartes Tropenholz. Violett bis schokobraun mit fast schwarzen Streifen.</p><p class="mb-2"><strong>Verwendung:</strong> Marimbaphone, Gitarren, Luxusobjekte.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Charakteristisch sind die <strong>schwarzen Farbstreifen</strong>. Riecht süßlich bei Bearbeitung.</div>`,
     "Pappel": `<div class="text-xs font-bold mb-2">🟩 Heimisch (Europa)</div><p class="mb-2">Sehr weiches und leichtes Laubholz. Grau-weiß bis bräunlich.</p><p class="mb-2"><strong>Verwendung:</strong> Paletten, Zündhölzer, Saunabänke.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Nach dem Sägen ist die Oberfläche sehr <strong>wollig und faserig</strong>.</div>`,
     "Platane": `<div class="text-xs font-bold mb-2">🟩 Heimisch (Südeuropa)</div><p class="mb-2">Zerstreutporiges Laubholz mit rötlichem Kern. Mäßig hart.</p><p class="mb-2"><strong>Verwendung:</strong> Innenausbau, Drechseln.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Die Markstrahlen sind ungewöhnlich <strong>breit und hoch</strong> (Perlholz-Optik im Schnitt).</div>`,
+    "Redwood": `<div class="text-xs font-bold mb-2 text-yellow-600">🟨 Import (Nordamerika)</div><p class="mb-2">Auch Küstenmammutbaum genannt. Das Kernholz ist rötlich-braun und sehr dauerhaft, aber relativ weich.</p><p class="mb-2"><strong>Verwendung:</strong> Außenfassaden, Gartenmöbel, Terrassen.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Das Holz ist sehr leicht und spaltet sich sehr gerade. Es hat <strong>keine Harzkanäle</strong>, riecht aber dennoch aromatisch.</div>`,
     "Robinie": `<div class="text-xs font-bold mb-2">🟩 Heimisch (Eingebürgert)</div><p class="mb-2">Kern olivgrün bis goldbraun. Extrem hart, zäh und dauerhaft.</p><p class="mb-2"><strong>Verwendung:</strong> Spielplätze, Gartenmöbel, Pfähle.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Die großen Frühholzporen sind komplett mit <strong>Thyllen</strong> verstopft.</div>`,
     "Rotbuche": `<div class="text-xs font-bold mb-2">🟩 Heimisch (Europa)</div><p class="mb-2">Schlichtes, rötlich-weißes Holz. Hart und schwer, arbeitet aber stark.</p><p class="mb-2"><strong>Verwendung:</strong> Stühle (Bugholz), Werkbänke, Treppen.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Markstrahlen im Tangentialschnitt als dunkle Spindeln (<strong>Reiskerne</strong>) sichtbar.</div>`,
     "Rüster": `<div class="text-xs font-bold mb-2">🟩 Heimisch (Europa)</div><p class="mb-2">Holz der Ulme. Ringporig, schokobrauner Kern. Sehr zäh.</p><p class="mb-2"><strong>Verwendung:</strong> Möbel, Treppen, Sportgeräte.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Feine Poren im Spätholz bilden wellenförmige Bänder (<strong>Ulmenwellen</strong>).</div>`,
@@ -786,8 +773,8 @@ const detailedWoodInfo = {
     "Zebrano": `<div class="text-xs font-bold mb-2 text-red-600">🟥 Import (Afrika) - Gefährdet</div><p class="mb-2">Hellbraun mit regelmäßigen dunkelbraunen Streifen.</p><p class="mb-2"><strong>Verwendung:</strong> Furniere, Auto-Interieur.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Die <strong>Zebra-Streifung</strong> ist unverwechselbar. Riecht unangenehm.</div>`,
     "Zeder": `<div class="text-xs font-bold mb-2 text-yellow-600">🟨 Import (Nordamerika)</div><p class="mb-2">Meist Western Red Cedar. Sehr leicht, weich, rötlich und haltbar.</p><p class="mb-2"><strong>Verwendung:</strong> Schindeln, Fassaden, Mottenkugeln.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Intensiver, <strong>aromatischer Geruch</strong> (Bleistift).</div>`
 };
-
-const reflectionQuestions=[ "Welches Holz würdest du für Gartenmöbel wählen und warum?", "Eine Küchenarbeitsplatte muss schnittfest sein. Welches Holz eignet sich?", "Für einen Dielenboden: Hartes oder weiches Holz?", "Warum ist Teak im Schiffbau so beliebt?" ];
+const reflectionQuestions=[ "Welches Holz würdest du für Gartenmöbel wählen und warum?", "Eine Küchenarbeitsplatte muss schnittfest sein. Welches Holz eignet sich?", "Für einen Dielenboden: Hartes oder weiches Holz?", "Warum ist Teak im Schiffbau so beliebt?"
+];
 
 // 7. QUIZ FRAGEN (FÜR DAS STECHEN) - NEU MIT ERKLÄRUNG
 const quizQuestions = [
@@ -797,6 +784,7 @@ const quizQuestions = [
     {q:"Welche Holzfeuchte sollten Möbelstücke aufweisen, die in zentral beheizten Wohnräumen genutzt werden?", o:["8 – 10 %","15 – 18 %","ca. 25 %","0 %"], c:0, e:"Das entspricht dem durchschnittlichen Raumklima (20°C, 50% Luftfeuchte)."},
     {q:"Was versteht man unter dem Begriff „Kernholz“?", o:["Junges Außenholz","Toter, innerer Teil","Die Rinde","Verfaultes Holz"], c:1, e:"Der Kern dient nur noch der Stabilität und ist oft dauerhafter."},
     {q:"Welche physiologische Hauptfunktion erfüllt das Splintholz im lebenden Baum?", o:["Wasserleitung","Kälteschutz","Nur Stabilität","Harzspeicher"], c:0, e:"Der Splint ist der physiologisch aktive, wasserleitende Teil des Holzes."},
+    
     {q:"Welche der folgenden Baumarten zählt zu den Nadelhölzern?", o:["Eiche","Buche","Fichte","Ahorn"], c:2, e:"Die Fichte ist der klassische heimische Nadelbaum."},
     {q:"Welche der folgenden Baumarten gehört zu den Laubhölzern?", o:["Kiefer","Lärche","Esche","Tanne"], c:2, e:"Die Esche gehört zu den Laubbäumen (Angiospermen)."},
     {q:"Was versteht man unter der sogenannten „Darrdichte“ eines Holzes?", o:["Frischgewicht","Dichte bei 0 % Wasser","Härte","Astanteil"], c:1, e:"„Darren“ bedeutet technisches Trocknen bis kein Wasser mehr enthalten ist."},
@@ -805,6 +793,7 @@ const quizQuestions = [
     {q:"Welches Nadelholz wird im traditionellen Holzbau am häufigsten für Dachstühle verwendet?", o:["Fichte","Nussbaum","Kirschbaum","Balsa"], c:0, e:"Fichte ist leicht, fest, elastisch und günstig verfügbar."},
     {q:"Was stellen die Jahresringe im Querschnitt eines Baumstammes dar?", o:["Krankheiten","Holzzuwachs pro Jahr","Risse","Wurzeln"], c:1, e:"Ein Ring besteht aus Frühholz (Frühling) und Spätholz (Sommer)."},
     {q:"Wodurch unterscheiden sich Frühholz und Spätholz innerhalb eines Jahresringes?", o:["Frühholz ist dunkler","Frühholz hell, Spätholz dunkel","Kein Unterschied","Spätholz ist blau"], c:1, e:"Frühholz dient dem Wassertransport, Spätholz der Festigkeit."},
+    
     {q:"Welche physikalische Eigenschaft ist typisch für das Holz der Pappel?", o:["Schwer und hart","Leicht und weich","Witterungsfest","Schwarz"], c:1, e:"Pappelholz hat eine sehr geringe Dichte."},
     {q:"Was ist das Kambium und welche Funktion hat es im Baumstamm?", o:["Die Rinde","Wachstumsschicht","Das Mark","Ein Ast"], c:1, e:"Hier findet die Zellteilung statt (Holz nach innen, Bast nach außen)."},
     {q:"Welches Holz verströmt einen intensiven, aromatischen Geruch, der an Bleistifte erinnert?", o:["Buche","Zeder","Ahorn","Esche"], c:1, e:"Zedernöl sorgt für den typischen Geruch und vertreibt Motten."},
@@ -847,7 +836,6 @@ const quizQuestions = [
     {q:"Was sind „Tüpfel“ in der Zellwand?", o:["Ventile für den Wasseraustausch","Krankheiten","Farbpigmente","Astlöcher"], c:0, e:"Sie verbinden benachbarte Zellen und ermöglichen den Flüssigkeitstransport."},
     {q:"Wo bildet ein Laubbaum Reaktionsholz (Zugholz), wenn er schief steht?", o:["Auf der Unterseite","Auf der Oberseite (Zugseite)","Im Kern","In der Wurzel"], c:1, e:"Laubbäume „ziehen“ sich aktiv wieder gerade (im Gegensatz zu Nadelbäumen, die drücken)."}
 ];
-
 function shuffleArray(a){ for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
 
 // Funktion: Klotzi jubeln lassen (MIT NEUEN SPRÜCHEN)
@@ -929,14 +917,12 @@ function createCard(data, isRevealed, isPlayer, isActive, highlightAttr){
     if(isPlayer) { card.setAttribute('role', 'button'); card.setAttribute('tabindex', '0'); }
 
     const canSelect = isPlayer && ((gameMode==='ai' && aiGame.turn==='player' && !aiGame.roundInProgress) || (gameMode==='multiplayer' && localGameState.turn===localPlayerId && !localGameState.lastResult));
-    
     const front = document.createElement('div');
     const bClass = isActive ? 'border-orange-500 ring-4 ring-orange-200' : 'border-orange-200';
     front.className = `card-front card-front-bg rounded-2xl shadow-lg border-4 ${bClass} flex flex-col transition-all`;
     let html = `<div class="pt-3 px-3 pb-1"><h2 class="text-lg sm:text-xl font-bold text-amber-900 leading-none">${data.name}</h2></div>
                 <div class="mx-3 mt-1 mb-2 aspect-[4/3] rounded-xl overflow-hidden bg-white shadow-sm border border-orange-100"><img src="${data.imgTree}" class="w-full h-full object-cover"></div>
                 <div class="flex-grow flex flex-col justify-start gap-1 sm:gap-2 px-2 pb-2 overflow-y-auto hide-scrollbar">`;
-    
     for(const k of activeAttributeKeys){
         const info = attributeInfo[k];
         let flashClass = '';
@@ -950,7 +936,8 @@ function createCard(data, isRevealed, isPlayer, isActive, highlightAttr){
     const back = document.createElement('div');
     back.className = `card-back rounded-2xl shadow-lg relative ${isActive ? 'border-orange-500' : 'border-white'}`;
     if(!isPlayer && isOpponentNameBackVisible()){
-        const lbl = document.createElement('div'); lbl.className = 'opponent-back-name'; lbl.innerText = data.name; back.appendChild(lbl);
+        const lbl = document.createElement('div'); lbl.className = 'opponent-back-name'; lbl.innerText = data.name;
+        back.appendChild(lbl);
     }
     card.appendChild(front); card.appendChild(back);
     return card;
@@ -989,7 +976,6 @@ function startTieBreakerQuiz(qIndex, callback) {
     const qOptions = document.getElementById('quizOptions');
     const statusText = document.getElementById('quizStatusText');
     const expBox = document.getElementById('quizExplanation');
-    
     const question = quizQuestions[qIndex];
     qText.innerText = question.q;
     qOptions.innerHTML = '';
@@ -1010,7 +996,6 @@ function startTieBreakerQuiz(qIndex, callback) {
         buttons.push({btn, idx});
         qOptions.appendChild(btn);
     });
-    
     modal.classList.remove('hidden');
     timerBar.classList.add('animate-charge');
     
@@ -1037,14 +1022,13 @@ function startTieBreakerQuiz(qIndex, callback) {
                 const explanation = question.e || "Keine Erklärung verfügbar.";
                 expBox.innerText = "💡 " + explanation;
                 expBox.classList.remove('hidden');
-                
                 if(idx === question.c) {
                     btn.className = "w-full bg-green-500 text-white font-bold py-3 px-4 rounded-lg border-2 border-green-600 shadow-lg scale-105";
                     playSound(sounds.win);
                     setTimeout(() => {
                         modal.classList.add('hidden');
                         callback('correct');
-                    }, 4500); 
+                    }, 4500);
                 } else {
                     btn.className = "w-full bg-red-500 text-white font-bold py-3 px-4 rounded-lg border-2 border-red-600 shadow-md transform scale-95 opacity-50";
                     const correctBtnObj = buttons.find(b => b.idx === question.c);
@@ -1052,11 +1036,10 @@ function startTieBreakerQuiz(qIndex, callback) {
                     setTimeout(() => {
                         modal.classList.add('hidden');
                         callback('wrong');
-                    }, 4500); 
+                    }, 4500);
                 }
             };
         });
-        
         const quizTimeout = setTimeout(() => {
             if(!answered) {
                 answered = true;
@@ -1110,11 +1093,13 @@ function finishRoundAI(attr, rawPv, rawAv, pWins) {
         winStreak++; 
         playSound(sounds.win); 
         showHappyWorm(); 
-        checkRun(); // CHECK DEN RUN BEI 5 SIEGEN
-        lastRoundWinningWoodName = aiGame.currentPlayerCard.name; 
+        checkRun();
+        // CHECK DEN RUN BEI 5 SIEGEN
+        lastRoundWinningWoodName = aiGame.currentPlayerCard.name;
     } else { 
-        winStreak = 0; // RESET DEN RUN BEI VERLUST
-        lastRoundWinningWoodName = aiGame.currentAiCard.name; 
+        winStreak = 0;
+        // RESET DEN RUN BEI VERLUST
+        lastRoundWinningWoodName = aiGame.currentAiCard.name;
     }
     openBottomSheet(resText);
     const pC=aiGame.playerCards.shift(); const aC=aiGame.aiCards.shift();
@@ -1247,7 +1232,6 @@ window.selectAttribute = async (attr) => {
         const ov = getNumericValue(rawOv, attr);
         const logic = attributeInfo[attr].logic;
         let pWins = (logic === 'Niedrig gewinnt') ? (pv < ov) : (pv > ov);
-        
         if(pv === ov) {
             const qIdx = Math.floor(Math.random() * quizQuestions.length);
             await updateDoc(getPublicDataRef("games", gameId),{
@@ -1269,7 +1253,8 @@ window.startGameAI = (name) => {
     document.getElementById('ruleButton').classList.remove('hidden');
     document.getElementById('playerNameDisplay').innerText=name;
     const sh=shuffleArray([...woodCards]);
-    aiGame.playerCards=sh.slice(0,14); aiGame.aiCards=sh.slice(14,28); // 14 KARTEN WEIL 30 GESAMT
+    aiGame.playerCards=sh.slice(0,15); aiGame.aiCards=sh.slice(15,30);
+    // 15 KARTEN WEIL 30 GESAMT
     aiGame.currentPlayerCard=aiGame.playerCards[0]; aiGame.currentAiCard=aiGame.aiCards[0];
     document.getElementById('gameContainer').classList.remove('hidden');
     scrollToTop();
@@ -1280,7 +1265,7 @@ let authRetries = 0;
 window.createGame = async (playerName) => {
     if (!auth || !auth.currentUser) { 
         if(authRetries > 10) { alert("Verbindungsfehler"); return; }
-        authRetries++; setTimeout(() => window.createGame(playerName), 500); return; 
+        authRetries++; setTimeout(() => window.createGame(playerName), 500); return;
     }
     localPlayerId = auth.currentUser.uid;
     trackEvent('games_multiplayer');
@@ -1314,9 +1299,9 @@ window.joinGame = async (id, playerName) => {
         const p1=snap.data().playerIds[0];
         await updateDoc(ref,{
             status:'playing', playerIds:[p1,localPlayerId],
-            [`players.${localPlayerId}`]:{name:playerName,cards:sh.slice(14,28),status:'online'},
-            [`players.${p1}.cards`]:sh.slice(0,14),
-            turn:p1, currentCards:{[p1]:sh.slice(0,14)[0],[localPlayerId]:sh.slice(14,28)[0]},
+            [`players.${localPlayerId}`]:{name:playerName,cards:sh.slice(15,30),status:'online'},
+            [`players.${p1}.cards`]:sh.slice(0,15),
+            turn:p1, currentCards:{[p1]:sh.slice(0,15)[0],[localPlayerId]:sh.slice(15,30)[0]},
             lastResult:null
         });
         scrollToTop();
@@ -1366,7 +1351,6 @@ const calculateRank = (count) => {
     if (count >= 10) return { title: "Schleifklotz-Schwinger", stars: 2 };
     return { title: "Werkstatt-Neuling", stars: 1 };
 };
-
 async function updateMainMenuStats(user) {
     if (!user) return;
     const statsRef = doc(db, 'artifacts', appId, 'users', user.uid, 'gamification', 'stats');
@@ -1382,7 +1366,6 @@ async function updateMainMenuStats(user) {
     } catch (e) {}
 }
 onAuthStateChanged(auth, (user) => { if (user) updateMainMenuStats(user); });
-
 async function updateLeaderboard(name) {
     if (!auth.currentUser) return;
     const ref = getPublicDataRef("leaderboard", auth.currentUser.uid);
@@ -1401,7 +1384,6 @@ window.endGame = async (winnerName) => {
     
     // NEU: GEWINNERSOUND
     if(isWin) playSound(sounds.gameWin);
-    
     let newGamesCount = 0; let rankData = null;
     if (auth.currentUser) {
         const statsRef = doc(db, 'artifacts', appId, 'users', auth.currentUser.uid, 'gamification', 'stats');
@@ -1427,7 +1409,6 @@ window.endGame = async (winnerName) => {
     }
     document.getElementById('gameOverModal').classList.remove('hidden');
 };
-
 // --- HIER DIE ÄNDERUNG: Leaderboard Navigation ---
 window.showLeaderboard = async (fromMenu = false) => { 
     const list=document.getElementById('leaderboardList');
@@ -1460,7 +1441,6 @@ window.closeLeaderboard = () => {
         document.getElementById('gameOverModal').classList.remove('hidden');
     }
 };
-
 window.showNamePrompt = (mode) => {
     document.getElementById('setupModal').classList.add('hidden');
     document.getElementById('nameModal').classList.remove('hidden');
@@ -1478,7 +1458,6 @@ window.showNamePrompt = (mode) => {
     });
 };
 window.copyShareLink = () => { const l=document.getElementById('shareLink'); l.select(); try { document.execCommand('copy'); } catch(e){} };
-
 window.showGameInfo = () => {
     document.getElementById('mainHeader').classList.add('hidden'); 
     const list = document.getElementById('infoCategoryList');
@@ -1503,7 +1482,6 @@ window.closeGameInfo = () => {
     document.getElementById('gameInfoModal').classList.add('hidden');
     document.getElementById('mainHeader').classList.remove('hidden'); 
 };
-
 window.closeInfoModal = () => document.getElementById('infoModal').classList.add('hidden');
 window.resetGame = () => location.reload();
 
@@ -1526,7 +1504,7 @@ document.getElementById('bsInfoBtn').addEventListener('click', ()=>{
         const img1 = cardData.imgTree || 'https://placehold.co/400x300?text=Bild+fehlt';
         const img2 = cardData.imgCross || 'https://placehold.co/400x300?text=Detail+fehlt';
         modalContent.innerHTML += `
-            <div class="grid grid-cols-2 gap-3 mt-4">
+             <div class="grid grid-cols-2 gap-3 mt-4">
                 <div>
                     <p class="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">Maserung</p>
                     <img src="${img1}" class="w-full h-32 object-cover rounded-lg border border-gray-200 shadow-sm cursor-pointer hover:opacity-90 transition" onclick="window.openImageViewer(this.src)">
@@ -1544,7 +1522,7 @@ const p=new URLSearchParams(window.location.search);
 if(p.get('game')){ 
     document.getElementById('setupModal').classList.add('hidden');
     gameId=p.get('game'); 
-    window.showNamePrompt('join'); 
+    window.showNamePrompt('join');
 }
 
 window.openImageViewer = (src) => {
