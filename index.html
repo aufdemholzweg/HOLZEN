@@ -29,32 +29,18 @@
         .card-front-bg { background-color: #fffbeb; background-image: linear-gradient(to bottom right, #fffbeb, #fef3c7); }
         .hover-lift:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
         
-        /* Status-Ball Animation */
         .animate-pulse-glow { animation: pulse-glow 2s infinite; }
         @keyframes pulse-glow { 0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); transform: translate(-50%, -50%) scale(1); } 50% { box-shadow: 0 0 15px 5px rgba(34, 197, 94, 0.4); transform: translate(-50%, -50%) scale(1.1); } 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); transform: translate(-50%, -50%) scale(1); } }
         
-        /* Pop-In Animation für Fenster */
         .animate-pop-in { animation: pop-in 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
         @keyframes pop-in { 0% { transform: scale(0.5); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
         
-        /* Bounce Animation für Gleichstand */
         .animate-bounce-slam { animation: bounce-slam 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
-        @keyframes bounce-slam { 
-            0% { transform: scale(0); opacity: 0; } 
-            60% { transform: scale(1.1); opacity: 1; } 
-            100% { transform: scale(1); opacity: 1; } 
-        }
+        @keyframes bounce-slam { 0% { transform: scale(0); opacity: 0; } 60% { transform: scale(1.1); opacity: 1; } 100% { transform: scale(1); opacity: 1; } }
 
-        /* KLOTZI JUBEL ANIMATION (Runde gewonnen) */
-        @keyframes slide-up-bounce {
-            0% { transform: translateY(100%) rotate(10deg); opacity: 0; }
-            60% { transform: translateY(-20px) rotate(-5deg); opacity: 1; }
-            80% { transform: translateY(10px) rotate(5deg); }
-            100% { transform: translateY(0) rotate(0deg); opacity: 1; }
-        }
+        @keyframes slide-up-bounce { 0% { transform: translateY(100%) rotate(10deg); opacity: 0; } 60% { transform: translateY(-20px) rotate(-5deg); opacity: 1; } 80% { transform: translateY(10px) rotate(5deg); } 100% { transform: translateY(0) rotate(0deg); opacity: 1; } }
         .animate-klotzi-popup { animation: slide-up-bounce 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
 
-        /* NEU: RUN FLAMMEN ANIMATION */
         @keyframes flame-in {
             0% { transform: scale(0) rotate(-20deg); opacity: 0; }
             50% { transform: scale(1.3) rotate(10deg); opacity: 1; }
@@ -78,16 +64,10 @@
         .attr-toggle-btn.selected { background-color: #fef3c7; border-color: #f59e0b; color: #92400e; }
         .attr-toggle-btn:not(.selected) { background-color: #f3f4f6; color: #9ca3af; border-color: transparent; }
 
-        /* ANIMATIONEN FÜR DEN BALKEN & PUNKT */
-        @keyframes pulse-dot-anim { 
-            0%, 100% { transform: translate(50%, -50%) scale(1); } 
-            50% { transform: translate(50%, -50%) scale(1.4); } 
-        }
+        @keyframes pulse-dot-anim { 0%, 100% { transform: translate(50%, -50%) scale(1); } 50% { transform: translate(50%, -50%) scale(1.4); } }
         .animate-pulse-dot { animation: pulse-dot-anim 1s infinite ease-in-out; }
-
         @keyframes chargeWidth { from { width: 0%; } to { width: 100%; } }
         .animate-charge { animation: chargeWidth 1.5s linear forwards; }
-        
         @keyframes shrinkWidth { from { width: 100%; } to { width: 0%; } }
         .animate-shrink { animation: shrinkWidth 10s linear forwards; }
     </style>
@@ -744,9 +724,6 @@ const woodCards=[
  {name:"🌲 Zeder", dk:"1-2", druckfestigkeit:40, quellen:11, rohdichte:550, emodul:7200, preis:5, imgTree:`${IMG_BASE}/zeder_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/zeder_2.jpeg${IMG_SUFFIX}`}
 ];
 
-// -------------------------------------------------------------
-// NEUE WISSENSKARTEN-DATEN
-// -------------------------------------------------------------
 const detailedWoodInfo = {
     "🌳 Ahorn": `<div class="text-xs font-bold mb-2">🟩 Heimisch (Europa)</div><p class="mb-2">Das helle Holz glänzt seidig und hat eine sehr gleichmäßige Struktur. Es ist hart und gleichzeitig elastisch.</p><p class="mb-2"><strong>Verwendung:</strong> Hochwertige Massivmöbel, Tischplatten, Böden von Streichinstrumenten.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Ahorn hat einen typischen <strong>Seidenglanz</strong> auf gehobelten Flächen. Die Poren sind so fein, dass du sie mit bloßem Auge nicht sehen kannst.</div>`,
     "🌳 Birke": `<div class="text-xs font-bold mb-2">🟩 Heimisch (Europa, Nordasien)</div><p class="mb-2">Die Birke liefert ein helles, gelblich-weißes bis rötliches Holz. Es ist mäßig hart und zäh, aber leider nicht witterungsbeständig.</p><p class="mb-2"><strong>Verwendung:</strong> Der Klassiker für Sperrholz und Multiplex-Platten.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Hier sind die Gefäße (Poren) oft breiter als die Markstrahlen. Im Querschnitt sehen die Poren aus wie <strong>feine, helle Punkte</strong>.</div>`,
@@ -761,7 +738,6 @@ const detailedWoodInfo = {
     "🌲 Hemlock": `<div class="text-xs font-bold mb-2 text-yellow-600">🟨 Import (Nordamerika)</div><p class="mb-2">Ein Nadelholz aus Nordamerika. Es ist grau-weiß bis gelblich und harzfrei.</p><p class="mb-2"><strong>Verwendung:</strong> Saunabau (harzt nicht), Innenausbau.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Es sieht der Fichte ähnlich, ist aber eher <strong>grau im Farbton</strong> und besitzt absolut keine Harzkanäle.</div>`,
     "🌳 Hickory": `<div class="text-xs font-bold mb-2 text-yellow-600">🟨 Import (Nordamerika)</div><p class="mb-2">Ein sehr hartes Holz aus der Walnuss-Familie. Höchste Zähigkeit aller Handelshölzer.</p><p class="mb-2"><strong>Verwendung:</strong> Hochwertige Werkzeugstiele, Drumsticks.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Im dunklen Spätholz kannst du feine, helle Linien erkennen. Das sind netzartige <strong>Parenchymbänder</strong>.</div>`,
     "🌲 Kiefer": `<div class="text-xs font-bold mb-2">🟩 Heimisch (Europa)</div><p class="mb-2">Starker Kontrast zwischen dem rötlichen Kern und dem gelben Splint. Harzreich.</p><p class="mb-2"><strong>Verwendung:</strong> Fenster, Türen, Möbel im Landhausstil, Dielen.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Auf dem Querschnitt siehst du große, deutliche <strong>Harzkanäle</strong>. Riecht intensiv nach Harz.</div>`,
-    "🌳 Kirschbaum": `<div class="text-xs font-bold mb-2">🟩 Heimisch (Europa)</div><p class="mb-2">Ein edles, feinporiges Hartholz. Der Kern ist rötlich und dunkelt feurig nach.</p><p class="mb-2"><strong>Verwendung:</strong> Stilmöbel, Innenausbau.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Die Markstrahlen erscheinen im Querschnitt als helle, <strong>scharf begrenzte Linien</strong>.</div>`,
     "🌲 Lärche": `<div class="text-xs font-bold mb-2">🟩 Heimisch (Europa)</div><p class="mb-2">Schwerstes heimisches Nadelholz. Kern intensiv rotbraun. Sehr witterungsbeständig.</p><p class="mb-2"><strong>Verwendung:</strong> Fassaden, Fenster, Brücken, Außenbereich.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Der Übergang vom hellen Frühholz zum dunklen <strong>Spätholz</strong> ist extrem scharf und kontrastreich.</div>`,
     "🌳 Linde": `<div class="text-xs font-bold mb-2">🟩 Heimisch (Europa)</div><p class="mb-2">Ein helles, weiches und leichtes Holz. Kaum sichtbare Jahresringe.</p><p class="mb-2"><strong>Verwendung:</strong> Das klassische Holz für Bildhauer und Schnitzer.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Das Holz ist in alle Richtungen <strong>sehr homogen</strong> schneidbar (ideal zum Schnitzen).</div>`,
     "🌳 Mahagoni (echtes)": `<div class="text-xs font-bold mb-2 text-red-600">🟥 Import (Tropen) - CITES!</div><p class="mb-2">Tropisches Kernholz, rotbraun bis kupferrot. Mäßig hart, arbeitet kaum.</p><p class="mb-2"><strong>Verwendung:</strong> Exklusive Möbel, Bootsbau.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Durch den <strong>Wechseldrehwuchs</strong> entstehen auf der Fläche die berühmten Hell-Dunkel-Streifen.</div>`,
@@ -780,67 +756,6 @@ const detailedWoodInfo = {
     "🌳 Zebrano": `<div class="text-xs font-bold mb-2 text-red-600">🟥 Import (Afrika) - Gefährdet</div><p class="mb-2">Hellbraun mit regelmäßigen dunkelbraunen Streifen.</p><p class="mb-2"><strong>Verwendung:</strong> Furniere, Auto-Interieur.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Die <strong>Zebra-Streifung</strong> ist unverwechselbar. Riecht unangenehm.</div>`,
     "🌲 Zeder": `<div class="text-xs font-bold mb-2 text-yellow-600">🟨 Import (Nordamerika)</div><p class="mb-2">Meist Western Red Cedar. Sehr leicht, weich, rötlich und haltbar.</p><p class="mb-2"><strong>Verwendung:</strong> Schindeln, Fassaden, Mottenkugeln.</p><div class="bg-amber-50 p-2 rounded border border-amber-200 mt-2"><strong>🔍 Hammermerkmal:</strong><br>Intensiver, <strong>aromatischer Geruch</strong> (Bleistift).</div>`
 };
-
-const reflectionQuestions=[ "Welches Holz würdest du für Gartenmöbel wählen und warum?", "Eine Küchenarbeitsplatte muss schnittfest sein. Welches Holz eignet sich?", "Für einen Dielenboden: Hartes oder weiches Holz?", "Warum ist Teak im Schiffbau so beliebt?" ];
-
-// 7. QUIZ FRAGEN (FÜR DAS STECHEN) - NEU MIT ERKLÄRUNG
-const quizQuestions = [
-    {q:"Was passiert mit dem Volumen von Holz, wenn es unterhalb des Fasersättigungsbereiches Feuchtigkeit aufnimmt?", o:["Es schwindet","Es quillt","Bleibt gleich","Wird leichter"], c:1, e:"Wasser lagert sich in die Zellwände ein und drückt sie auseinander."},
-    {q:"In welcher anatomischen Richtung sind das Quellen und Schwinden von Holz am stärksten ausgeprägt?", o:["Längs","Radial","Tangential","Überall gleich"], c:2, e:"Tangential arbeitet Holz etwa doppelt so stark wie radial."},
-    {q:"Was bezeichnet man als den Fasersättigungsbereich bei einer Holzfeuchte von ca. 30 %?", o:["Holz schwimmt","Zellwand voll, Lumen leer","Darrtrocken","Möbeltrocken"], c:1, e:"Ab diesem Punkt beginnt das Holz beim Trocknen zu schwinden."},
-    {q:"Welche Holzfeuchte sollten Möbelstücke aufweisen, die in zentral beheizten Wohnräumen genutzt werden?", o:["8 – 10 %","15 – 18 %","ca. 25 %","0 %"], c:0, e:"Das entspricht dem durchschnittlichen Raumklima (20°C, 50% Luftfeuchte)."},
-    {q:"Was versteht man unter dem Begriff „Kernholz“?", o:["Junges Außenholz","Toter, innerer Teil","Die Rinde","Verfaultes Holz"], c:1, e:"Der Kern dient nur noch der Stabilität und ist oft dauerhafter."},
-    {q:"Welche physiologische Hauptfunktion erfüllt das Splintholz im lebenden Baum?", o:["Wasserleitung","Kälteschutz","Nur Stabilität","Harzspeicher"], c:0, e:"Der Splint ist der physiologisch aktive, wasserleitende Teil des Holzes."},
-    {q:"Welche der folgenden Baumarten zählt zu den Nadelhölzern?", o:["Eiche","Buche","Fichte","Ahorn"], c:2, e:"Die Fichte ist der klassische heimische Nadelbaum."},
-    {q:"Welche der folgenden Baumarten gehört zu den Laubhölzern?", o:["Kiefer","Lärche","Esche","Tanne"], c:2, e:"Die Esche gehört zu den Laubbäumen (Angiospermen)."},
-    {q:"Was versteht man unter der sogenannten „Darrdichte“ eines Holzes?", o:["Frischgewicht","Dichte bei 0 % Wasser","Härte","Astanteil"], c:1, e:"„Darren“ bedeutet technisches Trocknen bis kein Wasser mehr enthalten ist."},
-    {q:"Warum ist das Kernholz der Eiche besonders witterungsbeständig und dauerhaft?", o:["Ist sehr weich","Enthält Gerbsäure","Speichert Wasser","Ist weiß"], c:1, e:"Gerbsäure (Tannin) schützt das Holz vor Pilzen und Insekten."},
-    {q:"Welche heimische Baumart ist an ihrer charakteristischen weißen Rinde zu erkennen?", o:["Kiefer","Birke","Eiche","Nussbaum"], c:1, e:"Die weiße Rinde ist das sicherste Erkennungsmerkmal der Birke."},
-    {q:"Welches Nadelholz wird im traditionellen Holzbau am häufigsten für Dachstühle verwendet?", o:["Fichte","Nussbaum","Kirschbaum","Balsa"], c:0, e:"Fichte ist leicht, fest, elastisch und günstig verfügbar."},
-    {q:"Was stellen die Jahresringe im Querschnitt eines Baumstammes dar?", o:["Krankheiten","Holzzuwachs pro Jahr","Risse","Wurzeln"], c:1, e:"Ein Ring besteht aus Frühholz (Frühling) und Spätholz (Sommer)."},
-    {q:"Wodurch unterscheiden sich Frühholz und Spätholz innerhalb eines Jahresringes?", o:["Frühholz ist dunkler","Frühholz hell, Spätholz dunkel","Kein Unterschied","Spätholz ist blau"], c:1, e:"Frühholz dient dem Wassertransport, Spätholz der Festigkeit."},
-    {q:"Welche physikalische Eigenschaft ist typisch für das Holz der Pappel?", o:["Schwer und hart","Leicht und weich","Witterungsfest","Schwarz"], c:1, e:"Pappelholz hat eine sehr geringe Dichte."},
-    {q:"Was ist das Kambium und welche Funktion hat es im Baumstamm?", o:["Die Rinde","Wachstumsschicht","Das Mark","Ein Ast"], c:1, e:"Hier findet die Zellteilung statt (Holz nach innen, Bast nach außen)."},
-    {q:"Welches Holz verströmt einen intensiven, aromatischen Geruch, der an Bleistifte erinnert?", o:["Buche","Zeder","Ahorn","Esche"], c:1, e:"Zedernöl sorgt für den typischen Geruch und vertreibt Motten."},
-    {q:"Was bedeutet es, wenn ein Holzbauteil als „imprägniert“ bezeichnet wird?", o:["Mit Schutzmittel getränkt","Geschliffen","Getrocknet","Lackiert"], c:0, e:"Der Schutz zieht tief in das Holz ein, anders als bei Lack."},
-    {q:"Welcher heimische Nadelbaum wirft im Winter seine Nadeln ab?", o:["Fichte","Kiefer","Lärche","Tanne"], c:2, e:"Die Lärche wirft ihre Nadeln im Herbst ab wie ein Laubbaum seine Blätter."},
-    {q:"Welche Holzart wird aufgrund ihrer Zähigkeit traditionell für Hammerstiele verwendet?", o:["Fichte","Esche","Pappel","Balsa"], c:1, e:"Esche ist extrem zäh und elastisch, sie bricht nicht spröde."},
-    {q:"Welche biologische Funktion erfüllt das Harz bei Nadelbäumen?", o:["Wundverschluss","Ein Pilz","Der Kern","Ein Dünger"], c:0, e:"Es verschließt Verletzungen und schützt vor Insekten."},
-    {q:"Was bedeutet der Begriff „anisotrop“ in Bezug auf den Werkstoff Holz?", o:["Überall gleich","Richtungsabhängig","Brennbar","Giftig"], c:1, e:"Holz verhält sich in Längs-, Radial- und Tangentialrichtung unterschiedlich."},
-    {q:"Woran kann man die Nadeln einer Fichte bei der Bestimmung erkennen?", o:["Sie stechen","Sind weich","Fallen ab","Schuppenförmig"], c:0, e:"„Die Fichte sticht, die Tanne nicht.“"},
-    {q:"Mit welchem Messgerät bestimmt man üblicherweise die Holzfeuchte auf der Baustelle?", o:["Zollstock","Widerstandsmessgerät","Wasserwaage","Thermometer"], c:1, e:"Zwei Spitzen werden ins Holz geschlagen; je feuchter, desto besser leitet es Strom."},
-    {q:"Was versteht man unter der „Darr-Methode“ zur Bestimmung der Holzfeuchte?", o:["Trocknen bei 103°C","Dünsten","Wässern","Holzdehnung"], c:0, e:"Dies ist die Referenzmethode, um den exakten Wassergehalt zu bestimmen."},
-    {q:"Welchen Zweck erfüllt ein großer Dachüberstand beim Holzschutz an Fassaden?", o:["Optik","Trockenhalten","Brandschutz","Vogelschutz"], c:1, e:"Trockenes Holz (unter 20 %) kann nicht von Pilzen zerstört werden."},
-    {q:"Welche Funktion übernimmt der Inhaltsstoff Lignin in der Holzzellwand?", o:["Druckfestigkeit (Härte)","Weichmacher","Holzfärbung","Nährstoffreicher"], c:0, e:"Lignin verholzt die Zellwand und sorgt für die Druckstabilität."},
-    {q:"Welche Funktion hat die Cellulose im Aufbau der Holzzellwand?", o:["Zuggerüst der Fasern","„Klebstoff“","Standfästigkeit","Einlagerung"], c:0, e:"Cellulosefasern fangen Zugkräfte auf (ähnlich wie Stahl in Stahlbeton)."},
-    {q:"Welche der folgenden Holzarten ist so schwer, dass sie im Wasser sinkt?", o:["Fichte","Ebenholz","Pappel","Linde"], c:1, e:"Diese Hölzer haben eine Rohdichte von über 1,0 g/cm³."},
-    {q:"Was versteht man unter dem Begriff „Maserholz“?", o:["Wirbelig strukturiertes Holz","Gerades Holz","Farbiges Holz","Faules Holz"], c:0, e:"Es entsteht oft an Wucherungen und ist sehr dekorativ."},
-    {q:"Welche Holzart wird klassischerweise für die Herstellung von Weinfässern (Barrique) genutzt?", o:["Eiche","Fichte","Pappel","Birke"], c:0, e:"Eiche ist dicht (dank Thyllen) und gibt erwünschte Aromen an den Wein ab."},
-    {q:"Was ist „Bläue“ im Holz?", o:["Zuwachs von Ästen","Verfärbung durch Pilze","Holzzerfall","Wuchsfehler"], c:1, e:"Bläue ist meist ein optischer Mangel, keine Zerstörung der Zellwand."},
-    {q:"Welcher Teil des Holzes weist die höchste Dichte und Härte auf?", o:["Frühholz","Spätholz","alles gleich","Kambium"], c:1, e:"Spätholz hat dickere Zellwände und kleinere Hohlräume."},
-    {q:"Nach welchem Prinzip ist eine Sperrholzplatte aufgebaut?", o:["Längsholz aufeinander","Lagen um 90° verleimt","Stäbe hochkant","PU-Klebstoff"], c:1, e:"Durch das „Absperren“ (Kreuzen) wird das Quellen und Schwinden minimiert."},
-    {q:"Welche Holzart zeigt im Radialschnitt glänzende „Spiegel“ (Markstrahlen)?", o:["Eiche","Fichte","Kiefer","Pappel"], c:0, e:"Die „Spiegel“ sind die angeschnittenen, breiten Markstrahlen der Eiche."},
-    {q:"Welches Holz zeichnet sich durch besonders hohe Elastizität aus?", o:["Esche","Eiche","Pappel","Fichte"], c:0, e:"Esche ist biegsam und bricht nicht sofort (ideal für Sportgeräte)."},
-    {q:"Was ist ein Ast im Holz aus technischer Sicht?", o:["Wuchsfehler","Eingewachsener Zweig","Krankheit","Wurzel"], c:1, e:"Jeder Ast im Holz war früher ein Zweig außen am Baum."},
-    {q:"Welche Holzart wird häufig für die Herstellung von einfachen Paletten verwendet?", o:["Kiefer / Fichte","Nussbaum","Eiche","Teak"], c:0, e:"Für Einwegverpackungen muss das Holz billig, leicht und verfügbar sein."},
-    {q:"Was meint der Fachmann mit dem Ausdruck „Das Holz arbeitet“?", o:["Macht Geräusche","Quillt & Schwindet","Verrottet","Wächst"], c:1, e:"Das Quellen und Schwinden ist die wichtigste Eigenschaft bei der Konstruktion."},
-    {q:"Welche der folgenden Holzarten bezeichnet man als ringporig?", o:["Eiche","Buche","Ahorn","Fichte"], c:0, e:"Bei der Eiche sieht man die großen Poren im Frühholz als deutlichen Ring."},
-    {q:"Was ist eine OSB-Platte (Oriented Strand Board)?", o:["Grobspanplatte","Massivholz","Vollkunststoff","MDF"], c:0, e:"Die Späne sind ausgerichtet, um der Platte mehr Festigkeit zu geben."},
-    {q:"In welcher Jahreszeit bildet der Baum das dunklere Spätholz?", o:["Frühling","Sommer","Winter","Immer"], c:1, e:"Im Frühling muss der Baum schnell Wasser leiten, im Sommer festigt er sich."},
-    {q:"Ab welcher Holzfeuchte besteht dauerhaft die Gefahr von Pilzbefall?", o:["0 %","8 %","20 %","100 %"], c:2, e:"Pilze brauchen freies Wasser. Trockenes Holz (unter 20 %) ist sicher."},
-    {q:"Warum vergraut Holz im Außenbereich mit der Zeit?", o:["Staub","UV-Licht & Regen","Fäule","Pilze"], c:1, e:"Das Lignin wird zerstört und ausgewaschen, zurück bleibt helle Cellulose."},
-    {q:"Welcher heimische Nadelbaum besitzt keine Harzkanäle?", o:["Fichte","Kiefer","Lärche","Tanne"], c:3, e:"Tannenholz ist harzfrei (ein wichtiges Unterscheidungsmerkmal zur Fichte)."},
-    {q:"Warum haben Pfannen oft Holzgriffe?", o:["reduziert Gewicht","Leitet Strom","Isoliert Wärme","Brennt nicht"], c:2, e:"Holz leitet Hitze nur sehr langsam weiter, man verbrennt sich nicht die Finger."},
-    {q:"Die Eibe ist ein Nadelholz. Welches typische Nadelholz-Merkmal fehlt ihr jedoch komplett?", o:["Jahresringe","Der farbige Kern","Die Harzkanäle","Die Härte"], c:2, e:"Im Gegensatz zu Fichte oder Kiefer besitzt die Eibe keine Harzkanäle."},
-    {q:"Was ist das besondere Merkmal der Poren bei der Robinie?", o:["Sie sind leer","Sie sind verthyllt","Sie sind quadratisch","Mit Harz gefüllt"], c:1, e:"Die Thyllen verstopfen die Poren komplett, was das Holz sehr dauerhaft macht."},
-    {q:"Welche Holzfeuchte stellt sich ungefähr ein, wenn Holz lange Zeit im Normalklima (20°C/65%) gelagert wird?", o:["ca. 6 – 8 %","ca. 12 %","ca. 18 %","ca. 30 %"], c:1, e:"Dies ist ein Standardwert für die „Ausgleichsfeuchte“ im Außenklima unter Dach."},
-    {q:"Bei welcher Holzart muss man bei der Oberflächenbeschichtung besonders mit Harzgallen rechnen?", o:["Eiche","Fichte (o. Kiefer)","Tanne","Buche"], c:1, e:"Fichte und Kiefer besitzen Harzkanäle, die bei Wärme auslaufen können."},
-    {q:"Warum fühlt sich Holz bei Raumtemperatur wärmer an als ein Stück Stahl?", o:["Holz heizt","Schlechter Wärmeleiter","Höhere Dichte","Gibt Feuchte ab"], c:1, e:"Stahl leitet die Körperwärme sofort ab (kalt), Holz isoliert (warm)."},
-    {q:"Woran erkennt man „Braunfäule“ am zerstörten Holz?", o:["Das Holz wird weiß und faserig","Das Holz zerfällt würfelartig (Würfelbruch)","Das Holz wird blau","Das Holz wird elastisch"], c:1, e:"Der Pilz baut Cellulose ab, das braune Lignin bleibt spröde zurück und bricht in Würfeln."},
-    {q:"Woran erkennt man „Weißfäule“?", o:["Das Holz wird hell und faserig","Das Holz wird schwarz","Es entstehen Würfel","Es wird steinhart"], c:0, e:"Der Pilz baut das braune Lignin ab, die weiße Cellulose bleibt als weiche Faserstruktur zurück."},
-    {q:"Was sind „Tüpfel“ in der Zellwand?", o:["Ventile für den Wasseraustausch","Krankheiten","Farbpigmente","Astlöcher"], c:0, e:"Sie verbinden benachbarte Zellen und ermöglichen den Flüssigkeitstransport."},
-    {q:"Wo bildet ein Laubbaum Reaktionsholz (Zugholz), wenn er schief steht?", o:["Auf der Unterseite","Auf der Oberseite (Zugseite)","Im Kern","In der Wurzel"], c:1, e:"Laubbäume „ziehen“ sich aktiv wieder gerade (im Gegensatz zu Nadelbäumen, die drücken)."}
-];
 
 let usedQuizIndices = [];
 function getUniqueQuizQuestionIndex() {
@@ -896,36 +811,26 @@ function startTieBreakerQuiz(qIndex, callback) {
             const {btn, idx} = obj;
             btn.className = "w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3 px-4 rounded-lg border-2 border-gray-200 transition active:scale-95 cursor-pointer";
             btn.disabled = false;
-            
             btn.onclick = () => {
                 if(answered) return;
                 answered = true;
                 clearTimeout(quizTimeout);
                 sounds.quizTick.pause(); sounds.quizTick.currentTime = 0;
-                
                 const explanation = question.e || "Keine Erklärung verfügbar.";
                 expBox.innerText = "💡 " + explanation;
                 expBox.classList.remove('hidden');
-                
                 if(idx === question.c) {
                     btn.className = "w-full bg-green-500 text-white font-bold py-3 px-4 rounded-lg border-2 border-green-600 shadow-lg scale-105";
                     playSound(sounds.win);
-                    setTimeout(() => {
-                        modal.classList.add('hidden');
-                        callback('correct');
-                    }, 4500); 
+                    setTimeout(() => { modal.classList.add('hidden'); callback('correct'); }, 4500);
                 } else {
                     btn.className = "w-full bg-red-500 text-white font-bold py-3 px-4 rounded-lg border-2 border-red-600 shadow-md transform scale-95 opacity-50";
                     const correctBtnObj = buttons.find(b => b.idx === question.c);
                     if(correctBtnObj) correctBtnObj.btn.className = "w-full bg-green-500 text-white font-bold py-3 px-4 rounded-lg border-2 border-green-600 shadow-lg scale-105 animate-pulse";
-                    setTimeout(() => {
-                        modal.classList.add('hidden');
-                        callback('wrong');
-                    }, 4500); 
+                    setTimeout(() => { modal.classList.add('hidden'); callback('wrong'); }, 4500);
                 }
             };
         });
-        
         const quizTimeout = setTimeout(() => {
             if(!answered) {
                 answered = true;
@@ -954,10 +859,9 @@ function evaluateRoundAI(attr){
     const av = getNumericValue(rawAv, attr);
     const logic = attributeInfo[attr].logic;
     let pWins = (logic === 'Niedrig gewinnt') ? (pv < av) : (pv > av);
-    
     if(pv === av) {
         showTieOverlay(() => {
-            const qIdx = Math.floor(Math.random() * quizQuestions.length);
+            const qIdx = getUniqueQuizQuestionIndex();
             startTieBreakerQuiz(qIdx, (result) => {
                 let roundWinner = false;
                 if(result === 'correct') roundWinner = true;
@@ -979,10 +883,10 @@ function finishRoundAI(attr, rawPv, rawAv, pWins) {
         winStreak++; 
         playSound(sounds.win); 
         showHappyWorm(); 
-        checkRun(); // CHECK DEN RUN BEI 5 SIEGEN
+        checkRun(); 
         lastRoundWinningWoodName = aiGame.currentPlayerCard.name; 
     } else { 
-        winStreak = 0; // RESET DEN RUN BEI VERLUST
+        winStreak = 0; 
         lastRoundWinningWoodName = aiGame.currentAiCard.name; 
     }
     openBottomSheet(resText);
@@ -1118,7 +1022,7 @@ window.selectAttribute = async (attr) => {
         let pWins = (logic === 'Niedrig gewinnt') ? (pv < ov) : (pv > ov);
         
         if(pv === ov) {
-            const qIdx = Math.floor(Math.random() * quizQuestions.length);
+            const qIdx = getUniqueQuizQuestionIndex();
             await updateDoc(getPublicDataRef("games", gameId),{
                 quizTrigger: { active: true, attr: attr, qIndex: qIdx, timestamp: Date.now() }
             });
