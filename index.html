@@ -455,7 +455,7 @@ Es werden keine Tracking oder Werbe-Cookies eingesetzt.
     <div class="bg-white rounded-2xl shadow-2xl p-6 max-w-sm w-full text-center relative overflow-visible">
         
         <style>
-            .scene-stage { width: 100%; height: 220px; position: relative; background: linear-gradient(to bottom, #87CEEB 0%, #E0F7FA 70%, #8D6E63 70%, #5D4037 100%); border-radius: 16px; overflow: hidden; border: 4px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-bottom: 20px; }
+            .scene-stage { width: 100%; height: 150px; position: relative; background: linear-gradient(to bottom, #87CEEB 0%, #E0F7FA 70%, #8D6E63 70%, #5D4037 100%); border-radius: 16px; overflow: hidden; border: 4px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-bottom: 20px; }
             .klotzi-real { height: 100px; width: auto; position: absolute; bottom: 50px; left: 40px; z-index: 10; transform-origin: bottom center; animation: klotzi-logic 6s infinite ease-in-out; }
             .seed { font-size: 20px; position: absolute; bottom: 120px; left: 160px; opacity: 0; animation: seed-fall 6s infinite; }
             .big-tree { font-size: 120px; position: absolute; bottom: 35px; left: 110px; transform-origin: bottom center; transform: scale(0); filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.2)); animation: tree-pop 6s infinite; }
@@ -473,6 +473,11 @@ Es werden keine Tracking oder Werbe-Cookies eingesetzt.
             @keyframes spin-sun { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         </style>
 
+        <a href="https://forms.office.com/r/dPiXWjBiGQ" target="_blank" 
+           class="absolute -top-6 -right-6 z-[220] bg-violet-600 hover:bg-violet-700 text-white text-xs font-bold h-16 w-48 flex items-center justify-center px-4 rounded-full shadow-xl transition-transform active:scale-95 gap-2 no-underline border-4 border-white/20 animate-pop-in">
+            <span>💬</span> Feedback zum Spiel
+        </a>
+
         <div class="scene-stage" role="img" aria-label="Animation: Klotzi pflanzt einen Baum">
             <div class="sun-ray"></div>
             <img src="https://github.com/aufdemholzweg/holzquartett/blob/main/images/klotzi_win.png?raw=true" class="klotzi-real" alt="Klotzi">
@@ -483,13 +488,6 @@ Es werden keine Tracking oder Werbe-Cookies eingesetzt.
         <div class="relative z-10 mt-4"> 
             <h2 id="gameOverTitle" class="text-3xl font-black mb-2 text-gray-800">SPIELENDE</h2>
             <p id="gameOverText" class="text-gray-600 mb-6"></p>
-
-            <div id="gameOverFeedbackContainer" class="hidden mb-4 animate-pop-in">
-                 <a href="https://forms.office.com/r/dPiXWjBiGQ" target="_blank" 
-                    class="block w-full bg-violet-600 hover:bg-violet-700 text-white font-bold py-2.5 rounded-xl shadow-lg text-center border-2 border-white/20 transition-transform active:scale-95">
-                    💬 Feedback geben
-                 </a>
-            </div>
 
             <div class="mb-4">
                 <p class="text-xs font-bold text-gray-400 uppercase mb-2 tracking-wider">Level Auswahl</p>
@@ -1485,7 +1483,7 @@ window.endGame = async (winnerName) => {
     // Level 2 (Aktiv ab 5 Spielen)
     const lvl2Btn = document.createElement('a');
     if(newGamesCount >= 5) {
-        lvl2Btn.href = "https://aufdemholzweg.github.io/Mikrotechnische-Untersuchungen-Holzerkennung/"; // DEIN PLATZHALTER
+        lvl2Btn.href = "https://hier-Link-einfuegen-fuer-zweites-level"; // DEIN PLATZHALTER
         lvl2Btn.target = "_blank"; // In neuem Tab öffnen, damit man zurück kann
         lvl2Btn.className = "bg-green-600 hover:bg-green-700 text-white font-bold py-2 rounded-lg text-center text-xs flex flex-col justify-center items-center shadow-md border-b-2 border-green-800 transition active:scale-95 animate-pulse h-14";
         lvl2Btn.innerHTML = "<span>Lvl 2</span><span>🚀</span>";
@@ -1505,10 +1503,7 @@ window.endGame = async (winnerName) => {
 
     document.getElementById('gameOverModal').classList.remove('hidden');
     
-    // 3 Sekunden Timer für Feedback Button
-    setTimeout(() => {
-         document.getElementById('gameOverFeedbackContainer').classList.remove('hidden');
-    }, 3000);
+    // Feedback-Button ist jetzt immer sichtbar (absolut positioniert), daher keine Animation nötig
 };
 
 // --- HIER DIE ÄNDERUNG: Leaderboard Navigation ---
