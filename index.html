@@ -93,10 +93,10 @@
         /* NEU: SANFTES POCHEN FÜR FEEDBACK BUTTON */
         @keyframes gentle-pulse {
             0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            50% { transform: scale(1.08); }
         }
         .animate-gentle-pulse { 
-            animation: gentle-pulse 3s infinite ease-in-out; 
+            animation: gentle-pulse 2s infinite ease-in-out; 
         }
 
         .opponent-back-name { position: absolute; top: 15%; width: 100%; text-align: center; color: rgba(255,255,255,0.95);
@@ -586,8 +586,7 @@
 </div>
 
 <div id="gameOverModal" class="hidden fixed inset-0 dimmer flex items-center justify-center z-[200] p-4 pt-20">
-    <div class="bg-white rounded-2xl shadow-2xl p-6 max-w-sm w-full text-center 
-    relative overflow-visible">
+    <div class="bg-white rounded-2xl shadow-2xl p-6 max-w-sm w-full text-center relative overflow-visible -mt-12">
         
         <style>
             .scene-stage { width: 100%;
@@ -655,8 +654,8 @@
                     </div>
             </div>
 
- 
             <div class="space-y-3">
+                <button onclick="window.resetGame()" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 rounded-lg shadow-md transition transform active:scale-95">🔄 Neues Spiel</button>
                 <button onclick="window.showLeaderboard(false)" class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-2 rounded-lg border border-gray-300">🏆 Bestenliste</button>
             </div>
         </div>
