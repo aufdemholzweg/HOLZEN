@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -226,7 +225,7 @@
 </div>
 
 <div id="quizModal" class="fixed inset-0 dimmer flex items-center justify-center z-[80] p-4 hidden pt-20">
-    <div class="bg-white rounded-2xl shadow-2xl relative w-full max-w-sm flex flex-col animate-pop-in border-4 border-amber-500 overflow-visible">
+    <div class="bg-white rounded-2xl shadow-2xl relative w-full max-w-sm flex flex-col animate-pop-in border-4 border-amber-50 overflow-visible">
         
         <div class="h-4 w-full bg-gray-200 relative overflow-hidden rounded-t-xl">
             <div id="quizTimerBar" class="h-full w-0 bg-amber-500 rounded-r-sm relative"> 
@@ -1655,8 +1654,10 @@ window.endGame = async (winnerName) => {
     document.getElementById('bottomSheet').classList.add('hidden');
     document.getElementById('bottomSheetBackdrop').classList.add('hidden');
     
-    document.getElementById('gameOverFeedbackContainer').classList.add('hidden');
-const isWin = (winnerName === (gameMode === 'ai' ? aiGame.playerName : localGameState.players[localPlayerId].name));
+    // --- FIX HIER: ID 'gameOverFeedbackContainer' existiert im HTML nicht, Zeilen entfernt ---
+    // document.getElementById('gameOverFeedbackContainer').classList.add('hidden');
+    
+    const isWin = (winnerName === (gameMode === 'ai' ? aiGame.playerName : localGameState.players[localPlayerId].name));
     
     const sceneStage = document.querySelector('.scene-stage');
     const klotziImg = sceneStage.querySelector('.klotzi-real');
@@ -1700,9 +1701,10 @@ text.innerHTML = `Schade, ${winnerName} hat gewonnen.<br>Dranbleiben lohnt sich!
     renderLevelButtons('levelSelector', newGamesCount); // Buttons rendern
 
     document.getElementById('gameOverModal').classList.remove('hidden');
-setTimeout(() => {
-         document.getElementById('gameOverFeedbackContainer').classList.remove('hidden');
-    }, 3000);
+    // --- FIX HIER: Timeout entfernt, da Element nicht existiert ---
+    // setTimeout(() => {
+    //      document.getElementById('gameOverFeedbackContainer').classList.remove('hidden');
+    // }, 3000);
 };
 // NEUE FUNKTION: Level Menü öffnen
 window.openLevelMenu = async () => {
