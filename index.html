@@ -90,6 +90,15 @@
         .animate-run-flame { animation: flame-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
         }
 
+        /* NEU: SANFTES POCHEN FÜR FEEDBACK BUTTON */
+        @keyframes gentle-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .animate-gentle-pulse { 
+            animation: gentle-pulse 3s infinite ease-in-out; 
+        }
+
         .opponent-back-name { position: absolute; top: 15%; width: 100%; text-align: center; color: rgba(255,255,255,0.95);
         font-weight: 700; font-size: 1.1rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5); pointer-events: none;
         }
@@ -507,7 +516,7 @@
     
     <div class="relative w-full max-w-sm pt-10"> <a href="https://forms.office.com/r/dPiXWjBiGQ" target="_blank" 
    class="fixed top-16 left-0 z-[130] bg-violet-600 hover:bg-violet-700 text-white text-xs font-bold h-12 w-40 flex items-center justify-center px-4 rounded-r-full shadow-xl transition-transform active:scale-95 gap-2 no-underline 
-    border-y-2 border-r-2 border-white/20 animate-pop-in">
+    border-y-2 border-r-2 border-white/20 animate-pop-in animate-gentle-pulse">
     <span>💬</span> Feedback
         </a>
 
@@ -623,7 +632,7 @@
         </style>
 
         <a href="https://forms.office.com/r/dPiXWjBiGQ" target="_blank" 
-           class="absolute -top-6 -right-6 z-[220] bg-violet-600 hover:bg-violet-700 text-white text-xs font-bold h-16 w-48 flex items-center justify-center px-4 rounded-full shadow-xl transition-transform active:scale-95 gap-2 no-underline border-4 border-white/20 animate-pop-in">
+           class="absolute -top-6 -right-6 z-[220] bg-violet-600 hover:bg-violet-700 text-white text-xs font-bold h-16 w-48 flex items-center justify-center px-4 rounded-full shadow-xl transition-transform active:scale-95 gap-2 no-underline border-4 border-white/20 animate-pop-in animate-gentle-pulse">
             <span>💬</span> Feedback zum Spiel
         </a>
 
@@ -1654,9 +1663,6 @@ window.endGame = async (winnerName) => {
     document.getElementById('bottomSheet').classList.add('hidden');
     document.getElementById('bottomSheetBackdrop').classList.add('hidden');
     
-    // --- FIX HIER: ID 'gameOverFeedbackContainer' existiert im HTML nicht, Zeilen entfernt ---
-    // document.getElementById('gameOverFeedbackContainer').classList.add('hidden');
-    
     const isWin = (winnerName === (gameMode === 'ai' ? aiGame.playerName : localGameState.players[localPlayerId].name));
     
     const sceneStage = document.querySelector('.scene-stage');
@@ -1701,10 +1707,6 @@ text.innerHTML = `Schade, ${winnerName} hat gewonnen.<br>Dranbleiben lohnt sich!
     renderLevelButtons('levelSelector', newGamesCount); // Buttons rendern
 
     document.getElementById('gameOverModal').classList.remove('hidden');
-    // --- FIX HIER: Timeout entfernt, da Element nicht existiert ---
-    // setTimeout(() => {
-    //      document.getElementById('gameOverFeedbackContainer').classList.remove('hidden');
-    // }, 3000);
 };
 // NEUE FUNKTION: Level Menü öffnen
 window.openLevelMenu = async () => {
