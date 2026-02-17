@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -89,6 +88,15 @@
             opacity: 1; }
         }
         .animate-run-flame { animation: flame-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        /* NEU: SANFTES POCHEN FÜR FEEDBACK BUTTON */
+        @keyframes gentle-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .animate-gentle-pulse { 
+            animation: gentle-pulse 3s infinite ease-in-out; 
         }
 
         .opponent-back-name { position: absolute; top: 15%; width: 100%; text-align: center; color: rgba(255,255,255,0.95);
@@ -226,7 +234,7 @@
 </div>
 
 <div id="quizModal" class="fixed inset-0 dimmer flex items-center justify-center z-[80] p-4 hidden pt-20">
-    <div class="bg-white rounded-2xl shadow-2xl relative w-full max-w-sm flex flex-col animate-pop-in border-4 border-amber-500 overflow-visible">
+    <div class="bg-white rounded-2xl shadow-2xl relative w-full max-w-sm flex flex-col animate-pop-in border-4 border-amber-50 overflow-visible">
         
         <div class="h-4 w-full bg-gray-200 relative overflow-hidden rounded-t-xl">
             <div id="quizTimerBar" class="h-full w-0 bg-amber-500 rounded-r-sm relative"> 
@@ -508,7 +516,7 @@
     
     <div class="relative w-full max-w-sm pt-10"> <a href="https://forms.office.com/r/dPiXWjBiGQ" target="_blank" 
    class="fixed top-16 left-0 z-[130] bg-violet-600 hover:bg-violet-700 text-white text-xs font-bold h-12 w-40 flex items-center justify-center px-4 rounded-r-full shadow-xl transition-transform active:scale-95 gap-2 no-underline 
-    border-y-2 border-r-2 border-white/20 animate-pop-in">
+    border-y-2 border-r-2 border-white/20 animate-pop-in animate-gentle-pulse">
     <span>💬</span> Feedback
         </a>
 
@@ -624,7 +632,7 @@
         </style>
 
         <a href="https://forms.office.com/r/dPiXWjBiGQ" target="_blank" 
-           class="absolute -top-6 -right-6 z-[220] bg-violet-600 hover:bg-violet-700 text-white text-xs font-bold h-16 w-48 flex items-center justify-center px-4 rounded-full shadow-xl transition-transform active:scale-95 gap-2 no-underline border-4 border-white/20 animate-pop-in">
+           class="absolute -top-6 -right-6 z-[220] bg-violet-600 hover:bg-violet-700 text-white text-xs font-bold h-16 w-48 flex items-center justify-center px-4 rounded-full shadow-xl transition-transform active:scale-95 gap-2 no-underline border-4 border-white/20 animate-pop-in animate-gentle-pulse">
             <span>💬</span> Feedback zum Spiel
         </a>
 
@@ -1590,63 +1598,64 @@ if (count >= 10) return { title: "Schleifklotz-Schwinger", stars: 2 };
 function renderLevelButtons(containerId, gamesCount) {
     const container = document.getElementById(containerId);
     if(!container) return;
-    container.innerHTML = '';
+container.innerHTML = '';
 
     // Level 1
     const lvl1Btn = document.createElement('a');
     lvl1Btn.href = "#";
-    lvl1Btn.onclick = (e) => { e.preventDefault(); if(containerId==='levelSelector') window.resetGame(); else { document.getElementById('levelMenuModal').classList.add('hidden'); document.getElementById('setupModal').classList.remove('hidden'); } };
-    lvl1Btn.className = "bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 rounded-lg text-center text-xs flex flex-col justify-center items-center shadow-md border-b-2 border-amber-700 transition active:scale-95 h-14";
-    lvl1Btn.innerHTML = "<span>Lvl 1</span><span>🌲</span>";
+lvl1Btn.onclick = (e) => { e.preventDefault(); if(containerId==='levelSelector') window.resetGame(); else { document.getElementById('levelMenuModal').classList.add('hidden'); document.getElementById('setupModal').classList.remove('hidden'); } };
+lvl1Btn.className = "bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 rounded-lg text-center text-xs flex flex-col justify-center items-center shadow-md border-b-2 border-amber-700 transition active:scale-95 h-14";
+lvl1Btn.innerHTML = "<span>Lvl 1</span><span>🌲</span>";
     container.appendChild(lvl1Btn);
 
     // Level 2
     const lvl2Btn = document.createElement('a');
-    if(gamesCount >= 5) {
-        lvl2Btn.href = "https://aufdemholzweg.github.io/Mikrotechnische-Untersuchungen-Holzerkennung/"; 
-        lvl2Btn.target = "_blank"; 
-        lvl2Btn.className = "bg-green-600 hover:bg-green-700 text-white font-bold py-2 rounded-lg text-center text-xs flex flex-col justify-center items-center shadow-md border-b-2 border-green-800 transition active:scale-95 animate-pulse h-14";
-        lvl2Btn.innerHTML = "<span>Lvl 2</span><span>🚀</span>";
+if(gamesCount >= 5) {
+        lvl2Btn.href = "https://aufdemholzweg.github.io/Ausblick_weitere_Spiele/"; 
+        lvl2Btn.target = "_blank";
+lvl2Btn.className = "bg-green-600 hover:bg-green-700 text-white font-bold py-2 rounded-lg text-center text-xs flex flex-col justify-center items-center shadow-md border-b-2 border-green-800 transition active:scale-95 animate-pulse h-14";
+lvl2Btn.innerHTML = "<span>Lvl 2</span><span>🚀</span>";
     } else {
         lvl2Btn.className = "bg-gray-200 text-gray-400 font-bold py-2 rounded-lg text-center text-xs flex flex-col justify-center items-center border border-gray-300 cursor-not-allowed h-14";
-        lvl2Btn.innerHTML = "<span>Lvl 2</span><span>🔒</span>";
+lvl2Btn.innerHTML = "<span>Lvl 2</span><span>🔒</span>";
     }
     container.appendChild(lvl2Btn);
 
     // Level 3-5
     for(let i=3; i<=5; i++) {
         const btn = document.createElement('div');
-        btn.className = "bg-gray-100 text-gray-300 font-bold py-2 rounded-lg text-center text-xs flex flex-col justify-center items-center border border-gray-200 cursor-not-allowed h-14";
-        btn.innerHTML = `<span>Lvl ${i}</span><span>🔒</span>`;
+btn.className = "bg-gray-100 text-gray-300 font-bold py-2 rounded-lg text-center text-xs flex flex-col justify-center items-center border border-gray-200 cursor-not-allowed h-14";
+btn.innerHTML = `<span>Lvl ${i}</span><span>🔒</span>`;
         container.appendChild(btn);
     }
 }
 
 async function updateMainMenuStats(user) {
     if (!user) return;
-    const statsRef = doc(db, 'artifacts', appId, 'users', user.uid, 'gamification', 'stats');
-    try {
+const statsRef = doc(db, 'artifacts', appId, 'users', user.uid, 'gamification', 'stats');
+try {
         const snap = await getDoc(statsRef);
-        const count = snap.exists() ? (snap.data().gamesPlayed || 0) : 0;
+        const count = snap.exists() ?
+(snap.data().gamesPlayed || 0) : 0;
         const rank = calculateRank(count);
         const container = document.getElementById('mainMenuStats');
-        if(container) {
+if(container) {
             container.innerHTML = `<div class="text-white/80 text-xs mt-2 font-medium">Dein Rang: <span class="font-bold text-white text-sm">${rank.title}</span> • ${count} Spiele</div>`;
-            container.classList.remove('hidden');
+container.classList.remove('hidden');
         }
         // LEVEL BUTTON IM HAUPTMENÜ ANZEIGEN
         if(count >= 5) {
             document.getElementById('mainMenuLevelBtn').classList.remove('hidden');
-        }
+}
     } catch (e) {}
 }
 onAuthStateChanged(auth, (user) => { if (user) updateMainMenuStats(user); });
 async function updateLeaderboard(name) {
     if (!auth.currentUser) return;
     const ref = getPublicDataRef("leaderboard", auth.currentUser.uid);
-    try {
+try {
         await setDoc(ref, { name: name, wins: increment(1), last_win: serverTimestamp() }, { merge: true });
-    } catch (e) {}
+} catch (e) {}
 }
 
 window.endGame = async (winnerName) => {
@@ -1654,99 +1663,95 @@ window.endGame = async (winnerName) => {
     document.getElementById('bottomSheet').classList.add('hidden');
     document.getElementById('bottomSheetBackdrop').classList.add('hidden');
     
-    document.getElementById('gameOverFeedbackContainer').classList.add('hidden');
-    
     const isWin = (winnerName === (gameMode === 'ai' ? aiGame.playerName : localGameState.players[localPlayerId].name));
     
     const sceneStage = document.querySelector('.scene-stage');
     const klotziImg = sceneStage.querySelector('.klotzi-real');
-    
-    if (isWin) {
+if (isWin) {
         sceneStage.classList.remove('lose-state');
-        klotziImg.src = "https://github.com/aufdemholzweg/holzquartett/blob/main/images/klotzi_win.png?raw=true";
+        // PFAD GEÄNDERT: Repository HOLZEN
+        klotziImg.src = "https://github.com/aufdemholzweg/HOLZEN/blob/main/images/klotzi_win.png?raw=true";
         playSound(sounds.gameWin);
         triggerConfetti();
-    } else {
+} else {
         sceneStage.classList.add('lose-state');
+        // PFAD GEÄNDERT: Repository HOLZEN
         klotziImg.src = "https://github.com/aufdemholzweg/HOLZEN/blob/main/images/klotzi_lose.png?raw=true";
-    }
+}
     
     let newGamesCount = 0; let rankData = null;
-    if (auth.currentUser) {
+if (auth.currentUser) {
         const statsRef = doc(db, 'artifacts', appId, 'users', auth.currentUser.uid, 'gamification', 'stats');
-        try {
+try {
             await setDoc(statsRef, { gamesPlayed: increment(1), lastPlayed: serverTimestamp() }, { merge: true });
-            const snap = await getDoc(statsRef);
+const snap = await getDoc(statsRef);
             newGamesCount = snap.data().gamesPlayed || 0;
             rankData = calculateRank(newGamesCount);
-        } catch (e) {}
-        if (isWin) { await updateLeaderboard(gameMode === 'ai' ? aiGame.playerName : localGameState.players[localPlayerId].name); }
+} catch (e) {}
+        if (isWin) { await updateLeaderboard(gameMode === 'ai' ? aiGame.playerName : localGameState.players[localPlayerId].name);
+}
     }
     
     const title = document.getElementById('gameOverTitle');
     const text = document.getElementById('gameOverText');
-    if (isWin) {
+if (isWin) {
         title.innerText = "GEWONNEN!";
         title.className = "text-3xl font-black mb-2 text-green-600";
-        text.innerHTML = `Herzlichen Glückwunsch! Du hast gewonnen.<br><br><div class="flex items-center justify-center gap-2 text-amber-600 font-bold bg-amber-50 p-2 rounded-lg"><span class="text-2xl">🔥</span> ${newGamesCount} Flammen gesammelt</div>`;
-    } else {
+text.innerHTML = `Herzlichen Glückwunsch! Du hast gewonnen.<br><br><div class="flex items-center justify-center gap-2 text-amber-600 font-bold bg-amber-50 p-2 rounded-lg"><span class="text-2xl">🔥</span> ${newGamesCount} Flammen gesammelt</div>`;
+} else {
         title.innerText = "VERLOREN";
         title.className = "text-3xl font-black mb-2 text-gray-600";
-        text.innerHTML = `Schade, ${winnerName} hat gewonnen.<br>Dranbleiben lohnt sich!<br><br><div class="flex items-center justify-center gap-2 text-amber-600 font-bold bg-amber-50 p-2 rounded-lg"><span class="text-2xl">🔥</span> ${newGamesCount} Flammen gesammelt</div>`;
-    }
+text.innerHTML = `Schade, ${winnerName} hat gewonnen.<br>Dranbleiben lohnt sich!<br><br><div class="flex items-center justify-center gap-2 text-amber-600 font-bold bg-amber-50 p-2 rounded-lg"><span class="text-2xl">🔥</span> ${newGamesCount} Flammen gesammelt</div>`;
+}
     
     renderLevelButtons('levelSelector', newGamesCount); // Buttons rendern
 
     document.getElementById('gameOverModal').classList.remove('hidden');
-    setTimeout(() => {
-         document.getElementById('gameOverFeedbackContainer').classList.remove('hidden');
-    }, 3000);
 };
-
 // NEUE FUNKTION: Level Menü öffnen
 window.openLevelMenu = async () => {
     let count = 0;
-    if(auth && auth.currentUser) {
+if(auth && auth.currentUser) {
         try {
             const statsRef = doc(db, 'artifacts', appId, 'users', auth.currentUser.uid, 'gamification', 'stats');
-            const snap = await getDoc(statsRef);
+const snap = await getDoc(statsRef);
             count = snap.exists() ? (snap.data().gamesPlayed || 0) : 0;
-        } catch(e){}
+} catch(e){}
     }
     renderLevelButtons('mainMenuLevelSelector', count);
     document.getElementById('setupModal').classList.add('hidden');
     document.getElementById('levelMenuModal').classList.remove('hidden');
 };
-
 // --- HIER DIE ÄNDERUNG: Leaderboard Navigation ---
 window.showLeaderboard = async (fromMenu = false) => { 
     const list=document.getElementById('leaderboardList');
-    list.innerHTML='<div class="text-center py-4 text-gray-500">Lade...</div>';
+list.innerHTML='<div class="text-center py-4 text-gray-500">Lade...</div>';
     
     // MERKEN WO WIR HERKOMMEN
     if(fromMenu) {
         document.getElementById('setupModal').classList.add('hidden');
-        window.leaderboardReturnToMenu = true;
+window.leaderboardReturnToMenu = true;
     } else {
         document.getElementById('gameOverModal').classList.add('hidden');
         window.leaderboardReturnToMenu = false;
-    }
+}
     
     document.getElementById('leaderboardModal').classList.remove('hidden');
     try {
         const q=query(getPublicDataRef("leaderboard"), orderBy("wins","desc"), limit(10));
-        const snap=await getDocs(q);
-        if(snap.empty){ list.innerHTML='<div class="text-center py-4 text-gray-400">Keine Einträge</div>'; return; }
+const snap=await getDocs(q);
+        if(snap.empty){ list.innerHTML='<div class="text-center py-4 text-gray-400">Keine Einträge</div>'; return;
+}
         list.innerHTML = snap.docs.map((d,i)=>`<div class="flex justify-between p-3 rounded-lg ${i%2===0?'bg-gray-50':'bg-white'} border border-gray-100"><span class="font-bold text-gray-700">${i+1}. ${d.data().name}</span><span class="font-bold text-amber-600">${d.data().wins} 🏆</span></div>`).join('');
-    } catch(e){ list.innerHTML='<div class="text-center text-red-400 text-sm">Fehler beim Laden</div>'; }
+} catch(e){ list.innerHTML='<div class="text-center text-red-400 text-sm">Fehler beim Laden</div>'; }
 };
 
 window.closeLeaderboard = () => {
     document.getElementById('leaderboardModal').classList.add('hidden');
-    // ZURÜCK ZUM RICHTIGEN ORT
+// ZURÜCK ZUM RICHTIGEN ORT
     if (window.leaderboardReturnToMenu) {
         document.getElementById('setupModal').classList.remove('hidden');
-    } else {
+} else {
         document.getElementById('gameOverModal').classList.remove('hidden');
     }
 };
@@ -1757,7 +1762,7 @@ window.showNamePrompt = (mode) => {
     const clone=btn.cloneNode(true);
     btn.parentNode.replaceChild(clone,btn);
     window.setNavState('name_input');
-    clone.addEventListener('click',()=>{
+clone.addEventListener('click',()=>{
         const n=document.getElementById('playerName').value.trim();
         if(!n)return;
         document.getElementById('nameModal').classList.add('hidden');
@@ -1772,17 +1777,19 @@ window.showGameInfo = () => {
     const list = document.getElementById('infoCategoryList');
     if (!list) return;
     let html = '';
-    for (const key in attributeInfo) {
+for (const key in attributeInfo) {
         const info = attributeInfo[key];
-        const isBetter = info.logic === 'Hoch gewinnt';
+const isBetter = info.logic === 'Hoch gewinnt';
         html += `<div class="p-3 rounded-xl border-2 ${isBetter ? 'border-green-400 bg-green-50' : 'border-blue-400/80 bg-blue-50/50'} mb-2">
                     <div class="flex justify-between items-center mb-1">
                         <span class="text-lg font-bold text-gray-800">${info.icon} ${info.name}</span>
-                        <span class="text-sm font-semibold ${isBetter ? 'text-green-700' : 'text-blue-700'}">${isBetter ? '⬆ Hoch' : '⬇ Niedrig'}</span>
+                        <span class="text-sm font-semibold ${isBetter 
+? 'text-green-700' : 'text-blue-700'}">${isBetter ? '⬆ Hoch' : '⬇ Niedrig'}</span>
                     </div>
-                    <p class="text-xs text-gray-700 leading-snug">${info.description || ''}</p>
+                    <p class="text-xs text-gray-700 leading-snug">${info.description ||
+''}</p>
                  </div>`;
-    }
+}
     list.innerHTML = html;
     document.getElementById('gameInfoModal').classList.remove('hidden');
 }
@@ -1794,7 +1801,8 @@ window.closeGameInfo = () => {
 window.closeInfoModal = () => document.getElementById('infoModal').classList.add('hidden');
 window.resetGame = () => location.reload();
 
-function closeBottomSheet(){ const bs=document.getElementById('bottomSheet'); const bd=document.getElementById('bottomSheetBackdrop'); bs.classList.add('translate-y-full'); bd.classList.add('opacity-0'); setTimeout(()=>{bs.classList.add('hidden');bd.classList.add('hidden');},300); }
+function closeBottomSheet(){ const bs=document.getElementById('bottomSheet'); const bd=document.getElementById('bottomSheetBackdrop'); bs.classList.add('translate-y-full'); bd.classList.add('opacity-0'); setTimeout(()=>{bs.classList.add('hidden');bd.classList.add('hidden');},300);
+}
 function openBottomSheet(title){ if(title)document.getElementById('resultText').innerText=title; const bs=document.getElementById('bottomSheet'); const bd=document.getElementById('bottomSheetBackdrop'); bd.classList.remove('hidden'); bs.classList.remove('hidden'); setTimeout(()=>{bd.classList.remove('opacity-0'); bs.classList.remove('translate-y-full');},10); }
 
 document.getElementById('bsNextBtn').addEventListener('click',()=> { closeBottomSheet(); window.nextRound(); });
@@ -1802,7 +1810,8 @@ document.getElementById('bsNextBtn').addEventListener('click',()=> { closeBottom
 const soundToggle = document.getElementById('soundToggle');
 if(soundToggle) { soundToggle.checked = !isMuted; soundToggle.addEventListener('change', function() { isMuted = !this.checked; }); }
 const revealToggle = document.getElementById('revealBackToggle');
-if(revealToggle) { revealToggle.checked = isOpponentNameBackVisible(); revealToggle.addEventListener('change', function() { setOpponentNameBackVisible(this.checked); if(gameMode === 'ai' && !document.getElementById('gameContainer').classList.contains('hidden')) updateDisplayAI(); }); }
+if(revealToggle) { revealToggle.checked = isOpponentNameBackVisible(); revealToggle.addEventListener('change', function() { setOpponentNameBackVisible(this.checked); if(gameMode === 'ai' && !document.getElementById('gameContainer').classList.contains('hidden')) updateDisplayAI(); });
+}
 document.getElementById('bsInfoBtn').addEventListener('click', ()=>{ 
     const wood = lastRoundWinningWoodName || (aiGame.currentPlayerCard ? aiGame.currentPlayerCard.name : "Eiche");
     const content = detailedWoodInfo[wood] || `<p>Keine Detailinfo zu ${wood}</p>`;
@@ -1813,16 +1822,19 @@ document.getElementById('bsInfoBtn').addEventListener('click', ()=>{
         const img1 = cardData.imgTree || 'https://placehold.co/400x300?text=Bild+fehlt';
         const img2 = cardData.imgCross || 'https://placehold.co/400x300?text=Detail+fehlt';
         modalContent.innerHTML += `
-             <div class="grid grid-cols-2 gap-3 mt-4">
+       
+      <div class="grid grid-cols-2 gap-3 mt-4">
                 <div>
                     <p class="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">Maserung</p>
                     <img src="${img1}" class="w-full h-32 object-cover rounded-lg border border-gray-200 shadow-sm cursor-pointer hover:opacity-90 transition" onclick="window.openImageViewer(this.src)">
-                </div>
+                
+</div>
                 <div>
                     <p class="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">Detailansicht</p>
                     <img src="${img2}" class="w-full h-32 object-cover rounded-lg border border-gray-200 shadow-sm cursor-pointer hover:opacity-90 transition" onclick="window.openImageViewer(this.src)">
                 </div>
-            </div>`;
+          
+  </div>`;
     }
     document.getElementById('infoModal').classList.remove('hidden');
 });
