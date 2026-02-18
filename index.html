@@ -27,8 +27,8 @@
         .card-back { 
             transform: rotateY(180deg);
             background-color: #2c3e50;
-            /* PFAD GEÄNDERT: Repository HOLZEN */
-            background-image: url('https://github.com/aufdemholzweg/HOLZEN/blob/main/images/background_card.jpg?raw=true'); 
+            /* PFAD GEÄNDERT: .jpeg statt .jpg */
+            background-image: url('https://github.com/aufdemholzweg/HOLZEN/blob/main/images/background_card.jpeg?raw=true'); 
             background-size: cover; 
             background-position: center; 
             border: 4px solid white;
@@ -234,7 +234,7 @@
 </div>
 
 <div id="quizModal" class="fixed inset-0 dimmer flex items-center justify-center z-[80] p-4 hidden pt-20">
-    <div class="bg-white rounded-2xl shadow-2xl relative w-full max-w-sm flex flex-col animate-pop-in border-4 border-amber-50 overflow-visible">
+    <div class="bg-white rounded-2xl shadow-2xl relative w-full max-w-sm flex flex-col animate-pop-in border-4 border-amber-500 overflow-visible">
         
         <div class="h-4 w-full bg-gray-200 relative overflow-hidden rounded-t-xl">
             <div id="quizTimerBar" class="h-full w-0 bg-amber-500 rounded-r-sm relative"> 
@@ -912,41 +912,42 @@ function setOpponentNameBackVisible(v){ localStorage.setItem('holzquartett_showO
 
 // PFAD GEÄNDERT: Repository HOLZEN
 const IMG_BASE = "https://github.com/aufdemholzweg/HOLZEN/blob/main/images";
+// FIX: Endung auf .jpeg gesetzt (statt .jpg)
 const IMG_SUFFIX = "?raw=true";
-// 6. KARTEN DATEN (WICHTIG: Dateiendung auf .jpg geändert!)
+// 6. KARTEN DATEN
 const woodCards=[
- {name:"Ahorn", dk:"5", druckfestigkeit:60, quellen:6, rohdichte:650, emodul:9500, preis:2, imgTree:`${IMG_BASE}/ahorn_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/ahorn_2.jpg${IMG_SUFFIX}`},
- {name:"Birke", dk:"5", druckfestigkeit:50, quellen:8, rohdichte:650, emodul:14500, preis:2, imgTree:`${IMG_BASE}/birke_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/birke_2.jpg${IMG_SUFFIX}`},
- {name:"Douglasie", dk:"5", druckfestigkeit:70, quellen:6, rohdichte:550, emodul:13000, preis:4, imgTree:`${IMG_BASE}/douglasie_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/douglasie_2.jpg${IMG_SUFFIX}`},
- {name:"Ebenholz, Afr.", dk:"1-2", druckfestigkeit:70, quellen:11, rohdichte:1200, emodul:13500, preis:5, imgTree:`${IMG_BASE}/ebenholz_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/ebenholz_2.jpg${IMG_SUFFIX}`},
- {name:"Edelkastanie", dk:"2", druckfestigkeit:50, quellen:5, rohdichte:650, emodul:9000, preis:3, imgTree:`${IMG_BASE}/kastanie_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/kastanie_2.jpg${IMG_SUFFIX}`},
- {name:"Eibe", dk:"2", druckfestigkeit:60, quellen:5, rohdichte:700, emodul:15000, preis:4, imgTree:`${IMG_BASE}/eibe_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/eibe_2.jpg${IMG_SUFFIX}`},
- {name:"Eiche", dk:"2", druckfestigkeit:40, quellen:10, rohdichte:700, emodul:13000, preis:3, imgTree:`${IMG_BASE}/eiche_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/eiche_2.jpg${IMG_SUFFIX}`},
- {name:"Erle", dk:"5", druckfestigkeit:60, quellen:7, rohdichte:550, emodul:9500, preis:1, imgTree:`${IMG_BASE}/erle_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/erle_2.jpg${IMG_SUFFIX}`},
- {name:"Esche", dk:"5", druckfestigkeit:50, quellen:7, rohdichte:650, emodul:13000, preis:2, imgTree:`${IMG_BASE}/esche_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/esche_2.jpg${IMG_SUFFIX}`},
- {name:"Fichte", dk:"4", druckfestigkeit:50, quellen:6, rohdichte:500, emodul:11000, preis:2, imgTree:`${IMG_BASE}/fichte_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/fichte_2.jpg${IMG_SUFFIX}`},
+ {name:"Ahorn", dk:"5", druckfestigkeit:60, quellen:6, rohdichte:650, emodul:9500, preis:2, imgTree:`${IMG_BASE}/ahorn_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/ahorn_2.jpeg${IMG_SUFFIX}`},
+ {name:"Birke", dk:"5", druckfestigkeit:50, quellen:8, rohdichte:650, emodul:14500, preis:2, imgTree:`${IMG_BASE}/birke_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/birke_2.jpeg${IMG_SUFFIX}`},
+ {name:"Douglasie", dk:"5", druckfestigkeit:70, quellen:6, rohdichte:550, emodul:13000, preis:4, imgTree:`${IMG_BASE}/douglasie_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/douglasie_2.jpeg${IMG_SUFFIX}`},
+ {name:"Ebenholz, Afr.", dk:"1-2", druckfestigkeit:70, quellen:11, rohdichte:1200, emodul:13500, preis:5, imgTree:`${IMG_BASE}/ebenholz_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/ebenholz_2.jpeg${IMG_SUFFIX}`},
+ {name:"Edelkastanie", dk:"2", druckfestigkeit:50, quellen:5, rohdichte:650, emodul:9000, preis:3, imgTree:`${IMG_BASE}/kastanie_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/kastanie_2.jpeg${IMG_SUFFIX}`},
+ {name:"Eibe", dk:"2", druckfestigkeit:60, quellen:5, rohdichte:700, emodul:15000, preis:4, imgTree:`${IMG_BASE}/eibe_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/eibe_2.jpeg${IMG_SUFFIX}`},
+ {name:"Eiche", dk:"2", druckfestigkeit:40, quellen:10, rohdichte:700, emodul:13000, preis:3, imgTree:`${IMG_BASE}/eiche_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/eiche_2.jpeg${IMG_SUFFIX}`},
+ {name:"Erle", dk:"5", druckfestigkeit:60, quellen:7, rohdichte:550, emodul:9500, preis:1, imgTree:`${IMG_BASE}/erle_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/erle_2.jpeg${IMG_SUFFIX}`},
+ {name:"Esche", dk:"5", druckfestigkeit:50, quellen:7, rohdichte:650, emodul:13000, preis:2, imgTree:`${IMG_BASE}/esche_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/esche_2.jpeg${IMG_SUFFIX}`},
+ {name:"Fichte", dk:"4", druckfestigkeit:50, quellen:6, rohdichte:500, emodul:11000, preis:2, imgTree:`${IMG_BASE}/fichte_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/fichte_2.jpeg${IMG_SUFFIX}`},
  {name:"Hemlock", dk:"4", druckfestigkeit:60, quellen:7, 
-rohdichte:500, emodul:10000, preis:4, imgTree:`${IMG_BASE}/hemlock_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/hemlock_2.jpg${IMG_SUFFIX}`},
- {name:"Hickory", dk:"4", druckfestigkeit:60, quellen:9, rohdichte:800, emodul:15000, preis:3, imgTree:`${IMG_BASE}/hickory_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/hickory_2.jpg${IMG_SUFFIX}`},
- {name:"Kiefer", dk:"3-4", druckfestigkeit:60, quellen:8, rohdichte:550, emodul:11000, preis:1, imgTree:`${IMG_BASE}/kiefer_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/kiefer_2.jpg${IMG_SUFFIX}`},
- {name:"Lärche", dk:"3-4", druckfestigkeit:60, quellen:7, rohdichte:600, emodul:14000, preis:3, imgTree:`${IMG_BASE}/laerche_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/laerche_2.jpg${IMG_SUFFIX}`},
- {name:"Linde", dk:"5", druckfestigkeit:50, quellen:8, rohdichte:550, emodul:7500, preis:2, imgTree:`${IMG_BASE}/linde_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/linde_2.jpg${IMG_SUFFIX}`},
- {name:"Mahagoni (echtes)", dk:"2", druckfestigkeit:50, quellen:5, rohdichte:600, emodul:10500, preis:5, imgTree:`${IMG_BASE}/mahagoni_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/mahagoni_2.jpg${IMG_SUFFIX}`},
- {name:"Meranti (DR)", dk:"3-4", druckfestigkeit:60, quellen:7, rohdichte:750, emodul:14500, preis:4, imgTree:`${IMG_BASE}/meranti_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/meranti_2.jpg${IMG_SUFFIX}`},
- {name:"Nussbaum (EU)", dk:"3", druckfestigkeit:70, quellen:6, rohdichte:700, emodul:12000, preis:4, imgTree:`${IMG_BASE}/nuss_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/nuss_2.jpg${IMG_SUFFIX}`},
- {name:"Palisander", dk:"1", druckfestigkeit:80, quellen:6, rohdichte:850, emodul:13000, preis:5, imgTree:`${IMG_BASE}/palisander_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/palisander_2.jpg${IMG_SUFFIX}`},
- {name:"Pappel", dk:"5", druckfestigkeit:40, quellen:7, rohdichte:450, emodul:9000, preis:2, imgTree:`${IMG_BASE}/pappel_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/pappel_2.jpg${IMG_SUFFIX}`},
- {name:"Platane", dk:"5", druckfestigkeit:50, quellen:7, rohdichte:650, emodul:12500, preis:3, imgTree:`${IMG_BASE}/platane_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/platane_2.jpg${IMG_SUFFIX}`},
+rohdichte:500, emodul:10000, preis:4, imgTree:`${IMG_BASE}/hemlock_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/hemlock_2.jpeg${IMG_SUFFIX}`},
+ {name:"Hickory", dk:"4", druckfestigkeit:60, quellen:9, rohdichte:800, emodul:15000, preis:3, imgTree:`${IMG_BASE}/hickory_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/hickory_2.jpeg${IMG_SUFFIX}`},
+ {name:"Kiefer", dk:"3-4", druckfestigkeit:60, quellen:8, rohdichte:550, emodul:11000, preis:1, imgTree:`${IMG_BASE}/kiefer_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/kiefer_2.jpeg${IMG_SUFFIX}`},
+ {name:"Lärche", dk:"3-4", druckfestigkeit:60, quellen:7, rohdichte:600, emodul:14000, preis:3, imgTree:`${IMG_BASE}/laerche_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/laerche_2.jpeg${IMG_SUFFIX}`},
+ {name:"Linde", dk:"5", druckfestigkeit:50, quellen:8, rohdichte:550, emodul:7500, preis:2, imgTree:`${IMG_BASE}/linde_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/linde_2.jpeg${IMG_SUFFIX}`},
+ {name:"Mahagoni (echtes)", dk:"2", druckfestigkeit:50, quellen:5, rohdichte:600, emodul:10500, preis:5, imgTree:`${IMG_BASE}/mahagoni_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/mahagoni_2.jpeg${IMG_SUFFIX}`},
+ {name:"Meranti (DR)", dk:"3-4", druckfestigkeit:60, quellen:7, rohdichte:750, emodul:14500, preis:4, imgTree:`${IMG_BASE}/meranti_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/meranti_2.jpeg${IMG_SUFFIX}`},
+ {name:"Nussbaum (EU)", dk:"3", druckfestigkeit:70, quellen:6, rohdichte:700, emodul:12000, preis:4, imgTree:`${IMG_BASE}/nuss_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/nuss_2.jpeg${IMG_SUFFIX}`},
+ {name:"Palisander", dk:"1", druckfestigkeit:80, quellen:6, rohdichte:850, emodul:13000, preis:5, imgTree:`${IMG_BASE}/palisander_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/palisander_2.jpeg${IMG_SUFFIX}`},
+ {name:"Pappel", dk:"5", druckfestigkeit:40, quellen:7, rohdichte:450, emodul:9000, preis:2, imgTree:`${IMG_BASE}/pappel_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/pappel_2.jpeg${IMG_SUFFIX}`},
+ {name:"Platane", dk:"5", druckfestigkeit:50, quellen:7, rohdichte:650, emodul:12500, preis:3, imgTree:`${IMG_BASE}/platane_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/platane_2.jpeg${IMG_SUFFIX}`},
  {name:"Redwood", dk:"2", 
-druckfestigkeit:40, quellen:4, rohdichte:400, emodul:9500, preis:2, imgTree:`${IMG_BASE}/redwood_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/redwood_2.jpg${IMG_SUFFIX}`},
- {name:"Robinie", dk:"1-2", druckfestigkeit:70, quellen:6, rohdichte:800, emodul:13500, preis:3, imgTree:`${IMG_BASE}/robinie_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/robinie_2.jpg${IMG_SUFFIX}`},
- {name:"Rotbuche", dk:"5", druckfestigkeit:60, quellen:9, rohdichte:750, emodul:14000, preis:2, imgTree:`${IMG_BASE}/buche_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/buche_2.jpg${IMG_SUFFIX}`},
- {name:"Rüster", dk:"4", druckfestigkeit:50, quellen:7, rohdichte:700, emodul:11000, preis:3, imgTree:`${IMG_BASE}/ulme_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/ulme_2.jpg${IMG_SUFFIX}`},
- {name:"Tanne", dk:"4", druckfestigkeit:50, quellen:6, rohdichte:450, emodul:11000, preis:2, imgTree:`${IMG_BASE}/tanne_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/tanne_2.jpg${IMG_SUFFIX}`},
- {name:"Teak", dk:"1", druckfestigkeit:60, quellen:4, rohdichte:700, emodul:13000, preis:5, imgTree:`${IMG_BASE}/teak_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/teak_2.jpg${IMG_SUFFIX}`},
- {name:"Wengé", dk:"2", druckfestigkeit:90, quellen:7, rohdichte:900, emodul:16000, preis:4, imgTree:`${IMG_BASE}/wenge_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/wenge_2.jpg${IMG_SUFFIX}`},
- {name:"Zebrano", dk:"2-3", druckfestigkeit:50, quellen:7, rohdichte:800, emodul:15500, preis:4, imgTree:`${IMG_BASE}/zebrano_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/zebrano_2.jpg${IMG_SUFFIX}`},
- {name:"Zeder", dk:"1-2", druckfestigkeit:40, quellen:7, rohdichte:550, emodul:7000, preis:5, imgTree:`${IMG_BASE}/zeder_1.jpg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/zeder_2.jpg${IMG_SUFFIX}`}
+druckfestigkeit:40, quellen:4, rohdichte:400, emodul:9500, preis:2, imgTree:`${IMG_BASE}/redwood_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/redwood_2.jpeg${IMG_SUFFIX}`},
+ {name:"Robinie", dk:"1-2", druckfestigkeit:70, quellen:6, rohdichte:800, emodul:13500, preis:3, imgTree:`${IMG_BASE}/robinie_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/robinie_2.jpeg${IMG_SUFFIX}`},
+ {name:"Rotbuche", dk:"5", druckfestigkeit:60, quellen:9, rohdichte:750, emodul:14000, preis:2, imgTree:`${IMG_BASE}/buche_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/buche_2.jpeg${IMG_SUFFIX}`},
+ {name:"Rüster", dk:"4", druckfestigkeit:50, quellen:7, rohdichte:700, emodul:11000, preis:3, imgTree:`${IMG_BASE}/ulme_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/ulme_2.jpeg${IMG_SUFFIX}`},
+ {name:"Tanne", dk:"4", druckfestigkeit:50, quellen:6, rohdichte:450, emodul:11000, preis:2, imgTree:`${IMG_BASE}/tanne_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/tanne_2.jpeg${IMG_SUFFIX}`},
+ {name:"Teak", dk:"1", druckfestigkeit:60, quellen:4, rohdichte:700, emodul:13000, preis:5, imgTree:`${IMG_BASE}/teak_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/teak_2.jpeg${IMG_SUFFIX}`},
+ {name:"Wengé", dk:"2", druckfestigkeit:90, quellen:7, rohdichte:900, emodul:16000, preis:4, imgTree:`${IMG_BASE}/wenge_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/wenge_2.jpeg${IMG_SUFFIX}`},
+ {name:"Zebrano", dk:"2-3", druckfestigkeit:50, quellen:7, rohdichte:800, emodul:15500, preis:4, imgTree:`${IMG_BASE}/zebrano_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/zebrano_2.jpeg${IMG_SUFFIX}`},
+ {name:"Zeder", dk:"1-2", druckfestigkeit:40, quellen:7, rohdichte:550, emodul:7000, preis:5, imgTree:`${IMG_BASE}/zeder_1.jpeg${IMG_SUFFIX}`, imgCross:`${IMG_BASE}/zeder_2.jpeg${IMG_SUFFIX}`}
 ];
 // -------------------------------------------------------------
 // NEUE WISSENSKARTEN-DATEN
@@ -1610,7 +1611,7 @@ lvl1Btn.innerHTML = "<span>Lvl 1</span><span>🌲</span>";
     // Level 2
     const lvl2Btn = document.createElement('a');
 if(gamesCount >= 5) {
-        lvl2Btn.href = "https://aufdemholzweg.github.io/Ausblick_weitere_Spiele/"; 
+        lvl2Btn.href = "https://aufdemholzweg.github.io/Mikrotechnische-Untersuchungen-Holzerkennung/"; 
         lvl2Btn.target = "_blank";
 lvl2Btn.className = "bg-green-600 hover:bg-green-700 text-white font-bold py-2 rounded-lg text-center text-xs flex flex-col justify-center items-center shadow-md border-b-2 border-green-800 transition active:scale-95 animate-pulse h-14";
 lvl2Btn.innerHTML = "<span>Lvl 2</span><span>🚀</span>";
@@ -1662,6 +1663,8 @@ window.endGame = async (winnerName) => {
     document.getElementById('bottomSheet').classList.add('hidden');
     document.getElementById('bottomSheetBackdrop').classList.add('hidden');
     
+    // document.getElementById('gameOverFeedbackContainer').classList.add('hidden'); <- ENTFERNT, DA ID NICHT EXISTIERT
+    
     const isWin = (winnerName === (gameMode === 'ai' ? aiGame.playerName : localGameState.players[localPlayerId].name));
     
     const sceneStage = document.querySelector('.scene-stage');
@@ -1706,6 +1709,7 @@ text.innerHTML = `Schade, ${winnerName} hat gewonnen.<br>Dranbleiben lohnt sich!
     renderLevelButtons('levelSelector', newGamesCount); // Buttons rendern
 
     document.getElementById('gameOverModal').classList.remove('hidden');
+    // setTimeout entfernt, da der Container nicht existiert
 };
 // NEUE FUNKTION: Level Menü öffnen
 window.openLevelMenu = async () => {
@@ -1818,6 +1822,7 @@ document.getElementById('bsInfoBtn').addEventListener('click', ()=>{
     modalContent.innerHTML = `<h4 class="font-bold text-xl mb-2">${wood}</h4>` + content;
     const cardData = woodCards.find(c=>c.name===wood);
     if(cardData) {
+        // FIX: Auch hier .jpeg
         const img1 = cardData.imgTree || 'https://placehold.co/400x300?text=Bild+fehlt';
         const img2 = cardData.imgCross || 'https://placehold.co/400x300?text=Detail+fehlt';
         modalContent.innerHTML += `
