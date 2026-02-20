@@ -939,7 +939,7 @@ function getNumericValue(val, attr) {
     return parseFloat(val);
 }
 
-// 8. NEUE FUNKTION: DAS QUIZ STARTEN (Mit 4500ms Timer)
+// 8. NEUE FUNKTION: DAS QUIZ STARTEN (Mit 4500ms Timer und Zufallssortierung)
 function startTieBreakerQuiz(qIndex, callback) {
     const modal = document.getElementById('quizModal');
     const timerBar = document.getElementById('quizTimerBar');
@@ -958,13 +958,16 @@ function startTieBreakerQuiz(qIndex, callback) {
     timerBar.className = "h-full bg-amber-500 rounded-r-sm relative";
     void timerBar.offsetWidth;
     
+    let mappedOptions = question.o.map((opt, idx) => ({ text: opt, isCorrect: idx === question.c }));
+    let shuffledOptions = shuffleArray([...mappedOptions]);
+    
     let buttons = [];
-    question.o.forEach((opt, idx) => {
+    shuffledOptions.forEach((optObj) => {
         const btn = document.createElement('button');
         btn.className = "w-full bg-gray-100 text-gray-400 font-semibold py-3 px-4 rounded-lg border-2 border-gray-200 cursor-not-allowed";
-        btn.innerText = opt;
+        btn.innerText = optObj.text;
         btn.disabled = true; 
-        buttons.push({btn, idx});
+        buttons.push({btn, isCorrect: optObj.isCorrect});
         qOptions.appendChild(btn);
     });
     modal.classList.remove('hidden');
@@ -980,7 +983,7 @@ function startTieBreakerQuiz(qIndex, callback) {
         
         let answered = false;
         buttons.forEach(obj => {
-            const {btn, idx} = obj;
+            const {btn, isCorrect} = obj;
             btn.className = "w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3 px-4 rounded-lg border-2 border-gray-200 transition active:scale-95 cursor-pointer";
             btn.disabled = false;
             
@@ -993,7 +996,8 @@ function startTieBreakerQuiz(qIndex, callback) {
                 const explanation = question.e || "Keine Erklärung verfügbar.";
                 expBox.innerText = "💡 " + explanation;
                 expBox.classList.remove('hidden');
-                if(idx === question.c) {
+                
+                if(isCorrect) {
                     btn.className = "w-full bg-green-500 text-white font-bold py-3 px-4 rounded-lg border-2 border-green-600 shadow-lg scale-105";
                     playSound(sounds.win);
                     setTimeout(() => {
@@ -1002,7 +1006,7 @@ function startTieBreakerQuiz(qIndex, callback) {
                     }, 4500);
                 } else {
                     btn.className = "w-full bg-red-500 text-white font-bold py-3 px-4 rounded-lg border-2 border-red-600 shadow-md transform scale-95 opacity-50";
-                    const correctBtnObj = buttons.find(b => b.idx === question.c);
+                    const correctBtnObj = buttons.find(b => b.isCorrect);
                     if(correctBtnObj) correctBtnObj.btn.className = "w-full bg-green-500 text-white font-bold py-3 px-4 rounded-lg border-2 border-green-600 shadow-lg scale-105 animate-pulse";
                     setTimeout(() => {
                         modal.classList.add('hidden');
